@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Bonus Sport — concept M "Montaggio a scene" — 970×250 — 12,0 s</title>
+<!--
+  CONCEPT M — banner a scene montate (storyboard). Parametri URL: t, safe, bg, bgmode (drift|still), guide, colon (1 default | 0). Layout S1 (px): BONUS 132 · SPORT 362 · ":" 561 · CTA grande 607,79 230×52
+  Scene: S1 titolo → T1 → S2 Sisal → T2 → S3 NetBet → T3 → S4 William Hill → T4 → S5 comparazione → S6 CTA in risalto.
+  Durata 12,0 s = 300 fotogrammi a 25 fps. CTA presente in ogni fotogramma (grande in S1, si trasforma nella pill piccola in T1).
+-->
+<style>
+  @font-face { font-family:"Montserrat"; font-weight:800; src:url("assets/font/Montserrat-800.woff2") format("woff2"); }
+  @font-face { font-family:"Montserrat"; font-weight:700; src:url("assets/font/Montserrat-700.woff2") format("woff2"); }
+  @font-face { font-family:"Inter"; font-weight:600; src:url("assets/font/Inter-600.woff2") format("woff2"); }
+  :root { --sisal-green:#00643a; --sisal-lime:#b9d531; --lime-hi:#e6ff8a; --ground-0:#061a12; --text:#fff; --text-dim:rgba(255,255,255,0.74);
+    --card-bg:rgba(6,26,18,0.42); --card-bg-2:rgba(255,255,255,0.06); --card-border:rgba(255,255,255,0.17); --radius:12px;
+    --font-display:"Montserrat","Inter",Arial,sans-serif; --font-ui:"Inter","Montserrat",Arial,sans-serif; }
+  html,body{margin:0;padding:0;background:#000}
+  #stage{position:relative;width:970px;height:250px;overflow:hidden;background:var(--ground-0);font-family:var(--font-ui);color:var(--text)}
+  /* ambiente */
+  #env{position:absolute;inset:0;overflow:hidden} #env>div{position:absolute}
+  #env .img{left:-40px;top:-40px;width:1050px;height:330px;background-size:cover;background-position:center 60%;will-change:transform}
+  #env .proc{inset:0;background:radial-gradient(420px 220px at 12% 110%,rgba(185,213,49,.26),rgba(185,213,49,0) 70%),linear-gradient(180deg,#06231a 0%,#0b3324 55%,#0f4a30 100%)}
+  #env .flare{left:760px;top:-140px;width:560px;height:420px;border-radius:50%;opacity:0;background:radial-gradient(closest-side,rgba(255,250,225,.55),rgba(255,250,225,.18) 35%,rgba(255,250,225,0) 70%)}
+  #env .rays{left:520px;top:-260px;width:900px;height:700px;opacity:0;transform-origin:100% 0;background:linear-gradient(112deg,rgba(255,255,255,0) 30%,rgba(255,255,240,.10) 42%,rgba(255,255,255,0) 50%),linear-gradient(112deg,rgba(255,255,255,0) 55%,rgba(255,255,240,.07) 63%,rgba(255,255,255,0) 71%)}
+  #env .tone{inset:0;background:linear-gradient(180deg,rgba(6,26,18,.42) 0%,rgba(6,26,18,.10) 50%,rgba(6,26,18,.55) 100%)}
+  #env .vignette{inset:0;background:radial-gradient(75% 130% at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)}
+  #env .shade{left:120px;top:10px;width:730px;height:190px;border-radius:60px;background:rgba(4,18,12,.55);filter:blur(24px)}
+  #particles{position:absolute;inset:0;pointer-events:none} #particles i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:0}
+  /* scene */
+  .scene{position:absolute;inset:0;will-change:clip-path}
+  /* S1 titolo */
+  #s1 .grp{position:absolute;left:0;top:0;width:970px;height:210px}
+  #s1 .clip{position:absolute;overflow:hidden;height:66px;top:72px}
+  #s1 .w{font-family:var(--font-display);font-weight:800;font-size:56px;line-height:66px;text-transform:uppercase;white-space:nowrap;will-change:transform,letter-spacing}
+  #s1 .w1{color:#fff} #s1 .w2{color:var(--sisal-lime)}
+  #s1 .colon{position:absolute;top:66px;font-family:var(--font-display);font-weight:800;font-size:56px;line-height:66px;color:var(--sisal-lime);opacity:0}
+  #s1 .sweep{position:absolute;top:60px;height:90px;width:120px;opacity:0;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 100%);transform:skewX(-18deg);mix-blend-mode:screen}
+  #s1 .rule{position:absolute;top:150px;height:2px;width:0;background:var(--sisal-lime);opacity:.9}
+  /* CTA (unica, morfa da grande a piccola) */
+  #cta{position:absolute;border-radius:999px;background:var(--sisal-lime);color:#06301d;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.30),0 0 0 1px rgba(255,255,255,.08) inset;white-space:nowrap;z-index:5}
+  #cta .sheen{position:absolute;top:-20px;bottom:-20px;width:60px;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 100%);transform:translateX(-120px) skewX(-18deg);opacity:0}
+  #ctaring{position:absolute;border-radius:999px;border:2px solid var(--lime-hi);opacity:0;pointer-events:none;z-index:4}
+  #ctaburst{position:absolute;border-radius:50%;opacity:0;pointer-events:none;z-index:3;background:radial-gradient(closest-side,rgba(230,255,138,.55),rgba(185,213,49,.18) 45%,rgba(185,213,49,0) 70%)}
+  /* etichetta piccola nelle clip operatore */
+  .lbl{position:absolute;left:26px;top:96px;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:.06em;text-transform:uppercase;opacity:0}
+  .lbl b{color:var(--sisal-lime);font-weight:800}
+  /* hero card (clip operatore) */
+  .hero{position:absolute;left:335px;top:30px;width:300px;height:158px;border-radius:14px;box-sizing:border-box;overflow:hidden;background:linear-gradient(180deg,var(--card-bg-2),rgba(255,255,255,.02)),var(--card-bg);border:1px solid var(--card-border);box-shadow:0 12px 34px rgba(0,0,0,.3);transform-origin:50% 100%;opacity:0}
+  .hero .logo{position:absolute;left:0;right:0;top:22px;height:56px;display:flex;align-items:center;justify-content:center;opacity:0} .hero .logo img{display:block}
+  .hero .fino{position:absolute;left:0;right:0;top:86px;text-align:center;font-family:var(--font-ui);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);opacity:0}
+  .hero .valwrap{position:absolute;left:0;right:0;top:104px;height:46px;overflow:hidden;text-align:center}
+  .hero .val{display:inline-block;font-family:var(--font-display);font-weight:800;font-size:38px;line-height:46px;letter-spacing:-.01em;font-variant-numeric:tabular-nums;white-space:nowrap} .hero .val span{display:inline-block}
+  .hero .spec{position:absolute;top:-40px;bottom:-40px;width:90px;opacity:0;transform:translateX(-160px) skewX(-22deg);background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.20) 50%,rgba(255,255,255,0) 100%)}
+  .hero .idx{position:absolute;right:14px;top:10px;font-family:var(--font-ui);font-weight:600;font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.45);opacity:0}
+  /* S5 comparazione */
+  #s5 .title{position:absolute;left:26px;top:60px;width:196px}
+  #s5 .title .clip{overflow:hidden;height:40px}
+  #s5 .title .l{font-family:var(--font-display);font-weight:800;font-size:37px;line-height:40px;text-transform:uppercase;white-space:nowrap} #s5 .title .l2{color:var(--sisal-lime)}
+  #s5 .title .rule{margin-top:8px;height:2px;width:0;background:var(--sisal-lime);opacity:.9}
+  #cards{position:absolute;left:232px;top:32px;width:544px;height:146px;perspective:900px}
+  .card{position:absolute;top:0;width:168px;height:146px;border-radius:var(--radius);box-sizing:border-box;overflow:hidden;background:linear-gradient(180deg,var(--card-bg-2),rgba(255,255,255,.02)),var(--card-bg);border:1px solid var(--card-border);box-shadow:0 10px 30px rgba(0,0,0,.28);transform-origin:50% 100%}
+  .card .logo{position:absolute;left:0;right:0;top:22px;height:40px;display:flex;align-items:center;justify-content:center} .card .logo img{display:block}
+  .card .fino{position:absolute;left:0;right:0;top:76px;text-align:center;font-family:var(--font-ui);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+  .card .val{position:absolute;left:0;right:0;top:94px;text-align:center;font-family:var(--font-display);font-weight:800;font-size:29px;line-height:38px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  /* transizione: banda di luce */
+  #wipe{position:absolute;top:-40px;height:330px;width:140px;opacity:0;pointer-events:none;z-index:6;transform:skewX(-14deg);background:linear-gradient(90deg,rgba(230,255,138,0) 0%,rgba(255,255,255,.55) 45%,rgba(230,255,138,.35) 60%,rgba(230,255,138,0) 100%);filter:blur(4px);mix-blend-mode:screen}
+  /* safe area */
+  #safe{position:absolute;left:0;top:210px;width:970px;height:40px;background:var(--ground-0);z-index:9}
+  #safe.show::after{content:"SAFE AREA DISCLAIMER · 970×40 px · y 210–250 · libera per ADM / 18+ / diciture (inserimento manuale)";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:600 10px/1 var(--font-ui);letter-spacing:.08em;color:#ff4fd8;background:repeating-linear-gradient(45deg,rgba(255,79,216,.12) 0 6px,rgba(255,79,216,.04) 6px 12px);border-top:1px dashed #ff4fd8;box-sizing:border-box}
+  #guide{position:absolute;inset:0;pointer-events:none;display:none;z-index:10} #guide.show{display:block} #guide .box{position:absolute;border:1px dashed rgba(0,200,255,.8);box-sizing:border-box;font:600 9px/1 var(--font-ui);color:#00c8ff;padding:2px}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="env"><div class="proc"></div><div class="img" id="envimg"></div><div class="rays" id="rays"></div><div class="flare" id="flare"></div><div class="tone"></div><div class="shade"></div><div class="vignette"></div></div>
+  <div id="particles"></div>
+
+  <!-- S1: titolo a tutto banner -->
+  <div class="scene" id="s1"><div class="grp">
+    <div class="clip" style="left:132px"><div class="w w1" data-el="w1">Bonus</div></div>
+    <div class="clip" style="left:362px"><div class="w w2" data-el="w2">Sport</div></div>
+    <div class="colon" data-el="colon" style="left:561px">:</div>
+    <div class="sweep" data-el="s1sweep"></div>
+    <div class="rule" data-el="s1rule" style="left:132px"></div>
+  </div></div>
+
+  <!-- S2/S3/S4: clip operatore (una per volta) -->
+  <div class="scene" id="s2"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+    <div class="hero" data-op="sisal"><div class="idx">1 / 3</div><div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:172px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">5.200€</div></div><div class="spec"></div></div></div>
+  <div class="scene" id="s3"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+    <div class="hero" data-op="netbet"><div class="idx">2 / 3</div><div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:164px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">1.000€</div></div><div class="spec"></div></div></div>
+  <div class="scene" id="s4"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+    <div class="hero" data-op="williamhill"><div class="idx">3 / 3</div><div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:202px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">255€</div></div><div class="spec"></div></div></div>
+
+  <!-- S5/S6: comparazione + CTA in risalto -->
+  <div class="scene" id="s5">
+    <div class="title"><div class="clip"><div class="l" data-el="t1">Bonus</div></div><div class="clip"><div class="l l2" data-el="t2">Sport</div></div><div class="rule" data-el="t5rule"></div></div>
+    <div id="cards">
+      <div class="card" data-op="sisal" style="left:0"><div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:118px;height:auto"></div><div class="fino">Fino a</div><div class="val">5.200€</div></div>
+      <div class="card" data-op="netbet" style="left:188px"><div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:112px;height:auto"></div><div class="fino">Fino a</div><div class="val">1.000€</div></div>
+      <div class="card" data-op="williamhill" style="left:376px"><div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:138px;height:auto"></div><div class="fino">Fino a</div><div class="val">255€</div></div>
+    </div>
+  </div>
+
+  <div id="ctaburst"></div><div id="ctaring"></div>
+  <div id="cta"><span>Scopri di più</span><div class="sheen"></div></div>
+  <div id="wipe"></div>
+  <div id="safe"></div>
+  <div id="guide"><div class="box" style="left:232px;top:32px;width:544px;height:146px">CARDS</div><div class="box" style="left:800px;top:83px;width:150px;height:44px">CTA small</div><div class="box" style="left:0;top:210px;width:970px;height:40px">SAFE</div></div>
+</div>
+
+<script>
+  // ===================== TIMELINE (s) — 12,0 s = 300 fotogrammi =====================
+  const DUR=12.0;
+  const S = {  // [inizio, fine] di ogni scena; le transizioni (wipe) durano 0,35 s a cavallo dei tagli
+    s1:[0.00,2.60], t1:[2.60,2.95],
+    s2:[2.95,4.80], t2:[4.80,5.10],
+    s3:[5.10,6.95], t3:[6.95,7.25],
+    s4:[7.25,9.10], t4:[9.10,9.45],
+    s5:[9.45,12.0], s6:[10.70,12.0]   // S6 = enfasi CTA dentro l'inquadratura di S5
+  };
+  const q=new URLSearchParams(location.search); const t=parseFloat(q.get('t')||'0'); const still=(q.get('bgmode')||'drift')==='still';
+  const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)); const prog=(t,[a,b])=>clamp((t-a)/(b-a));
+  const eoC=x=>1-Math.pow(1-x,3), eoQ=x=>1-Math.pow(1-x,5), eoE=x=>x>=1?1:1-Math.pow(2,-10*x), eio=x=>-(Math.cos(Math.PI*x)-1)/2, eioC=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+  const lerp=(a,b,p)=>a+(b-a)*p; const d=still?0:t/DUR;
+
+  // ---- Ambiente: "camera" diversa per ogni clip (salto al taglio) + deriva continua dentro la clip
+  const cams={s1:[0,1.06],s2:[-28,1.02],s3:[22,1.03],s4:[-12,1.04],s5:[0,1.0]};
+  let cam=cams.s1; for(const k of ['s2','s3','s4','s5']) if(t>=S[k][0]-0.17) cam=cams[k];
+  const envimg=document.getElementById('envimg'); const bg=q.get('bg');
+  if(bg){envimg.style.backgroundImage=`url("${bg}")`; document.querySelector('#env .proc').style.opacity=0;}
+  document.getElementById('env').style.opacity=eoC(prog(t,[0,0.6]));
+  envimg.style.transform=`translateX(${cam[0]-14*d}px) scale(${cam[1]+0.03-0.03*d})`;
+  const pf=eoE(prog(t,[0.1,0.55])), ps=eio(prog(t,[0.55,1.6])); document.getElementById('flare').style.opacity=pf*lerp(1,0.38,ps);
+  const rays=document.getElementById('rays'); rays.style.opacity=0.9*eoC(prog(t,[0.3,1.4])); rays.style.transform=`rotate(${-2+3*d}deg)`;
+  const P=document.getElementById('particles'); let seed=7; const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280;};
+  for(let i=0;i<22;i++){const x0=20+rnd()*930,y0=20+rnd()*170,sp=6+rnd()*10,ph=rnd()*Math.PI*2,s=2+rnd()*1.6,op=.18+rnd()*.32;const tt=still?0:t;const y=y0-sp*tt*0.5,x=x0+Math.sin(ph+tt*.6)*6;
+    if(y>8&&y<198){const el=document.createElement('i');el.style.transform=`translate(${x}px,${y}px) scale(${s/3})`;el.style.opacity=op*eoC(prog(t,[0.4,1.6]));P.appendChild(el);}}
+
+  // ---- visibilità scene + wipe (clip-path da sinistra a destra)
+  const scenes={s1:document.getElementById('s1'),s2:document.getElementById('s2'),s3:document.getElementById('s3'),s4:document.getElementById('s4'),s5:document.getElementById('s5')};
+  const order=['s1','s2','s3','s4','s5']; const trans=[S.t1,S.t2,S.t3,S.t4];
+  Object.values(scenes).forEach(s=>s.style.display='none');
+  let cur=0; for(let i=0;i<4;i++) if(t>=trans[i][0]) cur=i+1;
+  let inTrans=-1; for(let i=0;i<4;i++) if(t>=trans[i][0]&&t<trans[i][1]) inTrans=i;
+  const wipe=document.getElementById('wipe');
+  if(inTrans>=0){const p=eioC(prog(t,trans[inTrans])); const a=scenes[order[inTrans]], b=scenes[order[inTrans+1]];
+    a.style.display='block'; a.style.clipPath=`inset(0 0 0 ${p*100}%)`; b.style.display='block'; b.style.clipPath=`inset(0 ${(1-p)*100}% 0 0)`;
+    wipe.style.opacity=Math.sin(p*Math.PI); wipe.style.left=`${-120+p*1130}px`;
+  } else { scenes[order[cur]].style.display='block'; scenes[order[cur]].style.clipPath='none'; wipe.style.opacity=0; }
+
+  // ---- S1: titolo
+  const rise=(el,p,dy=104)=>{el.style.transform=`translateY(${(1-p)*dy}%)`;el.style.letterSpacing=`${lerp(0.14,-0.01,p)}em`;el.style.opacity=clamp(p*3);};
+  rise(document.querySelector('[data-el=w1]'),eoE(prog(t,[0.25,0.95]))); rise(document.querySelector('[data-el=w2]'),eoE(prog(t,[0.38,1.08])));
+  const colon=document.querySelector('[data-el=colon]'); const pc=eoE(prog(t,[0.95,1.25])); colon.style.opacity=(q.get('colon')||'1')==='1'?pc:0; colon.style.transform=`scale(${lerp(0.4,1,pc)})`;
+  const sw=document.querySelector('[data-el=s1sweep]'); const psw=prog(t,[1.25,1.85]); sw.style.opacity=psw>0&&psw<1?Math.sin(psw*Math.PI):0; sw.style.left=`${lerp(90,600,eio(psw))}px`;
+  document.querySelector('[data-el=s1rule]').style.width=`${427*eoC(prog(t,[1.1,1.6]))}px`;
+
+  // ---- CTA unica: grande in S1 (a destra del titolo), morfa nella pill piccola durante T1; enfasi in S6
+  const big={x:607,y:79,w:230,h:52,fs:20}, small={x:800,y:83,w:150,h:44,fs:13.5};
+  const pin=eoE(prog(t,[0.0,0.45]));                // CTA presente dal fotogramma 0 (scala 0,6→1 nei primi 0,45 s)
+  const pm=eioC(prog(t,[2.50,3.05]));               // morph grande → piccola
+  const pe=eoE(prog(t,[S.s6[0],S.s6[0]+0.6]));       // enfasi S6: scala 1→1,12 e leggero spostamento verso il centro-destra
+  const pset=eio(prog(t,[S.s6[0]+0.6,S.s6[0]+1.1]));
+  const sc=lerp(1,1.12,pe)*lerp(1,0.97,pset);
+  let cx=lerp(big.x,small.x,pm), cy=lerp(big.y,small.y,pm), cw=lerp(big.w,small.w,pm), ch=lerp(big.h,small.h,pm), cfs=lerp(big.fs,small.fs,pm);
+  const cta=document.getElementById('cta');
+  cta.style.left=`${cx}px`; cta.style.top=`${cy}px`; cta.style.width=`${cw}px`; cta.style.height=`${ch}px`; cta.style.fontSize=`${cfs}px`;
+  const s0=lerp(0.6,1,pin); cta.style.transform=`scale(${s0*sc})`; cta.style.opacity=Math.max(0.999,clamp(pin*3));
+  const sheen=document.querySelector('#cta .sheen'); const sh1=prog(t,[1.7,2.2]), sh2=prog(t,[S.s6[0]+0.4,S.s6[0]+1.0]); const psh=sh1>0&&sh1<1?sh1:(sh2>0&&sh2<1?sh2:0);
+  sheen.style.opacity=psh>0?1:0; sheen.style.transform=`translateX(${-120+ (cw+240)*eio(psh)}px) skewX(-18deg)`;
+  const ring=document.getElementById('ctaring'); const pr=prog(t,[S.s6[0],S.s6[0]+0.8]);
+  ring.style.left=`${cx+cw/2-(cw/2)*(1+pr*0.45)}px`; ring.style.top=`${cy+ch/2-(ch/2)*(1+pr*0.9)}px`; ring.style.width=`${cw*(1+pr*0.45)}px`; ring.style.height=`${ch*(1+pr*0.9)}px`; ring.style.opacity=pr>0&&pr<1?(1-pr)*0.9:0;
+  const burst=document.getElementById('ctaburst'); const pb=prog(t,[S.s6[0],S.s6[0]+1.3]);
+  burst.style.left=`${cx+cw/2-190}px`; burst.style.top=`${cy+ch/2-190}px`; burst.style.width='380px'; burst.style.height='380px'; burst.style.opacity=pb>0?Math.sin(Math.min(pb,1)*Math.PI)*0.9+(t>=S.s6[0]+1.3?0.35:0):0;
+  if(t>=S.s6[0]+1.3) burst.style.opacity=0.35;
+
+  // ---- clip operatore (stessa coreografia per i tre, stessa durata)
+  [['s2',S.s2],['s3',S.s3],['s4',S.s4]].forEach(([id,win])=>{
+    const sc=scenes[id]; const u=t-win[0]; const hero=sc.querySelector('.hero'); const lbl=sc.querySelector('.lbl');
+    lbl.style.opacity=eoC(prog(u,[0.05,0.45]))*0.9; lbl.style.transform=`translateY(${(1-eoC(prog(u,[0.05,0.45])))*8}px)`;
+    const ph=eoE(prog(u,[0.0,0.5])); hero.style.opacity=clamp(ph*1.6); hero.style.transform=`translateY(${(1-ph)*30}px) rotateX(${(1-ph)*14}deg)`; hero.style.filter=`blur(${(1-ph)*5}px)`;
+    const pl=eoC(prog(u,[0.3,0.7])); const lg=hero.querySelector('.logo'); lg.style.opacity=pl; lg.style.transform=`scale(${lerp(0.94,1,pl)})`;
+    hero.querySelector('.fino').style.opacity=eoC(prog(u,[0.6,0.85])); hero.querySelector('.idx').style.opacity=0.9*eoC(prog(u,[0.5,0.8]));
+    const v=hero.querySelector('.val'); if(!v.dataset.split){v.innerHTML=[...v.textContent].map(c=>`<span>${c}</span>`).join('');v.dataset.split=1;}
+    const sp=v.querySelectorAll('span'); const n=sp.length; sp.forEach((s,i)=>{const st=1.15-0.42-(n-1-i)*0.035; const p=eoQ(prog(u,[st,st+0.42])); s.style.transform=`translateY(${(1-p)*40}px)`; s.style.opacity=clamp(p*2);});
+    const ps=prog(u,[1.25,1.75]); const spec=hero.querySelector('.spec'); spec.style.opacity=ps>0&&ps<1?Math.sin(ps*Math.PI):0; spec.style.transform=`translateX(${lerp(-160,380,eio(ps))}px) skewX(-22deg)`;
+  });
+
+  // ---- S5: comparazione (le tre card entrano insieme, dati già noti)
+  { const u=t-S.s5[0]+0.2;
+    const rr=(el,p)=>{el.style.transform=`translateY(${(1-p)*104}%)`;el.style.letterSpacing=`${lerp(0.14,-0.01,p)}em`;el.style.opacity=clamp(p*3);};
+    rr(document.querySelector('[data-el=t1]'),eoE(prog(u,[0.0,0.6]))); rr(document.querySelector('[data-el=t2]'),eoE(prog(u,[0.1,0.7]))); document.querySelector('[data-el=t5rule]').style.width=`${44*eoC(prog(u,[0.5,0.9]))}px`;
+    document.querySelectorAll('#s5 .card').forEach(c=>{const p=eoE(prog(u,[0.05,0.75])); c.style.opacity=clamp(p*1.6); c.style.transform=`translateY(${(1-p)*28}px) rotateX(${(1-p)*16}deg)`; c.style.filter=`blur(${(1-p)*5}px)`;});
+  }
+
+  if(q.get('safe')==='1') document.getElementById('safe').classList.add('show');
+  if(q.get('guide')==='1') document.getElementById('guide').classList.add('show');
+  window.__ready=true;
+</script>
+</body>
+</html>

@@ -38,5 +38,8 @@ node render.mjs --times 0,2.7,9 --out ../06_storyboard/frames --safe 1 --bg asse
 ## Dati della comparazione (dal brief, non modificati)
 Sisal — FINO A 5.200€ · NetBet — FINO A 1.000€ · William Hill — FINO A 255€ · Criterio: importo massimo dichiarato del bonus sport.
 
+## Nota sullo stato del push (2026-09-10)
+Da questa sessione **non è possibile scrivere sul repository GitHub**: il push via git è rifiutato (403: "Claude doesn't have GitHub access to antoniobarbatodt9/Comparazione_Bonus_Sport_Sisal for your organization") e anche la creazione del branch via API GitHub è rifiutata (403 "Resource not accessible by integration"). I commit esistono sul branch locale `claude/intelligent-feynman-sqxtf5` della sessione. La consegna completa (137 file, 17,9 MB) è nello zip `consegna_01_concept_storyboard.zip` inviato in chat. Per allineare GitHub: installare la Claude GitHub App sul repo (https://github.com/apps/claude/installations/select_target) o ricollegare GitHub da claude.ai (Settings → Connectors) e chiedere di ripetere il push; in alternativa estrarre lo zip nella root del repo e committare.
+
 ## Gate di approvazione
 Per procedere alla produzione occorre un'approvazione esplicita di concept e storyboard, e (per chiudere il brand audit) lo sblocco di `www.sisal.it` oppure screenshot/materiali ufficiali. Dettagli in `04_brand_identity/brand_audit.md` §1.

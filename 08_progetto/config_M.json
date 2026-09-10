@@ -1,0 +1,24 @@
+{
+  "_nota": "Concept M (montaggio a scene). I valori della comparazione sono riportati esattamente come da brief e NON vanno modificati senza istruzione del cliente. Il template banner_scene.html li replica nel DOM.",
+  "formato": {"width": 970, "height": 250, "fps": 25, "durata_s": 12.0, "fotogrammi": 300, "audio": "SFX + ambiente stadio, sintesi procedurale, mai voiceover (richiesta cliente 2026-09-10); GIF e WEB_MUTO senza audio"},
+  "titolo": "BONUS SPORT",
+  "cta": "SCOPRI DI PIÙ",
+  "operatori": [
+    {"id": "sisal", "nome": "Sisal", "valore": "FINO A 5.200€", "logo": "assets/loghi/Sisal_white_neg_LRES.png", "logo_hero_px": 172, "logo_card_px": 118, "ordine": 1, "cliente": true},
+    {"id": "netbet", "nome": "NetBet", "valore": "FINO A 1.000€", "logo": "assets/loghi/NetBet_PrimaryLogo_White.png", "logo_hero_px": 164, "logo_card_px": 112, "ordine": 2, "cliente": false},
+    {"id": "williamhill", "nome": "William Hill", "valore": "FINO A 255€", "logo": "assets/loghi/WilliamHill_white.png", "logo_hero_px": 202, "logo_card_px": 138, "ordine": 3, "cliente": false}
+  ],
+  "ordine_motivazione": "sequenza richiesta dal cliente (Sisal, NetBet, William Hill), coincidente con l'ordine decrescente dell'importo; stessa coreografia e durata per i tre; nessun indice numerico (rimosso su richiesta); nessun accento sulla card Sisal in S5 (scelta cliente)",
+  "safe_area_disclaimer": {"x": 0, "y": 210, "width": 970, "height": 40, "colore": "#061a12", "contenuto": "vuota; inserimento manuale successivo di ADM, 18+, diciture"},
+  "scene_s": {"S1": [0.0, 2.6], "T1": [2.6, 2.95], "S2_sisal": [2.95, 4.8], "T2": [4.8, 5.1], "S3_netbet": [5.1, 6.95], "T3": [6.95, 7.25], "S4_williamhill": [7.25, 9.1], "T4": [9.1, 9.45], "S5_comparazione": [9.45, 12.0], "S6_enfasi_cta": [10.7, 12.0]},
+  "layout": {
+    "S1": {"bonus": [142, 72], "sport": [372, 72], "cta_grande": [599, 79, 230, 52], "regolo": [142, 150, 427, 2]},
+    "S2_S4": {"hero": [195, 30, 300, 158], "cta_media": [565, 80, 210, 54]},
+    "S5": {"titolo": [26, 60], "cards_x": [232, 420, 608], "card": [32, 168, 146], "cta_piccola": [800, 83, 150, 44]}
+  },
+  "cta_timeline": {"ingresso": [1.10, 1.55], "morph_grande_media": [2.50, 3.05], "morph_media_piccola": [9.05, 9.50], "enfasi_S6": {"scala": [10.70, 11.30], "anello": [10.70, 11.50], "alone": [10.70, 12.00], "riflesso": [11.10, 11.70]}},
+  "clip_operatore_relativa_s": {"hero": [0.0, 0.5], "logo": [0.3, 0.7], "fino_a": [0.6, 0.85], "cifre_complete": 1.15, "riflesso": [1.25, 1.75], "durata": 1.85},
+  "ambiente": {"sorgente": "Higgsfield MCP nano_banana_2, job e190625a-b390-47f4-ba30-cc464acb0373 (campo di calcio visto dall'alto, notturno, nessun elemento IP)", "file": "assets/env/env_M_pitch_topdown_FINAL_2036x596.jpg", "md5": "ea1d842587991411dbbb9bc7673308fa", "trattamento": "tinta verde Sisal (mix-blend color + screen 12 %), luminosità +6 %, ombra centrale 28 %, vignetta; camera per scena S1 1,06 · S2 1,02/−28 px · S3 1,03/+22 px · S4 1,04/−12 px · S5 1,00; deriva 14 px (ferma nella GIF)"},
+  "audio": {"script": "audio/make_audio.py", "seme": 20260910, "file": "audio/BonusSport_M_audio_48k.wav", "loudness_target_lufs": -20, "true_peak_max_dbtp": -1, "cue": {"bed_stadio": [0.0, 11.9], "accensione": [0.10, 1.60], "soffi_titolo": [0.25, 0.45], "ingresso_cta": 1.10, "whoosh": [2.55, 4.78, 6.93, 9.08], "lock_valori": [4.10, 6.25, 8.40], "card_S5": 9.50, "ping_cta": 10.70}, "voce": "MAI"},
+  "brand_tokens_PROVVISORI": {"sisal_green": "#00643a", "sisal_lime": "#b9d531", "ground_0": "#061a12", "font_display": "Montserrat 800 (sostitutivo)", "font_ui": "Inter 600 (sostitutivo)"}
+}

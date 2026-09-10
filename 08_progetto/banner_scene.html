@@ -42,8 +42,8 @@
   /* CTA (unica, morfa da grande a piccola) */
   #cta{position:absolute;border-radius:999px;background:var(--sisal-lime);color:#06301d;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.30),0 0 0 1px rgba(255,255,255,.08) inset;white-space:nowrap;z-index:5}
   #cta .sheen{position:absolute;top:-20px;bottom:-20px;width:60px;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 100%);transform:translateX(-120px) skewX(-18deg);opacity:0}
-  #ctaring{position:absolute;border-radius:999px;border:2px solid var(--lime-hi);opacity:0;pointer-events:none;z-index:4}
-  #ctaburst{position:absolute;border-radius:50%;opacity:0;pointer-events:none;z-index:3;background:radial-gradient(closest-side,rgba(230,255,138,.55),rgba(185,213,49,.18) 45%,rgba(185,213,49,0) 70%)}
+  #ctaring{position:absolute;box-sizing:border-box;border-radius:999px;border:2px solid var(--lime-hi);opacity:0;pointer-events:none;z-index:4}
+  #ctaburst{position:absolute;border-radius:50%;opacity:0;pointer-events:none;z-index:3;background:radial-gradient(closest-side,rgba(230,255,138,.55),rgba(185,213,49,.16) 40%,rgba(185,213,49,0) 62%)}
   /* etichetta piccola nelle clip operatore */
   .lbl{position:absolute;left:26px;top:96px;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:.06em;text-transform:uppercase;opacity:0}
   .lbl b{color:var(--sisal-lime);font-weight:800}
@@ -89,11 +89,11 @@
 
   <!-- S2/S3/S4: clip operatore (una per volta) -->
   <div class="scene" id="s2">
-    <div class="hero" data-op="sisal"><div class="idx">1 / 3</div><div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:172px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">5.200€</div></div><div class="spec"></div></div></div>
+    <div class="hero" data-op="sisal"><div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:172px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">5.200€</div></div><div class="spec"></div></div></div>
   <div class="scene" id="s3">
-    <div class="hero" data-op="netbet"><div class="idx">2 / 3</div><div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:164px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">1.000€</div></div><div class="spec"></div></div></div>
+    <div class="hero" data-op="netbet"><div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:164px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">1.000€</div></div><div class="spec"></div></div></div>
   <div class="scene" id="s4">
-    <div class="hero" data-op="williamhill"><div class="idx">3 / 3</div><div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:202px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">255€</div></div><div class="spec"></div></div></div>
+    <div class="hero" data-op="williamhill"><div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:202px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">255€</div></div><div class="spec"></div></div></div>
 
   <!-- S5/S6: comparazione + CTA in risalto -->
   <div class="scene" id="s5">
@@ -130,7 +130,7 @@
   // ---- Ambiente: "camera" diversa per ogni clip (salto al taglio) + deriva continua dentro la clip
   const cams={s1:[0,1.06],s2:[-28,1.02],s3:[22,1.03],s4:[-12,1.04],s5:[0,1.0]};
   let cam=cams.s1; for(const k of ['s2','s3','s4','s5']) if(t>=S[k][0]-0.17) cam=cams[k];
-  const envimg=document.getElementById('envimg'); const bg=q.get('bg')||'assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg';
+  const envimg=document.getElementById('envimg'); const bg=q.get('bg')||'assets/env/env_M_pitch_topdown_FINAL_2036x596.jpg';
   if(bg){envimg.style.backgroundImage=`url("${bg}")`; document.querySelector('#env .proc').style.opacity=0;}
   document.getElementById('env').style.opacity=eoC(prog(t,[0,0.6]));
   envimg.style.transform=`translateX(${cam[0]-14*d}px) scale(${cam[1]+0.03-0.03*d})`;
@@ -170,13 +170,13 @@
   const L2=(k)=>lerp(lerp(big[k],mid[k],pm1),small[k],pm2); let cx=L2('x'), cy=L2('y'), cw=L2('w'), ch=L2('h'), cfs=L2('fs');
   const cta=document.getElementById('cta');
   cta.style.left=`${cx}px`; cta.style.top=`${cy}px`; cta.style.width=`${cw}px`; cta.style.height=`${ch}px`; cta.style.fontSize=`${cfs}px`;
-  const s0=lerp(0.7,1,pin); cta.style.transform=`translateX(${(1-pin)*36}px) scale(${s0*sc})`; cta.style.opacity=clamp(pin*2.5);
+  const s0=lerp(0.7,1,pin); cta.style.transformOrigin=(t>=S.s6[0]?'100% 50%':'50% 50%'); cta.style.transform=`translateX(${(1-pin)*36}px) scale(${s0*sc})`; cta.style.opacity=clamp(pin*2.5);
   const sheen=document.querySelector('#cta .sheen'); const sh1=prog(t,[1.7,2.2]), sh2=prog(t,[S.s6[0]+0.4,S.s6[0]+1.0]); const psh=sh1>0&&sh1<1?sh1:(sh2>0&&sh2<1?sh2:0);
   sheen.style.opacity=psh>0?1:0; sheen.style.transform=`translateX(${-120+ (cw+240)*eio(psh)}px) skewX(-18deg)`;
   const ring=document.getElementById('ctaring'); const pr=prog(t,[S.s6[0],S.s6[0]+0.8]);
-  ring.style.left=`${cx+cw/2-(cw/2)*(1+pr*0.45)}px`; ring.style.top=`${cy+ch/2-(ch/2)*(1+pr*0.9)}px`; ring.style.width=`${cw*(1+pr*0.45)}px`; ring.style.height=`${ch*(1+pr*0.9)}px`; ring.style.opacity=pr>0&&pr<1?(1-pr)*0.9:0;
+  ring.style.left=`${cx+cw-1-cw*(1+pr*0.45)}px`; ring.style.top=`${cy+ch/2-(ch/2)*(1+pr*0.9)}px`; ring.style.width=`${cw*(1+pr*0.45)}px`; ring.style.height=`${ch*(1+pr*0.9)}px`; ring.style.opacity=pr>0&&pr<1?(1-pr)*0.9:0;
   const burst=document.getElementById('ctaburst'); const pb=prog(t,[S.s6[0],S.s6[0]+1.3]);
-  burst.style.left=`${cx+cw/2-190}px`; burst.style.top=`${cy+ch/2-190}px`; burst.style.width='380px'; burst.style.height='380px'; burst.style.opacity=pb>0?Math.sin(Math.min(pb,1)*Math.PI)*0.9+(t>=S.s6[0]+1.3?0.35:0):0;
+  burst.style.left=`${cx+cw/2-30-150}px`; burst.style.top=`${cy+ch/2-150}px`; burst.style.width='300px'; burst.style.height='300px'; burst.style.opacity=pb>0?Math.sin(Math.min(pb,1)*Math.PI)*0.9+(t>=S.s6[0]+1.3?0.35:0):0;
   if(t>=S.s6[0]+1.3) burst.style.opacity=0.35;
 
   // ---- clip operatore (stessa coreografia per i tre, stessa durata)
@@ -184,7 +184,7 @@
     const sc=scenes[id]; const u=t-win[0]; const hero=sc.querySelector('.hero');
     const ph=eoE(prog(u,[0.0,0.5])); hero.style.opacity=clamp(ph*1.6); hero.style.transform=`translateY(${(1-ph)*30}px) rotateX(${(1-ph)*14}deg)`; hero.style.filter=`blur(${(1-ph)*5}px)`;
     const pl=eoC(prog(u,[0.3,0.7])); const lg=hero.querySelector('.logo'); lg.style.opacity=pl; lg.style.transform=`scale(${lerp(0.94,1,pl)})`;
-    hero.querySelector('.fino').style.opacity=eoC(prog(u,[0.6,0.85])); hero.querySelector('.idx').style.opacity=0.9*eoC(prog(u,[0.5,0.8]));
+    hero.querySelector('.fino').style.opacity=eoC(prog(u,[0.6,0.85])); 
     const v=hero.querySelector('.val'); if(!v.dataset.split){v.innerHTML=[...v.textContent].map(c=>`<span>${c}</span>`).join('');v.dataset.split=1;}
     const sp=v.querySelectorAll('span'); const n=sp.length; sp.forEach((s,i)=>{const st=1.15-0.42-(n-1-i)*0.035; const p=eoQ(prog(u,[st,st+0.42])); s.style.transform=`translateY(${(1-p)*40}px)`; s.style.opacity=clamp(p*2);});
     const ps=prog(u,[1.25,1.75]); const spec=hero.querySelector('.spec'); spec.style.opacity=ps>0&&ps<1?Math.sin(ps*Math.PI):0; spec.style.transform=`translateX(${lerp(-160,380,eio(ps))}px) skewX(-22deg)`;

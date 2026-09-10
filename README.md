@@ -50,13 +50,14 @@ Sisal — FINO A 5.200€ · NetBet — FINO A 1.000€ · William Hill — FINO
 ## Nota sullo stato del push (2026-09-10)
 Da questa sessione **non è possibile scrivere sul repository GitHub**: il push via git è rifiutato (403: "Claude doesn't have GitHub access to antoniobarbatodt9/Comparazione_Bonus_Sport_Sisal for your organization") e anche la creazione del branch via API GitHub è rifiutata (403 "Resource not accessible by integration"). I commit esistono sul branch locale `claude/intelligent-feynman-sqxtf5` della sessione. La consegna completa (137 file, 17,9 MB) è nello zip `consegna_01_concept_storyboard.zip` inviato in chat. Per allineare GitHub: installare la Claude GitHub App sul repo (https://github.com/apps/claude/installations/select_target) o ricollegare GitHub da claude.ai (Settings → Connectors) e chiedere di ripetere il push; in alternativa estrarre lo zip nella root del repo e committare.
 
-## Concept M — montaggio a scene (storyboard v2 del 2026-09-10, in attesa di approvazione)
-Su richiesta del cliente è stato preparato lo storyboard di un **secondo concept**: scene montate come clip separate con transizioni (S1 "BONUS SPORT  SCOPRI DI PIÙ" a tutto banner, ingresso BONUS → SPORT → CTA → Sisal → NetBet → William Hill uno per volta con CTA media accanto alla card → comparazione → CTA in risalto), 12,0 s, sfondo **campo di calcio visto dall'alto** (Higgsfield), CTA presente in ogni scena, traccia SFX + ambiente stadio (**mai voiceover**). La v2 recepisce le note del cliente (vedi `06_storyboard/storyboard_M.md` §0).
-- `05_concept/concept_M.md` — lettura della richiesta punto per punto, struttura, pari dignità, scelte aperte.
-- `06_storyboard/storyboard_M.md` — timeline, layout, 16 fotogrammi-chiave, transizioni, **piano audio**, piano QC.
-- `06_storyboard/storyboard_M_contact_sheet.png` — contact sheet; `frames_M/` (safe area evidenziata) e `frames_M_clean/`.
-- `08_progetto/banner_scene.html` + `render_scene.mjs` — template e renderer del concept M (`?t=<s>&safe=1`).
-Nessun master del concept M è stato prodotto: si attende l'approvazione esplicita. Il concept A consegnato in `10_export/` resta invariato.
+## Concept M — montaggio a scene (PRODOTTO il 2026-09-10 dopo approvazione)
+Secondo concept richiesto dal cliente: scene montate come clip separate con transizioni (S1 "BONUS SPORT  SCOPRI DI PIÙ" a tutto banner, ingresso BONUS → SPORT → CTA → Sisal → NetBet → William Hill uno per volta con CTA media accanto alla card → comparazione → CTA in risalto), **12,0 s = 300 fotogrammi**, sfondo **campo di calcio visto dall'alto** (Higgsfield), CTA presente in ogni scena, **traccia audio SFX + ambiente stadio sintetizzata proceduralmente (mai voiceover)**. Approvazioni del cliente: 12 s · sfondo zenitale · audio ok · nessun accento sulla card Sisal in S5 · indici "n/3" rimossi.
+
+Consegna in `10_export/` (prefisso `BonusSport_970x250_25fps_12s_M_`): `_MASTER.mp4` (con audio AAC 192k), `_MASTER_444_archivio.mov` (yuv444p + PCM 24 bit), `_WEB.mp4` (≤ 3,5 MB, AAC 128k), `_WEB_MUTO.mp4` (senza traccia audio, per i circuiti che non ammettono audio), `_CONTROL.gif` (≤ 3,5 MB, muta), `_ENDFRAME_fallback_statico.png`, `audio/…_audio_48k24.wav` (traccia separata) e `audio/…_audio_misura.json` (loudness/true-peak).
+- `05_concept/concept_M.md`, `06_storyboard/storyboard_M.md` (+ contact sheet e `frames_M/`), `08_progetto/config_M.json` — concept, storyboard v2 e parametri.
+- `08_progetto/banner_scene.html` + `render_scene.mjs` + `make_master_M.sh` — template, renderer e pipeline; `08_progetto/audio/make_audio.py` — sintesi audio deterministica (seme fisso).
+- `11_qc/qc_check_M.py` + `11_qc/report_qc_M.md` — controlli automatici e visivi del concept M.
+Il concept A (9 s, pannello unico) resta consegnato e invariato in `10_export/`.
 
 ## Gate di approvazione
 Per procedere alla produzione occorre un'approvazione esplicita di concept e storyboard, e (per chiudere il brand audit) lo sblocco di `www.sisal.it` oppure screenshot/materiali ufficiali. Dettagli in `04_brand_identity/brand_audit.md` §1.

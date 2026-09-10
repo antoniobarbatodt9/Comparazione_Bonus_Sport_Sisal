@@ -100,6 +100,6 @@ Batch `generate_image_batch` di 4 still 21:9, `nano_banana_pro` (servito `nano_b
 | 23 | `7aaef159-1e57-4a77-b778-4992bfa31766` | alta angolazione, campo intero | campo intero con bordi neri, suggestivo ma il campo è piccolo nel 970×250 | riserva |
 | 24 | `2523bb8a-5f99-4b86-add0-9e7270a05403` | zenitale bagnato con foschia | inclinata e molto nebbiosa | scartato |
 
-Trasferimento (preview per lo storyboard): ritaglio fascia centrale 3168×927 (y=208), Lanczos a 1018×298, JPEG q86 4:4:4 (29 807 byte), md5 `40a0dc0c3c5b7c15bce12887d35e2b40`, 3 blocchi base64 ricomposti e verificati. File: `08_progetto/assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg`. In produzione: stesso ritaglio a 2036×596 q90 (≈ 10 blocchi).
+Trasferimento (preview per lo storyboard): ritaglio fascia centrale 3168×927 (y=208), Lanczos a 1018×298, JPEG q86 4:4:4 (29 807 byte), md5 `40a0dc0c3c5b7c15bce12887d35e2b40`, 3 blocchi base64 ricomposti e verificati. File: `08_progetto/assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg`. **Produzione (2026-09-10)**: stesso ritaglio trasferito a **2036×596** (JPEG q86 4:2:0, 146 342 byte), md5 `ea1d842587991411dbbb9bc7673308fa`, 13 blocchi base64 ricomposti e verificati → `08_progetto/assets/env/env_M_pitch_topdown_FINAL_2036x596.jpg` (default del template).
 
 Audio: verificato che gli strumenti audio di Higgsfield MCP sono solo text-to-speech (vedi `06_storyboard/storyboard_M.md` §7.1): non usati.

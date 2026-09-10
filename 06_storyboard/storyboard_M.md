@@ -1,6 +1,6 @@
 # Storyboard — Concept M "Montaggio a scene" · v2 · 970×250 · 25 fps · 12,0 s · 300 fotogrammi · con SFX (mai voiceover)
 
-Stato: **v2 in attesa di approvazione esplicita** (revisione del 2026-09-10 sulle note del cliente). Fotogrammi reali renderizzati dal progetto `08_progetto/banner_scene.html`. `frames_M/` = con safe area evidenziata in magenta (solo per lettura); `frames_M_clean/` = come apparirà. Contact sheet: `storyboard_M_contact_sheet.png`.
+Stato: **v2 APPROVATA e prodotta** (2026-09-10). Conferme del cliente: sfondo zenitale ok · 12,0 s · audio ok (bed stadio + SFX procedurali) · nessun accento sulla card Sisal in S5 · **indici "1/3, 2/3, 3/3" rimossi dalle card** (unica differenza rispetto ai fotogrammi dello storyboard). Esportazioni in `10_export/` (prefisso `BonusSport_970x250_25fps_12s_M_`), QC in `11_qc/report_qc_M.md`. Fotogrammi reali renderizzati dal progetto `08_progetto/banner_scene.html`. `frames_M/` = con safe area evidenziata in magenta (solo per lettura); `frames_M_clean/` = come apparirà. Contact sheet: `storyboard_M_contact_sheet.png`.
 
 ## 0. Che cosa cambia nella v2 (note del cliente → soluzione)
 
@@ -55,7 +55,7 @@ Presenza della CTA: assente solo nei primi 1,10 s di S1 (ingresso BONUS → SPOR
 | S2–S4 | CTA media | 565, 80 | 210 × 54 | 18 px; centro verticale allineato alla card; gruppo card+CTA centrato (195–775) |
 | S5/S6 | titolo | 26, 60 | 196 × 92 | come concept A |
 | S5/S6 | card | 232 / 420 / 608, 32 | 168 × 146 | identiche; loghi 118/112/138 px; valori 29 px |
-| S5/S6 | CTA piccola | 800, 83 | 150 × 44 | 13,5 px; in S6 scala fino a 1,12 → 0,97 (resta dentro 780–970 × 60–150) |
+| S5/S6 | CTA piccola | 800, 83 | 150 × 44 | 13,5 px; in S6 scala fino a 1,12 → 0,97 **ancorata al bordo destro** (x=950 fisso, cresce verso sinistra); anello e alone entro x=950 |
 | **tutte** | **Safe area disclaimer** | **0, 210** | **970 × 40** | **piatta `#061a12`, nessun elemento, nessun movimento, nessun wipe, per tutti i 300 fotogrammi** |
 
 I wipe e gli effetti di luce sono confinati a y < 210: la safe area non viene mai attraversata.

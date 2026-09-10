@@ -1,6 +1,6 @@
 # Concept M — "Montaggio a scene" (richiesta del cliente, 2026-09-10)
 
-Stato: **storyboard v2 in attesa di approvazione** (revisione del 2026-09-10 sulle note del cliente: niente due punti, ingresso BONUS → SPORT → CTA, etichetta piccola eliminata, CTA più grande nelle scene operatore, sfondo campo di calcio visto dall'alto). Nessun master prodotto per questo concept. Il concept A (pannello unico, 9 s) resta consegnato in `10_export/` e non viene toccato.
+Stato: **approvato e prodotto il 2026-09-10** (12 s, sfondo zenitale, audio SFX+bed, nessun accento S5, indici n/3 rimossi). Storyboard v2 (revisione del 2026-09-10 sulle note del cliente: niente due punti, ingresso BONUS → SPORT → CTA, etichetta piccola eliminata, CTA più grande nelle scene operatore, sfondo campo di calcio visto dall'alto). Nessun master prodotto per questo concept. Il concept A (pannello unico, 9 s) resta consegnato in `10_export/` e non viene toccato.
 
 ## 1. Che cosa ho capito della richiesta (riassunto per conferma)
 

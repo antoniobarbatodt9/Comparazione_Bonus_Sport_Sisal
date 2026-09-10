@@ -1,0 +1,1363 @@
+pages: 35 {'format': 'PDF 1.4', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': '', 'creationDate': '', 'modDate': '', 'trapped': '', 'encryption': None}
+
+===== PAGE 1 ===== (chars 916, images 3)
+DOSSIER DI RICERCA VISUALE
+Tre offerte.
+Pari dignità visiva.
+22 candidati esaminati · 10 schede visuali · 9 formati · 5 reference per Fable
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+1
+Una base concreta per progettare il confronto, con un’offerta da
+valorizzare attraverso dati, timing e accenti misurati.
+LA CONCLUSIONE CENTRALE
+La soluzione da sviluppare è una griglia persistente di tre moduli equivalenti. Le reference più utili
+documentano singoli meccanismi, non un modello italiano già pronto da replicare.
+LIMITE DELLA RICERCA
+Nessun esempio verificato soddisfa contemporaneamente Italia, tre operatori, comparazione animata e pari
+dignità visiva. Le 10 schede includono screenshot di preview, stati interattivi e asset statici esplicitamente
+etichettati.
+Non sono state generate nuove immagini creative o nuovi video. Le immagini riprodotte sono materiali di riferimento
+attribuiti alle rispettive fonti.
+
+
+===== PAGE 2 ===== (chars 1877, images 0)
+01 / COME LEGGERE IL DOSSIER
+Evidenza prima dell’ispirazione
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+2
+CRITERIO DI SELEZIONE
+Priorità a fonti italiane, sportsbook/casinò e unità HTML5 ispezionabili; poi riferimenti adiacenti per numeri,
+gerarchia, luce e transizioni. I 22 candidati sono uno screening, non 22 annunci qualificati di confronto a tre.
+Sigla
+Classificazione
+Cosa dimostra
+A · 3
+Annuncio/video pubblicato
+Canale ufficiale o notizia di lancio. Non equivale sempre a verifica della
+diffusione paid.
+A* · 4
+Campagna dichiarata dal fornitore
+Pubblicazione riportata nella selezione di campagne; non confermata
+da un ID in un archivio ads.
+C · 1
+Case study con risultati
+Metriche dichiarate e attribuite alla fonte; non prova della causalità di
+una soluzione grafica.
+P · 13
+Portfolio / preview dimostrativa
+Esistenza del lavoro o dell’asset. Non dimostra che l’annuncio sia stato
+distribuito.
+T · 1
+Tutorial
+Spiega una tecnica; non documenta una campagna.
+E · 0
+Concept sperimentale
+Nessun concept sufficientemente verificato ammesso. Non si deduce
+questa categoria dall’assenza di un piano media.
+OSSERVATO / DICHIARATO / PROPOSTO
+“Osservato” descrive screenshot e interazioni eseguite. “Dichiarato” attribuisce informazioni alla fonte.
+“Proposto” identifica un adattamento originale. ND significa non determinato: non è uno zero e non è assenza
+accertata.
+COSA SIGNIFICA DINAMICO
+Un annuncio può cambiare i dati senza animarsi. Un video può essere animato senza confrontare offerte. Tre
+quote 1/X/2 non sono tre operatori; tre annunci affiancati in una galleria non sono tre card della stessa
+creatività.
+FOTOGRAMMI E TEMPI
+Le catture non costituiscono una registrazione temporizzata. Per BMW sono documentati due stati
+d’interazione; per gli altri finalisti sono indicati i limiti dell’acquisizione. Non vengono inventati durata, easing,
+pulse o frame finali.
+
+
+===== PAGE 3 ===== (chars 2069, images 0)
+02 / MERCATO E ACCESSO ALLE FONTI
+Italia: il contesto decide l’uso
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+3
+VINCOLO RILEVANTE PER SPORTSBOOK E CASINÒ
+Le linee guida AGCOM sull’art. 9 richiamano il divieto di comunicazioni promozionali del gioco con vincita in
+denaro. Distinguono le informazioni e i servizi di comparazione, subordinandoli a continenza, non
+ingannevolezza e trasparenza; conta anche il modo in cui il messaggio è confezionato e diffuso.
+CONSEGUENZA PER QUESTO PROGETTO
+Tre card equilibrate, un simbolo 18+ o l’assenza di banconote non rendono automaticamente ammissibile una
+pubblicità. Anche luce, pulse, claim e CTA possono contribuire all’enfasi promozionale. Le direzioni sono
+proposte di linguaggio visivo: la loro utilizzabilità richiede di valutare insieme contenuto e collocazione.
+S20: AGCOM: Allegato A alla delibera 132/19/CONS
+DATI DA FISSARE PRIMA DI CHIAMARE UN’OFFERTA “MIGLIORE”
+Un criterio esplicito, dati omogenei, medesimo periodo o istante di rilevazione, condizioni pertinenti e fonte
+verificabile. Per le quote: stesso evento, mercato ed esito. Per offerte e bonus: non confrontare soltanto il
+valore nominale.
+Fonte consultata
+Esito e limite
+Google Ads Transparency Center ·
+Italia
+Interfaccia caricata senza schede di annunci consultabili. Nessun ID pubblicitario
+verificato.
+Meta Ad Library · Italia
+Pagina non consultabile in questa sessione; nessun annuncio verificato.
+YouTube
+Video italiani identificati su canali ufficiali; playback non disponibile per la verifica
+completa del montaggio.
+Portfolio e preview live
+BMW e galleria Bannerflow consultabili. Asset Hunch acquisiti come immagini statiche.
+Behance / Vimeo
+Portfolio leggibili; video Vimeo limitati da un blocco di accesso. Nessuna animazione
+dedotta dalle miniature.
+Google Rich Media Gallery
+Pagina/template consultati, ma nessuna unità utile verificata nella galleria. Tutorial
+GWD accessibile.
+Ricognizione al 10 settembre 2026, non censimento esaustivo né certificazione normativa. Un accesso fallito non
+dimostra che non esistano campagne pertinenti.
+
+
+===== PAGE 4 ===== (chars 1535, images 0)
+03 / SCREENING INIZIALE
+I 22 candidati
+01–10 hanno una scheda visuale. Tutti i candidati hanno una valutazione tecnica e di adattabilità.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+4
+ID
+Candidato
+Settore
+Prova
+01
+BMW Finance: selettore modelli
+Automotive / finanziamento
+P
+02
+Greatodds: Manchester City / Chelsea
+Sportsbook
+P
+03
+Merkur XTip: Croatia / Morocco
+Sportsbook
+P
+04
+Bluestep: ristrutturazione
+Banche / prestiti
+P
+05
+Storytel: Becoming Sherlock
+Abbonamenti / contenuti digitali
+P
+06
+Meliá Rewards: Wonder Week
+Viaggi / programma fedeltà
+P
+07
+Casumo: Wheel
+Casinò
+P
+08
+BMW Serie 5: Hotspot
+Automotive
+P
+09
+Facile.it: Va a pagare
+Comparatore / assicurazioni
+A
+10
+Tipico: Lakers / Orlando
+Sportsbook
+P
+11
+Mozzart: Mystic Fortune Deluxe
+Casinò / slot
+P
+12
+Kaizen: Social Dynamic Ads
+Sportsbook / iGaming
+C
+13
+Segugio: Assicurazioni 2024
+Comparatore / assicurazioni
+A
+14
+Segugio: Energia Gas 2026
+Comparatore / energia
+A
+15
+Hallon: campagna sale
+Telefonia
+A*
+16
+Three: banner video
+Telefonia
+A*
+17
+ATG: corse ippiche
+Scommesse sportive
+A*
+18
+Elko: Samsung Frame
+Retail / elettronica
+A*
+19
+Google Assistant: set display
+Software / assistente digitale
+P
+20
+Casino Banner Design: Behance
+Casinò
+P
+21
+HTML5 interactive banner ads: Shapovalov
+Portfolio HTML5 multisettore
+P
+22
+Google Web Designer: Transition Gallery
+Tecnica HTML5
+T
+Ordine dei primi 10: utilità per il brief e qualità del materiale acquisito, non graduatoria di performance pubblicitaria. I
+candidati successivi completano contesto, settori e limiti dello screening.
+
+
+===== PAGE 5 ===== (chars 2280, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 01–02
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+5
+01 BMW Finance: selettore modelli
+P · Automotive / finanziamento · Regno Unito: sterline e condizioni BMW UK
+Formato / durata: HTML5 interattivo; preview 240×480 · Interattiva, nessuna durata fissa verificata
+Hook / comparazione: Auto e rata nello stesso campo visivo. Quattro modelli consultabili in sequenza, un solo brand; non
+tre offerte simultanee.
+Ordine / gerarchia: Modello → CTA → selettore/prezzo → anticipo → auto → condizioni. Griglia stabile; prezzo centrale;
+prodotto ancorato in basso.
+Offerta migliore: La selezione aggiorna modello, foto e prezzo; non dichiara un vincitore.
+Animazione / pulse: Trascinamento circolare verificato: da 118i (£249) a X3 (£409). Bagliore sul cursore; periodicità non
+misurata.
+Transizioni / 3D: Cambio coordinato di dati e prodotto; andamento completo ND. Fotografie 2D; nessuna scena 3D
+verificata.
+Frame finale: Stato selezionato persistente; CTA e condizioni visibili.
+Valutazione: Prima scelta per sincronizzare dati e visual, da trasformare in tre card sempre visibili.
+S04: The Bannermen: portfolio e preview BMW · S05: BMW Finance: preview HTML5 interattiva
+02 Greatodds: Manchester City / Chelsea
+P · Sportsbook · Distribuzione ND; copy sudslavo
+Formato / durata: Asset statico WebP 410×410 in galleria DPA · Non applicabile allo statico; versione animata ND
+Hook / comparazione: Atleti e stemmi rendono riconoscibile la partita. Tre esiti 1/X/2 dello stesso operatore, non tre
+operatori.
+Ordine / gerarchia: Partita → data → etichette 1/X/2 → quote. Tre box numerici uguali; giocatori e loghi non hanno pari peso
+ottico.
+Offerta migliore: Nessun valore marcato come migliore.
+Animazione / pulse: Non osservata: la prova disponibile è un asset statico. Assente nell’asset statico.
+Transizioni / 3D: Non osservabile. Ritagli fotografici e fondale grafico; 3D non dimostrato.
+Frame finale: Lo stesso asset; nessun end frame video verificato.
+Valutazione: Ottimo riferimento per tre metriche allineate; non confrontare esiti diversi come offerte equivalenti.
+S07: Hunch: Creative Examples, filtro Betting · S22: Greatodds: asset statico originale
+
+
+===== PAGE 6 ===== (chars 2159, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 03–04
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+6
+03 Merkur XTip: Croatia / Morocco
+P · Sportsbook · Distribuzione ND; copy “Subota”
+Formato / durata: Asset statico WebP 529×529 in galleria DPA · Non applicabile allo statico
+Hook / comparazione: Due bandiere contrapposte e marchio in alto. Tre quote, ma il box centrale è più stretto; un solo
+operatore.
+Ordine / gerarchia: Brand → bandiere/VS → quote → giorno e competizione. Squadre simmetriche, metriche con larghezze
+diseguali.
+Offerta migliore: Giallo comune ai numeri; nessuna migliore offerta evidenziata.
+Animazione / pulse: Non osservata nell’asset. Assente nell’asset statico.
+Transizioni / 3D: Non osservabile. Bandiere, aste e stadio con profondità illustrata; animazione 3D ND.
+Frame finale: Asset unico, non finale temporizzato.
+Valutazione: Riferimento diagnostico: conserva contrasto e allineamento, correggi la cella centrale e aggiungi etichette.
+S07: Hunch: Creative Examples, filtro Betting · S23: Merkur XTip: asset statico originale
+04 Bluestep: ristrutturazione
+P · Banche / prestiti · Svezia: copy svedese
+Formato / durata: Banner HTML5 in preview; rapporto acquisito 4:3 · ND; catturato uno stato
+Hook / comparazione: Domanda sulla ristrutturazione accanto a un gesto concreto. Un servizio, nessuna comparazione.
+Ordine / gerarchia: Domanda → precisazione → CTA; foto a destra e logo in basso. Testo e azione ben separati; CTA gialla su
+fondo quieto.
+Offerta migliore: Il colore isola l’azione; nessuna offerta concorrente.
+Animazione / pulse: La fonte descrive interazione legata alla pittura; catturato lo stato con parete dipinta, non l’intero
+gesto. Non verificato.
+Transizioni / 3D: Rivelazione tramite pittura descritta dalla fonte, non misurata. Foto 2D.
+Frame finale: Stato acquisito con messaggio, CTA e marchio; fine ciclo ND.
+Valutazione: Utile per una rivelazione localizzata del dato, senza spostare le tre card.
+S08: Bannerflow: galleria di preview live · S09: Bluestep: preview acquisita · S13: Bannerflow: selezione di campagne display
+
+
+===== PAGE 7 ===== (chars 2317, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 05–06
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+7
+05 Storytel: Becoming Sherlock
+P · Abbonamenti / contenuti digitali · Mercato della singola preview ND; copy inglese
+Formato / durata: HTML5 con componente audio; rapporto 6:5 · ND; ciclo non cronometrato
+Hook / comparazione: Copertina riconoscibile e invito ad ascoltare. Un contenuto; non tre piani né tre servizi.
+Ordine / gerarchia: Logo → headline; a destra cover → sottotitoli → controllo audio. Composizione stabile in due colonne,
+testo arancio su nero.
+Offerta migliore: L’attività è circoscritta all’area audio e ai sottotitoli.
+Animazione / pulse: Nella preview cambia il sottotitolo; waveform e controllo play presenti. Non misurata la traccia
+completa. Nessun pulse di una card verificato.
+Transizioni / 3D: Aggiornamento testuale nell’area audio; effetto preciso ND. Cover piatta, nessun 3D verificato.
+Frame finale: Interfaccia persistente con copertina e play; finale temporizzato ND.
+Valutazione: Buon principio: movimento in una sola zona, informazione principale ferma e comprensibile senza audio.
+S08: Bannerflow: galleria di preview live · S10: Storytel: preview acquisita · S13: Bannerflow: selezione di campagne display
+06 Meliá Rewards: Wonder Week
+P · Viaggi / programma fedeltà · Mercato ND; creatività in spagnolo
+Formato / durata: Preview HTML5 verticale; rapporto 1:2 · ND; uno stato completo acquisito
+Hook / comparazione: Titolo geometrico e palette turchese. Una promozione fedeltà, non tre hotel comparati.
+Ordine / gerarchia: Logo → titolo → beneficio → percentuale → scadenza → CTA. Gerarchia verticale; percentuale molto
+visibile.
+Offerta migliore: Percentuale, contrasto e ombre diagonali.
+Animazione / pulse: Ciclo completo non verificato; non attribuita un’animazione alle ombre. Non verificato.
+Transizioni / 3D: ND. Profondità grafica 2,5D: ombre lunghe; nessun rendering 3D animato verificato.
+Frame finale: Stato completo con beneficio, scadenza e CTA.
+Valutazione: Prendere luce e ordine verticale; evitare di copiare enfasi promozionale o testi. Questa preview non è il caso
+Meliá autunnale con dropdown.
+S08: Bannerflow: galleria di preview live · S11: Meliá Wonder Week: preview acquisita
+
+
+===== PAGE 8 ===== (chars 2086, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 07–08
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+8
+07 Casumo: Wheel
+P · Casinò · Mercato ND; copy inglese
+Formato / durata: Preview HTML5; screenshot parziale del viewport · ND; uno stato acquisito
+Hook / comparazione: Marchio turchese, headline bianca e CTA gialla su viola. Un operatore, nessun confronto.
+Ordine / gerarchia: Brand → promessa promozionale → CTA. Tre livelli semplici; CTA molto evidente.
+Offerta migliore: Contrasto cromatico; messaggio orientato alla vincita.
+Animazione / pulse: Non verificata una sequenza completa; non dedurre una ruota animata dal copy. Non verificato.
+Transizioni / 3D: ND. Nessun oggetto 3D visibile nello stato acquisito.
+Frame finale: Stato osservato con CTA; porzione inferiore oltre il viewport non acquisita.
+Valutazione: Solo palette e semplicità: copy di vincita e invito al gioco esclusi dalla direzione italiana.
+S08: Bannerflow: galleria di preview live · S12: Casumo: preview acquisita
+08 BMW Serie 5: Hotspot
+P · Automotive · Mercato ND; copy inglese
+Formato / durata: HTML5 interattivo; unità 240×480 · Interattiva, nessuna durata fissa verificata
+Hook / comparazione: Auto illuminata su fondo scuro. Più dettagli di una sola auto; non confronto tra offerte.
+Ordine / gerarchia: Marchio → headline/CTA → automobile con hotspot. Titolo fermo, foto protagonista; punti luminosi
+piccoli.
+Offerta migliore: Bagliori localizzati indicano aree esplorabili.
+Animazione / pulse: Mouseover verificato: compare un’area circolare di dettaglio/ingrandimento. Bagliori visibili; periodo e
+ampiezza non misurati.
+Transizioni / 3D: Ingresso del dettaglio su hover; curva e durata ND. Auto fotografica, profondità di scena; 3D real time non
+dimostrato.
+Frame finale: Stato interattivo con CTA; non un finale di video.
+Valutazione: Riferimento per una luce contenuta. Non usare lente o zoom che nascondano gli altri operatori.
+S04: The Bannermen: portfolio e preview BMW · S06: BMW Hotspot: preview HTML5 interattiva
+
+
+===== PAGE 9 ===== (chars 2007, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 09–10
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+9
+09 Facile.it: Va a pagare
+A · Comparatore / assicurazioni · Italia
+Formato / durata: Spot TV e digital; still stampa disponibile · 30 s, dichiarati dalla fonte
+Hook / comparazione: Reazione a una richiesta di pagamento: problema quotidiano riconoscibile. Comparazione come
+servizio; nessuna griglia di tre offerte verificata.
+Ordine / gerarchia: Still: persona e documento in primo piano; ordine delle scene ND. Espressione e documento guidano lo
+sguardo nello still.
+Offerta migliore: Risparmio nella narrativa descritta; trattamento visivo dell’offerta ND.
+Animazione / pulse: Film non riprodotto integralmente: montaggio e animazioni ND. ND.
+Transizioni / 3D: ND. Ripresa live action nello still; altre tecniche ND.
+Frame finale: Non acquisito.
+Valutazione: Riferimento italiano per chiarezza del bisogno, non per la meccanica di tre card.
+S01: Facile.it, Va a pagare: campagna italiana, Brand News, 9 gennaio 2025
+10 Tipico: Lakers / Orlando
+P · Sportsbook · Distribuzione ND; indizi USA: NBA, dollari, quote americane
+Formato / durata: Asset statico WebP in galleria DPA · Non applicabile allo statico
+Hook / comparazione: Confronto sportivo giallo/ciano. Due squadre e due quote; un solo bookmaker.
+Ordine / gerarchia: Evento → squadre → quote → incentivo. Blocchi squadra accostati, fascia numerica comune.
+Offerta migliore: Il richiamo economico in basso compete con le quote.
+Animazione / pulse: Non osservata nell’asset. Assente nell’asset statico.
+Transizioni / 3D: Non osservabile. Foto e compositing; 3D animato non dimostrato.
+Frame finale: Asset unico con incentivo; nessun end frame verificato.
+Valutazione: Utile per separare identità cromatiche; eliminare incentivo e riprogettare per tre operatori con pesi ottici
+uguali.
+S07: Hunch: Creative Examples, filtro Betting · S24: Tipico: asset statico originale
+
+
+===== PAGE 10 ===== (chars 1780, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 11–12
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+10
+11 Mozzart: Mystic Fortune Deluxe
+P · Casinò / slot · Distribuzione ND
+Formato / durata: Asset statico WebP in galleria DPA · Non applicabile allo statico
+Hook / comparazione: Key art del gioco in una cornice, simboli in basso. Un gioco; la galleria di più annunci non è una
+creatività a tre card.
+Ordine / gerarchia: Artwork → nome gioco → oggetti decorativi. Illustrazione dominante, decorazione affollata.
+Offerta migliore: Bordi gialli e oggetti saturi.
+Animazione / pulse: Non osservata. Assente nell’asset.
+Transizioni / 3D: Non osservabile. Illustrazione con volumi; tecnica 3D non verificata.
+Frame finale: Asset unico.
+Valutazione: Tenere soltanto il principio del gioco incorniciato; escludere monete/tesori, personaggi e accumulo decorativo
+come direzione.
+S07: Hunch: Creative Examples, filtro Betting · S25: Mozzart: asset statico originale
+12 Kaizen: Social Dynamic Ads
+C · Sportsbook / iGaming · Multimercato; Italia non dimostrata nel caso
+Formato / durata: Sistema di campagne social con dati aggiornati · ND: non riferito a un singolo film
+Hook / comparazione: ND per una singola creatività. Aggiornamento delle quote; tre concorrenti non documentati.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND: il case non isola un trattamento vincente.
+Animazione / pulse: Dinamico nei dati; non prova una specifica animazione. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: +20% conversion rate, +15% engagement, output creativo ×2 dichiarati dal fornitore. Nessuna attribuzione
+causale al pulse o alle tre card.
+S14: Kaizen: case study Bannerflow con risultati dichiarati
+
+
+===== PAGE 11 ===== (chars 1430, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 13–14
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+11
+13 Segugio: Assicurazioni 2024
+A · Comparatore / assicurazioni · Italia
+Formato / durata: Spot nel canale YouTube ufficiale · 30 s: durata nel player
+Hook / comparazione: Acquisto dell’auto e scelta della polizza, dalla descrizione. Servizio di confronto; tre offerte visibili
+non verificate.
+Ordine / gerarchia: ND: streaming non riprodotto. ND.
+Offerta migliore: ND.
+Animazione / pulse: ND. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: Non acquisito.
+Valutazione: Pubblicazione del video verificata sul canale ufficiale; piano media non verificato. Riferimento italiano di
+contesto.
+S02: Segugio.it: spot Assicurazioni 2024, canale ufficiale
+14 Segugio: Energia Gas 2026
+A · Comparatore / energia · Italia
+Formato / durata: Spot nel canale YouTube ufficiale · 30 s: indicati nel titolo
+Hook / comparazione: Soggetto gas: apertura esatta non verificata. Comparazione del servizio; tre offerte visibili non
+verificate.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND.
+Animazione / pulse: ND: riproduzione non verificata. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: Non acquisito.
+Valutazione: Selezionato per pertinenza italiana ed energia; non usato per descrivere un’animazione non vista.
+S03: Segugio.it: spot Energia Gas 2026, canale ufficiale
+
+
+===== PAGE 12 ===== (chars 1285, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 15–16
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+12
+15 Hallon: campagna sale
+A* · Telefonia · Svezia
+Formato / durata: Banner con video, descritto dal fornitore · ND
+Hook / comparazione: Messaggio sale / REA. Una promozione; tre offerte non documentate.
+Ordine / gerarchia: ND nella sequenza. Testo promozionale e video semitrasparente, secondo la fonte.
+Offerta migliore: Enfasi sulla promozione.
+Animazione / pulse: Loop video descritto; non visionato. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: Uso laterale: separare sfondo e testo. Nessuna prova per una comparazione tra tre operatori.
+S13: Bannerflow: selezione di campagne display
+16 Three: banner video
+A* · Telefonia · Svezia
+Formato / durata: Leaderboard con video, descritto dal fornitore · ND
+Hook / comparazione: ND. Un brand: il nome Three non indica tre offerte.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND.
+Animazione / pulse: Video riutilizzato su più formati, secondo la fonte. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: Pertinente alla produzione multiformato; non selezionato per la comparazione.
+S13: Bannerflow: selezione di campagne display
+
+
+===== PAGE 13 ===== (chars 1465, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 17–18
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+13
+17 ATG: corse ippiche
+A* · Scommesse sportive · Svezia
+Formato / durata: Banner video, descritto dal fornitore · ND
+Hook / comparazione: Immagini delle corse. Un operatore, nessuna griglia comparativa verificata.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND.
+Animazione / pulse: Riutilizzo di footage nel banner, secondo la fonte. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: Riferimento secondario per atmosfera sportiva; non trasferire messaggio promozionale in Italia.
+S13: Bannerflow: selezione di campagne display
+18 Elko: Samsung Frame
+A* · Retail / elettronica · Islanda
+Formato / durata: HTML5 rich media con slider, descritto dal fornitore · Interattiva; durata ND
+Hook / comparazione: TV ambientato nello spazio domestico. Due stati tramite slider, non tre offerte.
+Ordine / gerarchia: ND. Il prodotto nello stesso ambiente consente un confronto visivo.
+Offerta migliore: Lo slider rende visibile il cambiamento.
+Animazione / pulse: Interazione descritta, preview non acquisita. ND.
+Transizioni / 3D: Scorrimento del separatore secondo la fonte. ND.
+Frame finale: Dipendente dall’interazione; non verificato.
+Valutazione: Utile per coerenza del contesto, poco adatto a tre operatori sempre visibili.
+S15: Elko: slider Samsung Frame, articolo Bannerflow
+
+
+===== PAGE 14 ===== (chars 1711, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 19–20
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+14
+19 Google Assistant: set display
+P · Software / assistente digitale · Varianti GB nel percorso dei file; due lingue dichiarate
+Formato / durata: Set HTML5 di agenzia; preview testata non resa correttamente · ND
+Hook / comparazione: Dimostrazione di funzioni; apertura esatta ND. Varianti di un servizio; tre annunci in portfolio non
+sono tre offerte in un banner.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND.
+Animazione / pulse: Riutilizzo di sequenze tra varianti dichiarato dall’agenzia; playback ND. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: Interessante per modularità produttiva; evidenza visiva insufficiente per la shortlist.
+S16: Google Assistant: portfolio The Bannermen
+20 Casino Banner Design: Behance
+P · Casinò · Autore in Bangladesh; copy indonesiano, mercato ND
+Formato / durata: Portfolio di grafiche statiche; pubblicato 7 agosto 2026 · Non applicabile agli statici
+Hook / comparazione: Bonus, oro e simboli affollati. Più lavori nella pagina, non tre offerte comparabili.
+Ordine / gerarchia: Titoli → incentivi → oggetti; cambia fra i lavori. Accumulo di effetti e richiami monetari.
+Offerta migliore: Enfasi estrema su vantaggi economici.
+Animazione / pulse: Non documentata. Assente negli statici acquisiti.
+Transizioni / 3D: Non osservabile. Oggetti con resa volumetrica; pipeline ND.
+Frame finale: Statico.
+Valutazione: Escluso dalla direzione: iconografia della ricchezza e aggressività. Le formule “high converting” non sono
+risultati.
+S17: Casino Banner Design: portfolio Behance
+
+
+===== PAGE 15 ===== (chars 1720, images 0)
+04 / VALUTAZIONE DEI CANDIDATI
+Candidati 21–22
+Giudizi di adattamento progettuale; caratteristiche non verificabili indicate come ND.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+15
+21 HTML5 interactive banner ads: Shapovalov
+P · Portfolio HTML5 multisettore · Autore a Kyiv; mercato delle campagne ND
+Formato / durata: Portfolio Behance, 13 giugno 2022; video Vimeo incorporati · ND: Vimeo non accessibile
+Hook / comparazione: ND. Tre video incorporati non dimostrano tre offerte nella stessa unità.
+Ordine / gerarchia: ND. ND.
+Offerta migliore: ND.
+Animazione / pulse: Non verificata: player esterno bloccato. ND.
+Transizioni / 3D: ND. ND.
+Frame finale: ND.
+Valutazione: Candidato non finalista. Non classificato come campagna pubblicata, tutorial o concept senza prova.
+S18: HTML5 interactive banner ads: Serhii Shapovalov, Behance
+22 Google Web Designer: Transition Gallery
+T · Tecnica HTML5 · Globale; nessun mercato pubblicitario specifico
+Formato / durata: Tutorial/documentazione, non annuncio · Parametrica; nessuna durata di campagna
+Hook / comparazione: Non applicabile. Sequenza di immagini; non prova una comparazione reale.
+Ordine / gerarchia: Definito dall’autore. Non prescritta.
+Offerta migliore: Configurabile; nessun vincitore predefinito.
+Animazione / pulse: Fade, push, wipe e altri effetti documentati. Nessun pulse comparativo prescritto.
+Transizioni / 3D: Durata e easing configurabili. La Transition Gallery non richiede 3D; il Carousel è un componente distinto.
+Frame finale: Autoplay e ripetizioni configurabili.
+Valutazione: Riferimento tecnico per transizioni semplici. Non adottare una gallery che faccia sparire due dei tre operatori.
+S19: Google Web Designer: tutorial Transition Gallery
+
+
+===== PAGE 16 ===== (chars 1280, images 2)
+05 / SCHEDA VISUALE 01
+BMW Finance: selettore modelli
+P · Automotive / finanziamento · Regno Unito: sterline e condizioni BMW UK
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+16
+S04: The Bannermen: portfolio e preview BMW · S05: BMW Finance: preview HTML5 interattiva
+1. Stato iniziale acquisito: 118i, £249/mese.
+2. Stato dopo trascinamento: X3, £409/mese.
+ANIMAZIONE DOCUMENTATA
+Trascinamento circolare verificato: da 118i (£249) a X3 (£409). Pulse: Bagliore sul cursore; periodicità non misurata.
+Transizioni: Cambio coordinato di dati e prodotto; andamento completo ND.
+DA CUI PRENDERE ISPIRAZIONE
+Aggiornare prezzo, unità di misura e descrizione nello stesso istante, mantenendo le coordinate dei campi. Per il
+brief: tre card fisse, senza selettore che ne mostri soltanto una.
+CRITICITÀ
+Confronto sequenziale di quattro modelli e un brand. La rata senza anticipo e durata non esaurisce il costo. Offerta
+storica: i numeri sono reference, non condizioni attuali.
+ADATTAMENTO ALLE SIZE
+La logica dati è trasferibile; l’interazione circolare è fragile sui formati bassi. Ricomporre il layout, non scalarlo.
+Durata: Interattiva, nessuna durata fissa verificata · 3D: Fotografie 2D; nessuna scena 3D verificata. · Finale: Stato selezionato
+persistente; CTA e condizioni visibili.
+
+
+===== PAGE 17 ===== (chars 1189, images 1)
+05 / SCHEDA VISUALE 02
+Greatodds: Manchester City / Chelsea
+P · Sportsbook · Distribuzione ND; copy sudslavo
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+17
+S07: Hunch: Creative Examples, filtro Betting · S22: Greatodds: asset statico originale
+1. Asset originale statico della galleria Hunch. Nessun timestamp video.
+ANIMAZIONE DOCUMENTATA
+Non osservata: la prova disponibile è un asset statico. Pulse: Assente nell’asset statico. Transizioni: Non osservabile.
+DA CUI PRENDERE ISPIRAZIONE
+Tre celle numeriche con la stessa larghezza, stessa baseline e stessa precisione. Sostituire 1/X/2 con tre operatori
+soltanto se il dato è riferito allo stesso evento ed esito.
+CRITICITÀ
+La composizione riguarda tre esiti diversi: il valore numericamente più alto non è una “migliore offerta” a parità di
+oggetto. Atleti e loghi calcistici richiedono diritti; non sono materiale da riusare.
+ADATTAMENTO ALLE SIZE
+Griglia forte nei quadrati e nel 970×250; sotto 90 px eliminare i personaggi, non i dati comparabili.
+Durata: Non applicabile allo statico; versione animata ND · 3D: Ritagli fotografici e fondale grafico; 3D non dimostrato. · Finale: Lo stesso
+asset; nessun end frame video verificato.
+
+
+===== PAGE 18 ===== (chars 1054, images 1)
+05 / SCHEDA VISUALE 03
+Merkur XTip: Croatia / Morocco
+P · Sportsbook · Distribuzione ND; copy “Subota”
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+18
+S07: Hunch: Creative Examples, filtro Betting · S23: Merkur XTip: asset statico originale
+1. Asset originale statico. Il riferimento all’evento è World Cup 2022.
+ANIMAZIONE DOCUMENTATA
+Non osservata nell’asset. Pulse: Assente nell’asset statico. Transizioni: Non osservabile.
+DA CUI PRENDERE ISPIRAZIONE
+Contrasto leggibile fra fascia scura, numeri e accento giallo. La simmetria delle bandiere suggerisce due aree
+bilanciate.
+CRITICITÀ
+Non è una griglia di tre operatori: i due blocchi esterni sono più larghi e il dato centrale è meno contestualizzato. La
+grafica non offre un vincitore comparativo.
+ADATTAMENTO ALLE SIZE
+Per tre card rendere identiche tutte le larghezze e ripetere etichette e unità. Conservare solo la chiarezza numerica.
+Durata: Non applicabile allo statico · 3D: Bandiere, aste e stadio con profondità illustrata; animazione 3D ND. · Finale: Asset unico, non
+finale temporizzato.
+
+
+===== PAGE 19 ===== (chars 1180, images 1)
+05 / SCHEDA VISUALE 04
+Bluestep: ristrutturazione
+P · Banche / prestiti · Svezia: copy svedese
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+19
+S08: Bannerflow: galleria di preview live · S09: Bluestep: preview acquisita · S13: Bannerflow: selezione di campagne display
+1. Screenshot della preview: stato con parete dipinta. Nessun timestamp disponibile.
+ANIMAZIONE DOCUMENTATA
+La fonte descrive interazione legata alla pittura; catturato lo stato con parete dipinta, non l’intero gesto. Pulse: Non
+verificato. Transizioni: Rivelazione tramite pittura descritta dalla fonte, non misurata.
+DA CUI PRENDERE ISPIRAZIONE
+Una rivelazione confinata a una superficie può introdurre una metrica o una sottolineatura. Il resto del messaggio
+resta fermo.
+CRITICITÀ
+Il beneficio del prestito non è trasferibile al gioco. Il gesto completo è descritto dalla fonte, ma non documentato da
+una sequenza di fotogrammi acquisita.
+ADATTAMENTO ALLE SIZE
+Nei formati piccoli sostituire il gesto fotografico con un breve riempimento sotto il dato; l’operatore rimane sempre
+visibile.
+Durata: ND; catturato uno stato · 3D: Foto 2D. · Finale: Stato acquisito con messaggio, CTA e marchio; fine ciclo ND.
+
+
+===== PAGE 20 ===== (chars 1274, images 1)
+05 / SCHEDA VISUALE 05
+Storytel: Becoming Sherlock
+P · Abbonamenti / contenuti digitali · Mercato della singola preview ND; copy inglese
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+20
+S08: Bannerflow: galleria di preview live · S10: Storytel: preview acquisita · S13: Bannerflow: selezione di campagne display
+1. Screenshot completo della preview, con cover, sottotitolo e controllo audio.
+ANIMAZIONE DOCUMENTATA
+Nella preview cambia il sottotitolo; waveform e controllo play presenti. Non misurata la traccia completa. Pulse: Nessun
+pulse di una card verificato. Transizioni: Aggiornamento testuale nell’area audio; effetto preciso ND.
+DA CUI PRENDERE ISPIRAZIONE
+Isolare il movimento in un’area ridotta, lasciando stabili titolo e identità. Per il progetto: animare il solo accento
+del dato selezionato.
+CRITICITÀ
+Un solo contenuto, non una comparazione. La waveform senza un significato funzionale sarebbe decorazione.
+Nessuna evidenza che un pulse migliori i risultati.
+ADATTAMENTO ALLE SIZE
+Progettare la lettura a volume spento. Nei piccoli banner togliere waveform e copertina, conservare identità e
+metrica.
+Durata: ND; ciclo non cronometrato · 3D: Cover piatta, nessun 3D verificato. · Finale: Interfaccia persistente con copertina e play; finale
+temporizzato ND.
+
+
+===== PAGE 21 ===== (chars 1154, images 1)
+05 / SCHEDA VISUALE 06
+Meliá Rewards: Wonder Week
+P · Viaggi / programma fedeltà · Mercato ND; creatività in spagnolo
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+21
+S08: Bannerflow: galleria di preview live · S11: Meliá Wonder Week: preview acquisita
+1. Screenshot completo della preview Wonder Week; copy spagnolo.
+ANIMAZIONE DOCUMENTATA
+Ciclo completo non verificato; non attribuita un’animazione alle ombre. Pulse: Non verificato. Transizioni: ND.
+DA CUI PRENDERE ISPIRAZIONE
+Luce diagonale e ombra lunga possono creare profondità senza oggetti invadenti. Tre superfici uguali possono
+ricevere un diverso accento di luce.
+CRITICITÀ
+Una promozione unica, con percentuale dominante. Non è il caso dropdown Meliá raccontato in altri articoli.
+Movimento della luce non verificato: sarebbe una proposta nuova.
+ADATTAMENTO ALLE SIZE
+La struttura verticale funziona come riferimento per i formati alti. Nei leaderboard usare luce molto tenue e bandire
+il titolo monumentale.
+Durata: ND; uno stato completo acquisito · 3D: Profondità grafica 2,5D: ombre lunghe; nessun rendering 3D animato verificato. · Finale:
+Stato completo con beneficio, scadenza e CTA.
+
+
+===== PAGE 22 ===== (chars 1087, images 1)
+05 / SCHEDA VISUALE 07
+Casumo: Wheel
+P · Casinò · Mercato ND; copy inglese
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+22
+S08: Bannerflow: galleria di preview live · S12: Casumo: preview acquisita
+1. Screenshot del viewport: parte inferiore del banner non interamente acquisita.
+ANIMAZIONE DOCUMENTATA
+Non verificata una sequenza completa; non dedurre una ruota animata dal copy. Pulse: Non verificato. Transizioni: ND.
+DA CUI PRENDERE ISPIRAZIONE
+Tre livelli di lettura e palette ridotta. L’accento può essere riservato a un bordo o a un’etichetta, senza ingrandire
+una card.
+CRITICITÀ
+Il messaggio promette vincite e invita a giocare. È escluso come direzione di copy per il mercato italiano. Il richiamo
+alla ruota nel testo non prova un’animazione della ruota.
+ADATTAMENTO ALLE SIZE
+Da usare solo come studio del contrasto cromatico. Niente invito al gioco, promessa di denaro o CTA mutuata
+dall’originale.
+Durata: ND; uno stato acquisito · 3D: Nessun oggetto 3D visibile nello stato acquisito. · Finale: Stato osservato con CTA; porzione
+inferiore oltre il viewport non acquisita.
+
+
+===== PAGE 23 ===== (chars 1225, images 2)
+05 / SCHEDA VISUALE 08
+BMW Serie 5: Hotspot
+P · Automotive · Mercato ND; copy inglese
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+23
+S04: The Bannermen: portfolio e preview BMW · S06: BMW Hotspot: preview HTML5 interattiva
+1. Stato di riposo: hotspot sulla vettura.
+2. Stato su hover: dettaglio circolare.
+ANIMAZIONE DOCUMENTATA
+Mouseover verificato: compare un’area circolare di dettaglio/ingrandimento. Pulse: Bagliori visibili; periodo e ampiezza
+non misurati. Transizioni: Ingresso del dettaglio su hover; curva e durata ND.
+DA CUI PRENDERE ISPIRAZIONE
+Piccoli punti luce orientano l’attenzione con un ingombro ridotto. Adattamento: una sola accensione morbida
+lungo il bordo della card selezionata.
+CRITICITÀ
+Lente e ingrandimento possono coprire dati concorrenti. L’interazione su hover non è un comportamento universale
+su mobile. Nessun periodo di pulse misurato.
+ADATTAMENTO ALLE SIZE
+Trasformare il suggerimento luminoso in animazione autonoma breve. Non dipendere dall’hover e non sovrapporre
+la card evidenziata alle altre.
+Durata: Interattiva, nessuna durata fissa verificata · 3D: Auto fotografica, profondità di scena; 3D real time non dimostrato. · Finale:
+Stato interattivo con CTA; non un finale di video.
+
+
+===== PAGE 24 ===== (chars 1013, images 1)
+05 / SCHEDA VISUALE 09
+Facile.it: Va a pagare
+A · Comparatore / assicurazioni · Italia
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+24
+S01: Facile.it, Va a pagare: campagna italiana, Brand News, 9 gennaio 2025
+1. Still pubblicato nell’articolo sulla campagna; non estratto qui da un timestamp del film.
+ANIMAZIONE DOCUMENTATA
+Film non riprodotto integralmente: montaggio e animazioni ND. Pulse: ND. Transizioni: ND.
+DA CUI PRENDERE ISPIRAZIONE
+Partire da una domanda concreta e leggibile. In un banner comparativo: nominare subito la dimensione che si sta
+confrontando, invece di un claim generico.
+CRITICITÀ
+È una reference di linguaggio italiano, non di animazione comparativa. Film completo e frame finale non acquisiti:
+nessuna ricostruzione del montaggio.
+ADATTAMENTO ALLE SIZE
+Il gesto narrativo va tradotto in una riga di contesto, non miniaturizzato come scena video nei nove formati.
+Durata: 30 s, dichiarati dalla fonte · 3D: Ripresa live action nello still; altre tecniche ND. · Finale: Non acquisito.
+
+
+===== PAGE 25 ===== (chars 1101, images 1)
+05 / SCHEDA VISUALE 10
+Tipico: Lakers / Orlando
+P · Sportsbook · Distribuzione ND; indizi USA: NBA, dollari, quote americane
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+25
+S07: Hunch: Creative Examples, filtro Betting · S24: Tipico: asset statico originale
+1. Asset originale statico della galleria Hunch. Distribuzione paid non verificata.
+ANIMAZIONE DOCUMENTATA
+Non osservata nell’asset. Pulse: Assente nell’asset statico. Transizioni: Non osservabile.
+DA CUI PRENDERE ISPIRAZIONE
+Identità cromatiche distinte dentro un contenitore comune e numeri sulla stessa fascia. Applicare lo stesso
+contrasto minimo a tutti e tre gli operatori.
+CRITICITÀ
+Solo due squadre; quote americane e incentivo in dollari. Non costituisce un modello direttamente utilizzabile in
+Italia e non dimostra alcuna animazione.
+ADATTAMENTO ALLE SIZE
+Convertire la logica in tre moduli, normalizzare la leggibilità dei loghi e rimuovere il blocco promozionale economico.
+Durata: Non applicabile allo statico · 3D: Foto e compositing; 3D animato non dimostrato. · Finale: Asset unico con incentivo; nessun end
+frame verificato.
+
+
+===== PAGE 26 ===== (chars 1612, images 0)
+06 / MATRICE DELLE SIZE
+Adattabilità 01–11
+Valuta il trasferimento del principio visivo; non certifica la disponibilità del formato originale o la fattibilità del
+contenuto finale.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+26
+ID / reference
+970×2
+50
+728×9
+0
+300×5
+0
+300×2
+50
+336×2
+80
+320×3
+20
+320×4
+80
+300×6
+00
+160×6
+00
+01 BMW Finance: selettore modelli
+B
+C
+C
+B
+B
+B
+A
+A
+B
+02 Greatodds: Manchester City / Chelsea
+A
+B
+C
+A
+A
+A
+B
+B
+C
+03 Merkur XTip: Croatia / Morocco
+A
+B
+C
+A
+A
+A
+B
+B
+C
+04 Bluestep: ristrutturazione
+A
+B
+C
+A
+A
+A
+B
+B
+C
+05 Storytel: Becoming Sherlock
+A
+B
+C
+A
+A
+A
+B
+B
+C
+06 Meliá Rewards: Wonder Week
+B
+C
+C
+B
+B
+A
+A
+A
+B
+07 Casumo: Wheel
+A
+B
+C
+A
+A
+A
+B
+B
+C
+08 BMW Serie 5: Hotspot
+B
+C
+C
+B
+B
+A
+A
+A
+B
+09 Facile.it: Va a pagare
+C
+C
+C
+C
+C
+C
+C
+C
+C
+10 Tipico: Lakers / Orlando
+A
+B
+C
+A
+A
+A
+B
+B
+C
+11 Mozzart: Mystic Fortune Deluxe
+B
+C
+C
+B
+B
+A
+A
+A
+B
+LEGENDA
+A = principio facilmente ricomponibile; B = richiede layout e motion dedicati; C = trasferimento debole o
+fortemente ridotto;: = evidenza insufficiente per una valutazione responsabile. A non significa “copia e
+ridimensiona”.
+PERCHÉ I VOTI SI RIPETONO
+Sono giudizi per famiglia di composizione: griglia dati, verticale, scena editoriale, film narrativo o evidenza
+insufficiente. Non sono punteggi sperimentali. Le criticità specifiche restano nelle singole schede.
+IL CONFRONTO A TRE CAMBIA IL PROBLEMA
+Nessuna reference viene approvata automaticamente per tre brand. Occorre riservare pari spazio ai campi
+essenziali e provare la leggibilità alla dimensione reale. I formati molto bassi non possono ospitare la versione
+completa di una scheda verticale.
+
+
+===== PAGE 27 ===== (chars 1620, images 0)
+06 / MATRICE DELLE SIZE
+Adattabilità 12–22
+Valuta il trasferimento del principio visivo; non certifica la disponibilità del formato originale o la fattibilità del
+contenuto finale.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+27
+ID / reference
+970×2
+50
+728×9
+0
+300×5
+0
+300×2
+50
+336×2
+80
+320×3
+20
+320×4
+80
+300×6
+00
+160×6
+00
+12 Kaizen: Social Dynamic Ads
+—
+—
+—
+—
+—
+—
+—
+—
+—
+13 Segugio: Assicurazioni 2024
+C
+C
+C
+C
+C
+C
+C
+C
+C
+14 Segugio: Energia Gas 2026
+C
+C
+C
+C
+C
+C
+C
+C
+C
+15 Hallon: campagna sale
+A
+B
+C
+A
+A
+A
+B
+B
+C
+16 Three: banner video
+A
+B
+C
+A
+A
+A
+B
+B
+C
+17 ATG: corse ippiche
+A
+B
+C
+A
+A
+A
+B
+B
+C
+18 Elko: Samsung Frame
+A
+B
+C
+A
+A
+A
+B
+B
+C
+19 Google Assistant: set display
+—
+—
+—
+—
+—
+—
+—
+—
+—
+20 Casino Banner Design: Behance
+B
+C
+C
+B
+B
+A
+A
+A
+B
+21 HTML5 interactive banner ads:
+Shapovalov
+—
+—
+—
+—
+—
+—
+—
+—
+—
+22 Google Web Designer: Transition Gallery
+A
+B
+C
+A
+A
+A
+B
+B
+C
+LEGENDA
+A = principio facilmente ricomponibile; B = richiede layout e motion dedicati; C = trasferimento debole o
+fortemente ridotto;: = evidenza insufficiente per una valutazione responsabile. A non significa “copia e
+ridimensiona”.
+PERCHÉ I VOTI SI RIPETONO
+Sono giudizi per famiglia di composizione: griglia dati, verticale, scena editoriale, film narrativo o evidenza
+insufficiente. Non sono punteggi sperimentali. Le criticità specifiche restano nelle singole schede.
+IL CONFRONTO A TRE CAMBIA IL PROBLEMA
+Nessuna reference viene approvata automaticamente per tre brand. Occorre riservare pari spazio ai campi
+essenziali e provare la leggibilità alla dimensione reale. I formati molto bassi non possono ospitare la versione
+completa di una scheda verticale.
+
+
+===== PAGE 28 ===== (chars 1640, images 0)
+07 / REGOLE MULTIFORMATO
+Nove size, cinque composizioni
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+28
+Formato
+Composizione proposta
+Motion e vincolo principale
+970×250
+Tre colonne equivalenti, contesto comune e condizioni
+in fascia dedicata.
+Un accento locale; ampio fermo finale.
+728×90
+Tre moduli orizzontali compatti: logo, una metrica,
+etichetta breve.
+Nessuna scena introduttiva; dati subito leggibili.
+300×50
+Micro-comparazione progettata a parte, con tre identità
+e una metrica breve.
+Preferibilmente statica. Se condizioni
+indispensabili non entrano, il contenuto non è
+adatto a questa size.
+300×250
+Tre righe uguali; eventuale contesto in testata.
+Sottolineatura locale; niente artwork dominante.
+336×280
+Tre righe uguali, con più respiro per etichette e
+condizioni.
+Dato e unità sempre fermi.
+320×320
+Tre righe-card o tre colonne solo con contenuto
+davvero breve.
+Un ingresso simultaneo, accento successivo.
+320×480
+Tre card sovrapposte, ciascuna con la stessa altezza.
+Piccolo simbolo di categoria, opzionale.
+300×600
+Tre card sovrapposte e fascia informativa leggibile.
+Luce leggera sul bordo; nessun zoom.
+160×600
+Tre moduli verticali molto essenziali; loghi normalizzati.
+Eliminare decorazione e righe secondarie prima
+di ridurre i caratteri.
+SPECIFICHE DELLA DESTINAZIONE
+Le nove size sono obiettivi di progetto, non un elenco automaticamente accettato da ogni rete. Verificare dimensioni
+ammesse, peso, loop, click/exit, fallback e gestione dei feed nel canale finale. La documentazione Google distingue
+HTML5 statici e dinamici e impone requisiti al caricamento.
+S21: Google Ads: requisiti degli annunci display caricati
+
+
+===== PAGE 29 ===== (chars 1862, images 0)
+08 / PATTERN
+Cinque da adottare, cinque da evitare
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+29
+Tre card persistenti · Stessa area, stessi campi, stesso ordine di lettura. I tre operatori sono riconoscibili già al
+primo stato utile e restano presenti nel finale.
+Rivelazione sincronizzata dei dati · I tre valori compaiono insieme e si stabilizzano prima dell’accento. Nessun
+vantaggio informativo ottenuto ritardando o abbreviando le condizioni dei concorrenti.
+Un solo accento moderato · Bordo, etichetta descrittiva o variazione di luminosità sulla scelta da valorizzare. Il
+dato resta della stessa dimensione; evitare di affidare il significato solo al colore.
+Movimento confinato · Una sottolineatura o un passaggio di luce locale; loghi e testo non oscillano. Il
+movimento deve indicare un’informazione, non simulare una vincita.
+Finale completo e stabile · Congelare confronto, criterio, condizioni essenziali e azione informativa. Prevedere
+anche fallback statico e fruizione senza audio.
+Podio sproporzionato · Una card enorme e due miniature, sfocatura degli altri operatori, loghi sbiaditi o
+condizioni rese illeggibili.
+Pulse continuo e segnali di urgenza · Lampeggi ripetuti, countdown non necessario, rimbalzi del prezzo e
+cambi di colore che impediscono di leggere.
+Ricchezza e simulazione di vincita · Banconote, piogge di denaro, contanti, tesori, jackpot esplosivi e rulli che
+inscenano una vincita. Per il casinò limitarsi a simboli sobri di gioco.
+Confronti non omogenei · Esiti 1/X/2 spacciati per tre operatori, bonus nominali senza condizioni, periodi
+diversi, costi iniziali nascosti o metriche che cambiano da una card all’altra.
+Carosello che nasconde i concorrenti · Operatori visibili uno alla volta, riordino continuo e riduzione
+automatica di un layout grande nel 300×50. Il pubblico non deve ricostruire il confronto a memoria.
+
+
+===== PAGE 30 ===== (chars 1659, images 0)
+09 / DIREZIONI CREATIVE
+Tre strade, un criterio comune
+Proposte progettuali da validare sul contenuto reale e sulla collocazione italiana; non ricostruzioni di campagne
+esistenti.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+30
+01 • Tavola dati sportiva
+IMPIANTO
+Direzione prioritaria per una comparazione informativa. Fondo neutro o blu scuro, tre card uguali, loghi
+normalizzati e una metrica omogenea per operatore. Eventuale texture sportiva appena percepibile.
+SEQUENZA PROPOSTA
+0–1,2 s: contesto e tre identità; 1,2–3 s: dati simultanei; 3–4,5 s: un accento locale sulla metrica selezionata;
+4,5–12 s: confronto fermo. È uno storyboard proposto, non osservato in una campagna.
+RIFERIMENTI
+Greatodds per le celle; BMW Finance per coerenza degli aggiornamenti.
+PUNTO DA RISOLVERE
+“Migliore” solo rispetto al criterio esplicito, stesso evento/esito/istante e condizioni pertinenti. Niente podio o
+claim assoluto.
+02 • Galleria di giochi essenziale
+IMPIANTO
+Direzione casinò condizionata al contesto consentito. Tre pannelli uguali, un piccolo simbolo di gioco per
+pannello, massimo una famiglia stilistica. Niente denaro, tesori o personaggi invadenti.
+SEQUENZA PROPOSTA
+Comparsa simultanea, lieve variazione luminosa interna, arresto completo. Evitare rulli in funzione, sequenze
+da slot e suoni di premio.
+RIFERIMENTI
+Meliá per profondità grafica; Casumo esclusivamente per palette; Mozzart solo come esempio del perimetro
+da ripulire.
+PUNTO DA RISOLVERE
+Non confondere attrattiva della slot con qualità dell’offerta. Gli elementi di gioco non sostituiscono il criterio
+comparativo; l’assenza di banconote non rende automaticamente lecita la creatività.
+
+
+===== PAGE 31 ===== (chars 1759, images 0)
+09 / DIREZIONI CREATIVE
+Tre strade, un criterio comune
+Proposte progettuali da validare sul contenuto reale e sulla collocazione italiana; non ricostruzioni di campagne
+esistenti.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+31
+03 • Comparatore editoriale
+IMPIANTO
+Direzione più trasversale. Fondo chiaro, tre righe o colonne equivalenti, etichette esplicite e una piccola nota
+sulla fonte. Valorizzazione tramite sottolineatura e ordine stabile motivato.
+SEQUENZA PROPOSTA
+Tutti i dati già leggibili nel primo stato; breve rivelazione dell’etichetta informativa; un passaggio di luce sul
+bordo; finale statico.
+RIFERIMENTI
+Facile.it per concretezza del bisogno; Bluestep per rivelazione localizzata; Storytel per separazione fra area
+mobile e area ferma.
+PUNTO DA RISOLVERE
+Evitare che la veste editoriale mascheri un contenuto promozionale. Identificare correttamente natura e fonte
+della comparazione.
+REGOLE COMUNI ALLE TRE DIREZIONI
+Area delle card uguale. Identica dimensione per i dati comparabili e identica disponibilità delle condizioni. Loghi
+calibrati per peso ottico, senza deformarli. Ordine stabile e motivato; nessun riordino nel loop. Nessuna
+sovrapposizione che occulti un concorrente.
+IPOTESI DI MOTION DA TESTARE
+Una sola sottolineatura o variazione di luminosità in circa 600–900 ms, seguita da fermo. Sono valori iniziali
+proposti, non soglie normative o risultati empirici. La stessa composizione deve funzionare anche senza
+animazione.
+COME VERIFICARE L’EQUILIBRIO
+Alla size reale, chiedere a lettori esterni di riconoscere tutti e tre gli operatori, leggere il criterio e spiegare
+perché una scelta emerge. Se ricordano solo il brand evidenziato o interpretano male il vantaggio, correggere
+gerarchia e copy prima di valutare il CTR.
+
+
+===== PAGE 32 ===== (chars 1995, images 0)
+10 / PASSAGGIO A FABLE
+Le cinque reference da consegnare
+Shortlist di meccanismi complementari. Nessuna è una creatività italiana pronta per la distribuzione.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+32
+1. BMW Finance: selettore modelli
+Sincronizzazione fra dato e prodotto. Non replicare il selettore che mostra un solo modello.
+S05: BMW Finance: preview HTML5 interattiva
+2. Greatodds: Manchester City / Chelsea
+Tre celle numeriche allineate. È uno statico 1/X/2: usare lo stesso oggetto di confronto per tutti i brand.
+S22: Greatodds: asset statico originale
+3. Bluestep: ristrutturazione
+Rivelazione limitata a una piccola superficie. Il gesto completo non è stato acquisito; trattarlo come principio da
+sviluppare.
+S13: Bannerflow: selezione di campagne display
+4. BMW Serie 5: Hotspot
+Punto luce e attenzione localizzata. Niente lente o ingrandimento che copra gli altri operatori.
+S06: BMW Hotspot: preview HTML5 interattiva
+5. Meliá Rewards: Wonder Week
+Profondità tramite ombre e ordine verticale. Il movimento delle ombre è una proposta, non una sequenza
+verificata.
+S11: Meliá Wonder Week: preview acquisita
+BRIEF OPERATIVO
+Preparare in seguito uno storyboard della Tavola dati sportiva in 970×250, 300×250 e 300×50 per validare i
+tre casi più diversi; poi estendere alle altre size. Tre operatori e campi equivalenti, criterio esplicito, un solo
+accento locale e finale stabile. Nessun nuovo asset è stato generato in questa ricerca.
+INPUT NECESSARI PER LA FASE SUCCESSIVA
+Tre identità di brand; dati dell’offerta e condizioni; criterio verificabile per il vantaggio; collocazione prevista;
+fonti e aggiornamento dei dati; specifiche tecniche del canale. Senza questi input non inventare importi,
+ranking o qualifiche come “migliore in assoluto”.
+COSA CONTIENE IL PACCHETTO
+Brief testuale, schede e matrice in JSON, immagini originali e screenshot pertinenti, con manifest delle fonti. Le
+reference servono a orientare il progetto; non sono asset di brand concessi per il riuso.
+
+
+===== PAGE 33 ===== (chars 874, images 0)
+11 / FONTI E TRACCIABILITÀ
+Fonti 01–09
+Link cliccabili. Accesso il 10 settembre 2026. Le preview possono cambiare o cessare di funzionare.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+33
+S01 · Facile.it, Va a pagare: campagna italiana, Brand News, 9 gennaio 2025
+Apri la fonte originale ↗
+S02 · Segugio.it: spot Assicurazioni 2024, canale ufficiale
+Apri la fonte originale ↗
+S03 · Segugio.it: spot Energia Gas 2026, canale ufficiale
+Apri la fonte originale ↗
+S04 · The Bannermen: portfolio e preview BMW
+Apri la fonte originale ↗
+S05 · BMW Finance: preview HTML5 interattiva
+Apri la fonte originale ↗
+S06 · BMW Hotspot: preview HTML5 interattiva
+Apri la fonte originale ↗
+S07 · Hunch: Creative Examples, filtro Betting
+Apri la fonte originale ↗
+S08 · Bannerflow: galleria di preview live
+Apri la fonte originale ↗
+S09 · Bluestep: preview acquisita
+Apri la fonte originale ↗
+
+
+===== PAGE 34 ===== (chars 850, images 0)
+11 / FONTI E TRACCIABILITÀ
+Fonti 10–18
+Link cliccabili. Accesso il 10 settembre 2026. Le preview possono cambiare o cessare di funzionare.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+34
+S10 · Storytel: preview acquisita
+Apri la fonte originale ↗
+S11 · Meliá Wonder Week: preview acquisita
+Apri la fonte originale ↗
+S12 · Casumo: preview acquisita
+Apri la fonte originale ↗
+S13 · Bannerflow: selezione di campagne display
+Apri la fonte originale ↗
+S14 · Kaizen: case study Bannerflow con risultati dichiarati
+Apri la fonte originale ↗
+S15 · Elko: slider Samsung Frame, articolo Bannerflow
+Apri la fonte originale ↗
+S16 · Google Assistant: portfolio The Bannermen
+Apri la fonte originale ↗
+S17 · Casino Banner Design: portfolio Behance
+Apri la fonte originale ↗
+S18 · HTML5 interactive banner ads: Serhii Shapovalov, Behance
+Apri la fonte originale ↗
+
+
+===== PAGE 35 ===== (chars 1313, images 0)
+11 / FONTI E TRACCIABILITÀ
+Fonti 19–25
+Link cliccabili. Accesso il 10 settembre 2026. Le preview possono cambiare o cessare di funzionare.
+RICERCA VISUALE • ITALIA • 10 SETTEMBRE 2026
+35
+S19 · Google Web Designer: tutorial Transition Gallery
+Apri la fonte originale ↗
+S20 · AGCOM: Allegato A alla delibera 132/19/CONS
+Apri la fonte originale ↗
+S21 · Google Ads: requisiti degli annunci display caricati
+Apri la fonte originale ↗
+S22 · Greatodds: asset statico originale
+Apri la fonte originale ↗
+S23 · Merkur XTip: asset statico originale
+Apri la fonte originale ↗
+S24 · Tipico: asset statico originale
+Apri la fonte originale ↗
+S25 · Mozzart: asset statico originale
+Apri la fonte originale ↗
+ARCHIVI CONSULTATI SENZA ANNUNCI VERIFICABILI
+Google Ads Transparency Center (filtro Italia); Meta Ad Library (Italia, ricerca Facile.it); Google Rich Media
+Gallery. Non sono usati come prova di pubblicazione per nessuna scheda.
+Google Ads Transparency Center
+Meta Ad Library
+Google Rich Media Gallery
+ATTRIBUZIONE DELLE IMMAGINI
+BMW: The Bannermen / BMW; Greatodds, Merkur, Tipico, Mozzart: galleria Hunch e rispettivi brand; Bluestep,
+Storytel, Meliá, Casumo: preview Bannerflow e rispettivi brand; Facile.it: still nell’articolo Brand News. Le immagini
+sono riprodotte per analisi e identificazione delle reference.
+

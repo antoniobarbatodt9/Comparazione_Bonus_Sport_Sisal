@@ -1,0 +1,42 @@
+# Bonus Sport — banner dinamico di comparazione 970×250 (Sisal · NetBet · William Hill)
+
+**Stato: PRIMA CONSEGNA — analisi, brand audit (parziale, sito bloccato), concept, styleframe, storyboard, piani. In attesa di approvazione esplicita. Nessun asset definitivo, master, GIF o size aggiuntiva è stato prodotto.**
+
+## Dove guardare (in ordine)
+1. `06_storyboard/storyboard_contact_sheet.png` — lo storyboard scena per scena (11 fotogrammi reali 970×250, safe area evidenziata).
+2. `05_concept/styleframe_contact_sheet.png` — confronto delle direzioni A / B / C.
+3. `05_concept/concept.md` — direzioni, razionale, punti di forza/criticità, raccomandazione.
+4. `06_storyboard/storyboard.md` — durata, fotogrammi, cosa è statico/animato, gerarchia, ruolo di Sisal, spazio, loop.
+5. `04_brand_identity/brand_audit.md` — **blocco di accesso a sisal.it documentato** + tutto ciò che è osservabile dagli asset ufficiali; richiesta materiali.
+6. `02_analisi/analisi_ricerca.md` — analisi critica del PDF (osservato / dichiarato / dedotto / proposto).
+7. `07_asset_generati/README_higgsfield.md` — capacità, costi, esplorazione (4 still) e piano d'uso di Higgsfield MCP.
+8. `11_qc/piano_produzione.md`, `piano_qc.md`, `strategia_compressione.md` — piani e misure reali di compressione.
+
+## Struttura delle cartelle
+```
+00_ricerca/            PDF di ricerca (input)
+01_loghi/              loghi ufficiali (input, mai modificati)
+02_analisi/            analisi del PDF, testo estratto, pagine rasterizzate
+03_fonti/              registro fonti con URL/data/classificazione
+04_brand_identity/     audit (parziale), log del blocco, font sostitutivi (OFL)
+05_concept/            concept.md, styleframe/, styleframe_contact_sheet.png
+06_storyboard/         storyboard.md, frames/ (con safe area), frames_clean/, contact sheet
+07_asset_generati/     README Higgsfield + preview delle 4 immagini esplorative
+08_progetto/           PROGETTO MODIFICABILE: banner.html (template deterministico), render.mjs, config.json, assets/
+09_preview/            test di pipeline (non definitivi): MP4/GIF di prova per le misure di peso
+10_export/             (vuoto) master, web, GIF — dopo approvazione
+11_qc/                 piani di produzione, QC e compressione; report QC dopo produzione
+```
+
+## Come rigenerare un fotogramma o lo storyboard
+```
+cd 08_progetto
+node render.mjs --times 0,2.7,9 --out ../06_storyboard/frames --safe 1 --bg assets/env/env_A_pitch_PREVIEW.jpg --prefix scena
+# oppure aprire banner.html?t=4.4&safe=1&bg=assets/env/env_A_pitch_PREVIEW.jpg in Chromium
+```
+
+## Dati della comparazione (dal brief, non modificati)
+Sisal — FINO A 5.200€ · NetBet — FINO A 1.000€ · William Hill — FINO A 255€ · Criterio: importo massimo dichiarato del bonus sport.
+
+## Gate di approvazione
+Per procedere alla produzione occorre un'approvazione esplicita di concept e storyboard, e (per chiudere il brand audit) lo sblocco di `www.sisal.it` oppure screenshot/materiali ufficiali. Dettagli in `04_brand_identity/brand_audit.md` §1.

@@ -1,0 +1,31 @@
+{
+  "_nota": "Dati e parametri del progetto. I valori della comparazione sono riportati esattamente come da brief e NON vanno modificati senza istruzione del cliente. Il template banner.html li replica nel DOM (sezione DATI).",
+  "formato": { "width": 970, "height": 250, "fps": 25, "durata_s": 9.0, "fotogrammi": 225, "audio": "nessuno" },
+  "titolo": "BONUS SPORT",
+  "criterio": "Importo massimo dichiarato",
+  "cta": "SCOPRI DI PIÙ",
+  "operatori": [
+    { "id": "sisal", "nome": "Sisal", "valore": "FINO A 5.200€", "logo": "assets/loghi/Sisal_white_neg_LRES.png", "logo_width_px": 118, "ordine": 1, "cliente": true },
+    { "id": "netbet", "nome": "NetBet", "valore": "FINO A 1.000€", "logo": "assets/loghi/NetBet_PrimaryLogo_White.png", "logo_width_px": 112, "ordine": 2, "cliente": false },
+    { "id": "williamhill", "nome": "William Hill", "valore": "FINO A 255€", "logo": "assets/loghi/WilliamHill_white.png", "logo_width_px": 138, "ordine": 3, "cliente": false }
+  ],
+  "ordine_motivazione": "decrescente per il criterio confrontato (importo massimo dichiarato); coincide con cliente in prima posizione; nessun riordino durante l'animazione",
+  "safe_area_disclaimer": { "x": 0, "y": 210, "width": 970, "height": 40, "colore": "#061a12", "contenuto": "vuota; inserimento manuale successivo di ADM, 18+, diciture" },
+  "layout": {
+    "titolo": { "x": 26, "y": 48, "w": 190, "h": 100 },
+    "cards": { "x": 232, "y": 32, "w": 544, "h": 146, "card_w": 168, "card_h": 146, "gap": 20, "radius": 12 },
+    "cta": { "x": 800, "y": 83, "w": 150, "h": 44 }
+  },
+  "brand_tokens_PROVVISORI": {
+    "_nota": "derivati solo dal logo ufficiale sisal.svg; da validare con brand audit di sisal.it (bloccato in questa sessione)",
+    "sisal_green": "#00643a", "sisal_lime": "#b9d531", "ground_0": "#061a12", "ground_1": "#0b3324",
+    "font_display": "Montserrat 800 (SIL OFL, sostitutivo, non ufficiale)", "font_ui": "Inter 600 (SIL OFL, sostitutivo)"
+  },
+  "timeline_s": {
+    "env_fade": [0.0, 0.6], "title1": [0.2, 0.7], "title2": [0.3, 0.8], "criterio": [0.7, 1.1],
+    "cards": [0.9, 1.6], "loghi": [1.25, 1.75], "fino_a": [2.0, 2.35], "valori": [2.15, 2.75],
+    "accento_sweep": [4.0, 4.85], "accento_ring": [4.6, 5.1], "accento_glow": [4.5, 5.3], "cta_sheen": [6.6, 7.2],
+    "fermo_finale": [5.3, 9.0]
+  },
+  "ambiente": { "sorgente": "Higgsfield MCP, still 21:9 (da rigenerare a risoluzione piena dopo approvazione)", "preview_attuale": "assets/env/env_A_pitch_PREVIEW.jpg", "movimento": "deriva programmata 10 px + scala 1.035→1.0 in 9 s (MP4); fermo nella GIF" }
+}

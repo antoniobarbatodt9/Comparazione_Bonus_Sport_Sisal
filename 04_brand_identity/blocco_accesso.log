@@ -1,0 +1,18 @@
+BLOCCO DI ACCESSO AL SITO UFFICIALE SISAL — log delle evidenze (UTC)
+
+2026-09-10T15:34:52Z  curl https://www.sisal.it/ (via HTTPS_PROXY di sessione)
+  -> curl: (56) CONNECT tunnel failed, response 403
+  -> agent-proxy: www.sisal.it:443 — connect_rejected ("gateway answered 403 to CONNECT (policy denial or upstream failure)")
+
+2026-09-10T15:35Z     WebFetch https://www.sisal.it/
+  -> {"error_type":"EGRESS_BLOCKED","domain":"www.sisal.it","message":"Access to www.sisal.it is blocked by the network egress proxy."}
+
+2026-09-10T15:35Z     WebFetch https://www.sisal.com/
+  -> {"error_type":"EGRESS_BLOCKED","domain":"www.sisal.com","message":"Access to www.sisal.com is blocked by the network egress proxy."}
+
+2026-09-10T15:35:57Z  (verifica di contesto) web.archive.org:443 -> connect_rejected 403 (non usato comunque: non è fonte ufficiale)
+
+Stato proxy (curl $HTTPS_PROXY/__agentproxy/status): "recentRelayFailures" elenca www.sisal.it:443 come connect_rejected.
+Nota README del proxy: "403/407 from the proxy: The destination host is not allowed by your organization's egress policy for this session. Do not retry or route around it — report the blocked host."
+
+Azioni intraprese: nessun tentativo di aggiramento; brand audit limitato agli asset ufficiali forniti (01_loghi/); richiesta al cliente di sblocco dominio o materiali ufficiali.

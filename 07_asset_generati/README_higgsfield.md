@@ -103,3 +103,19 @@ Batch `generate_image_batch` di 4 still 21:9, `nano_banana_pro` (servito `nano_b
 Trasferimento (preview per lo storyboard): ritaglio fascia centrale 3168×927 (y=208), Lanczos a 1018×298, JPEG q86 4:4:4 (29 807 byte), md5 `40a0dc0c3c5b7c15bce12887d35e2b40`, 3 blocchi base64 ricomposti e verificati. File: `08_progetto/assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg`. **Produzione (2026-09-10)**: stesso ritaglio trasferito a **2036×596** (JPEG q86 4:2:0, 146 342 byte), md5 `ea1d842587991411dbbb9bc7673308fa`, 13 blocchi base64 ricomposti e verificati → `08_progetto/assets/env/env_M_pitch_topdown_FINAL_2036x596.jpg` (default del template).
 
 Audio: verificato che gli strumenti audio di Higgsfield MCP sono solo text-to-speech (vedi `06_storyboard/storyboard_M.md` §7.1): non usati.
+
+
+---
+
+## 8. REVISIONE 2 del concept M (2026-09-10): ambiente sonoro "stadio" da clip video con audio nativo
+
+Richiesta del cliente: il bed sintetico continuo non suonava come uno stadio reale; suggerito di generare lo sfondo con Higgsfield "con principio già di audio". Poiché `generate_audio` è solo text-to-speech, ho usato **modelli video con audio nativo** e ne ho estratto la sola traccia audio (la parte visiva resta lo still zenitale già approvato, per assenza di flicker e piena compressibilità; la clip video resta disponibile nella libreria Higgsfield del cliente).
+
+| # | Job | Modello | Durata | Costo | Analisi audio (sandbox: ffmpeg + faster-whisper) | Decisione |
+|---|---|---|---|---|---|---|
+| 32 | `9d228081-8a7f-4fb4-8448-ba79bd806993` | veo3_1 (start_image = still e190625a) | 8 s, 48 kHz stereo | 22 cr. | −33,8 LUFS; **nessun segmento di parlato** (whisper base, VAD: 0 segmenti); energia 300–2000 Hz (72 %) con ondeggiamenti lenti (variazione inviluppo 0,34): brusio di folla credibile | **SELEZIONATO** → `08_progetto/audio/ambience_stadio_higgsfield_veo_8s.m4a` (AAC 64 kbps, md5 `a53bcd4668d2ad2763731fc9bc8a3ef3`, 6 blocchi); in mix esteso a 12 s con loop e crossfade di 0,5 s |
+| 31 | `4daed520-6208-4fc5-85d5-bad2549764bb` | seedance_2_0 21:9 720p, generate_audio (start_image = still e190625a) | 12 s, 32 kHz | 54 cr. | −41,8 LUFS; nessun parlato; energia concentrata 100–800 Hz, quasi nulla sopra 2 kHz (rombo sordo, poco "folla") | scartato (non trasferito) |
+
+Prompt (entrambi): campo zenitale notturno, camera fissa; audio "realistic stadium ambience only: distant crowd murmur, soft continuous hum with occasional swells, a few far isolated shouts, wind; no music, no announcer, no commentary, no speech, no singing, no chants with words, no whistles". Preset "IN THE DARK" proposto dalla piattaforma e rifiutato (`declined_preset_id`).
+
+Crediti spesi in questa revisione: 76. Totale progetto: ≈ 97.

@@ -2,6 +2,14 @@
 
 Stato: **v2 APPROVATA e prodotta** (2026-09-10). Conferme del cliente: sfondo zenitale ok · 12,0 s · audio ok (bed stadio + SFX procedurali) · nessun accento sulla card Sisal in S5 · **indici "1/3, 2/3, 3/3" rimossi dalle card** (unica differenza rispetto ai fotogrammi dello storyboard). Esportazioni in `10_export/` (prefisso `BonusSport_970x250_25fps_12s_M_`), QC in `11_qc/report_qc_M.md`. Fotogrammi reali renderizzati dal progetto `08_progetto/banner_scene.html`. `frames_M/` = con safe area evidenziata in magenta (solo per lettura); `frames_M_clean/` = come apparirà. Contact sheet: `storyboard_M_contact_sheet.png`.
 
+## 0-bis. Revisione 2 dopo la prima consegna (note del cliente → soluzione)
+
+| Nota | Soluzione |
+|---|---|
+| Effetto "vetro" eccessivo | Rimossi tutti i riflessi diagonali (sulle hero card, sul titolo di S1, sulla CTA); card più solide (fondo 80 % invece di 42 %, senza gradiente bianco); raggi e flare dei riflettori attenuati. Restano solo i wipe di luce delle transizioni |
+| Sound effect brutto, rumore continuo non da stadio | Bed sostituito con un **ambiente stadio reale** estratto da una clip Higgsfield con audio nativo (veo3_1, job 9d228081…, nessun parlato verificato con trascrizione automatica); whoosh più corti e 5 dB più bassi, tick e ping più discreti; nessuna voce |
+| Anello attorno alla CTA finale distorto | **Anello e alone eliminati**: l'enfasi finale è solo un pulse del tasto (due battiti morbidi, +9 % e +6 %, ancorati al bordo destro) |
+
 ## 0. Che cosa cambia nella v2 (note del cliente → soluzione)
 
 | Nota | Soluzione nella v2 |
@@ -21,12 +29,10 @@ Stato: **v2 APPROVATA e prodotta** (2026-09-10). Conferme del cliente: sfondo ze
 | 0,45–1,15 | 11–29 | S1 | **"SPORT"** (lime) segue con la stessa animazione | "BONUS" | titolo |
 | 1,10–1,55 | 27–39 | S1 | **La CTA grande** (230×52) entra per terza: da destra (36 px), scala 0,7→1, opacità 0→1 | titolo | CTA |
 | 1,10–1,60 | 27–40 | S1 | Regolo lime si estende sotto il titolo (427 px) | titolo | regolo |
-| 1,25–1,85 | 31–46 | S1 | Passaggio di luce diagonale sul titolo | tutto | luce |
-| 1,70–2,20 | 42–55 | S1 | Riflesso sulla CTA grande | tutto | riflesso |
 | 2,20–2,60 | 55–65 | S1 | **Fermo di lettura** "BONUS SPORT  SCOPRI DI PIÙ" | tutto | ambiente (deriva) |
 | 2,50–3,05 | 62–76 | T1 | **Morph 1 della CTA**: da (599,79) 230×52 a (565,80) 210×54; non esce mai dal quadro | — | CTA |
 | 2,60–2,95 | 65–74 | T1 | **Wipe di luce**: S1 esce da sinistra, S2 entra; cambio di camera (scala 1,06 → 1,02, −28 px) | safe, CTA | tutto |
-| 2,95–4,80 | 74–120 | S2 Sisal | **Hero card** (195,30) 300×158 sale con rotateX 14°→0 e blur 5→0 (0–0,50 s); logo Sisal 172 px in dissolvenza e scala 0,94→1 (0,30–0,70 s); indice "1 / 3" (0,50–0,80 s); "FINO A" (0,60–0,85 s); cifre di **5.200€** una alla volta, complete a **1,15 s** (t=4,10); riflesso vetro (1,25–1,75 s); fermo fino a 1,85 s. CTA media ferma a destra della card | CTA, safe | card, logo, valore, riflesso |
+| 2,95–4,80 | 74–120 | S2 Sisal | **Hero card** (195,30) 300×158 sale con rotateX 14°→0 e blur 5→0 (0–0,50 s); logo Sisal 172 px in dissolvenza e scala 0,94→1 (0,30–0,70 s); indice "1 / 3" (0,50–0,80 s); "FINO A" (0,60–0,85 s); cifre di **5.200€** una alla volta, complete a **1,15 s** (t=4,10); fermo fino a 1,85 s (riflesso vetro rimosso nella revisione 2). CTA media ferma a destra della card | CTA, safe | card, logo, valore, riflesso |
 | 4,80–5,10 | 120–128 | T2 | Wipe di luce identico a T1 | CTA, safe | tutto |
 | 5,10–6,95 | 128–174 | S3 NetBet | **Stessa coreografia e stessi tempi di S2**, logo NetBet 164 px, indice "2 / 3", valore **1.000€** completo a t=6,25 | idem | idem |
 | 6,95–7,25 | 174–181 | T3 | Wipe di luce identico | CTA, safe | tutto |
@@ -35,7 +41,7 @@ Stato: **v2 APPROVATA e prodotta** (2026-09-10). Conferme del cliente: sfondo ze
 | 9,10–9,45 | 228–236 | T4 | Wipe di luce identico, camera torna a 1,00 | CTA, safe | tutto |
 | 9,25–10,20 | 231–255 | S5 | **Comparazione**: "BONUS"/"SPORT" a sinistra (37 px) si rivelano da maschera; **le tre card entrano insieme** (salita 28 px, rotateX 16°→0, blur 5→0), con loghi e valori già completi; regolo lime | CTA, safe | titolo, card |
 | 10,20–10,70 | 255–268 | S5 | Fermo di confronto: 5.200€ · 1.000€ · 255€ stessa dimensione, stessa baseline | tutto | ambiente |
-| 10,70–11,30 | 268–283 | S6 | **Enfasi CTA**: scala 1→1,12 (0,6 s) poi assestamento a 0,97 (0,5 s); anello che si espande e svanisce (0,8 s); alone radiale (1,3 s, poi resta al 35 %); secondo riflesso (11,10–11,70) | titolo, card, safe | CTA |
+| 10,70–11,85 | 268–296 | S6 | **Pulse CTA**: due battiti morbidi del tasto (10,70–11,25: +9 %; 11,45–12,00: +6 %), ancorati al bordo destro; nessun anello, nessun alone, nessun riflesso (revisione 2) | titolo, card, safe | CTA |
 | 11,80–12,00 | 295–299 | S6 | **End frame** stabile: titolo, tre card, CTA in risalto, safe area vuota. Usabile come fallback statico | tutto | — |
 
 Presenza della CTA: assente solo nei primi 1,10 s di S1 (ingresso BONUS → SPORT → CTA richiesto dal cliente), poi **presente e integra in ogni fotogramma** fino a 12,00 s, attraversando tutte le transizioni. Durata in cui tutte le informazioni (tre loghi + tre valori) sono contemporaneamente leggibili: 10,20–12,00 s (1,8 s) in S5, oltre ai 0,7 s di fermo di ciascun operatore in S2–S4. La variante a 13,0 s aggiungerebbe 0,5 s a S1 e 0,5 s a S5.

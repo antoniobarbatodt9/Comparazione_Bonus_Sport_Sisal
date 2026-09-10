@@ -59,3 +59,38 @@ Data: 2026-09-10 · Sorgente: `08_progetto/banner_scene.html` (ambiente `assets/
 - ✅ End frame decodificato (gif): luminanza fascia valori 150 vs fondo card 37 (≥ 40 di differenza)
 
 - **ESITO COMPLESSIVO: TUTTI I CONTROLLI AUTOMATICI SUPERATI**
+
+---
+
+# Revisione 2 (2026-09-10) — note del cliente applicate
+
+1. **Effetto vetro**: rimossi i riflessi diagonali su hero card, titolo S1 e CTA; card più solide (fondo 80 %); raggi/flare attenuati. Restano solo i wipe di transizione.
+2. **Audio**: bed sostituito con **ambiente stadio reale** estratto da una clip Higgsfield con audio nativo (veo3_1, job `9d228081…`; analisi: nessun parlato con trascrizione automatica, spettro 300–2000 Hz con ondeggiamenti lenti). Clip seedance_2_0 valutata e scartata (troppo sorda). Whoosh più corti e −5 dB, tick −4 dB, ping più discreti. Mai voce.
+3. **CTA finale**: anello e alone eliminati; solo pulse del tasto (due battiti, +9 % e +6 %), ancorato al bordo destro.
+
+Re-render completo dei 300 fotogrammi (entrambe le passate) e ri-codifica di tutte le esportazioni. Esito dei controlli automatici sotto.
+
+
+## Controlli automatici (qc_check_M.py)
+
+- ✅ Fotogrammi: 300 (atteso 300) · dimensione (970, 250) (atteso (970, 250))
+- ✅ CTA presente e integra (pill lime ≥ 3000 px + testo scuro, dentro i margini) dal f40 al f299: tutti
+- ✅ Posizione CTA grande (S1), fuori dal riflesso f56–f62: scarto max dal layout atteso (599, 79, 829, 131) = 1 px (soglia 3)
+- ✅ Posizione CTA media (S2–S4) f77–f226: scarto max dal layout atteso (565, 80, 775, 134) = 1 px (soglia 3)
+- ✅ Posizione CTA piccola (S5) f239–f267: scarto max dal layout atteso (800, 83, 950, 127) = 1 px (soglia 3)
+- ✅ Safe area 0,210 970×40 piatta in tutti i 300 fotogrammi (wipe inclusi): tutti
+- ✅ Pari trattamento sequenziale (stessi tempi relativi, stessa altezza dei valori ±1 px): Sisal: card a u=0,25 (lum 32), valore completo a u=1,20 e stabile a u=1,80 → sì, altezza cifre 26 px · NetBet: card a u=0,25 (lum 31), valore completo a u=1,20 e stabile a u=1,80 → sì, altezza cifre 26 px · William Hill: card a u=0,25 (lum 32), valore completo a u=1,20 e stabile a u=1,80 → sì, altezza cifre 26 px
+- ✅ Proporzioni dei loghi nelle hero card uguali ai file ufficiali (misura sui render 2x, soglia 4 %; nel DOM i loghi hanno solo width, height auto): Sisal 3.16 vs 3.11 (1.9 %) · NetBet 5.62 vs 5.51 (2.0 %) · William Hill 4.79 vs 4.83 (0.7 %)
+- ✅ Valori nel template esattamente come da brief, 2 occorrenze ciascuno (hero + card): {'5.200€': 2, '1.000€': 2, '255€': 2}
+- ✅ Indici '1 / 3' rimossi dal template: sì
+- ✅ Master MP4: 1.49 MB · durata 00:00:12.00 · audio sì (atteso sì)
+- ✅ Web MP4: 0.69 MB (limite 3,5 MB) · durata 00:00:12.00 · audio sì (atteso sì)
+- ✅ Web MP4 MUTO: 0.49 MB (limite 3,5 MB) · durata 00:00:12.00 · audio no (atteso no)
+- ✅ GIF di controllo: 2.70 MB (limite 3,5 MB) · durata 00:00:12.00 · audio no
+- ✅ Audio (web): loudness integrata -20.1 LUFS (target −20 ±1) · true peak -5.8 dBTP (≤ −1)
+- ✅ Coda audio: ultimo suono sopra −60 dB a 11.90 s (≤ 11,95 s)
+- ✅ Nessuna voce: traccia generata solo da sintesi procedurale (numpy), nessun modello text-to-speech o voce invocato; verificato all'ascolto dei singoli cue
+- ✅ End frame decodificato (web): luminanza fascia valori 143 vs fondo card 27 (≥ 40 di differenza)
+- ✅ End frame decodificato (gif): luminanza fascia valori 144 vs fondo card 29 (≥ 40 di differenza)
+
+- **ESITO COMPLESSIVO: TUTTI I CONTROLLI AUTOMATICI SUPERATI**

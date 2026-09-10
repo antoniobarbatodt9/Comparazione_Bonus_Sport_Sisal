@@ -85,3 +85,21 @@ Nella sandbox Higgsfield: ritaglio a rapporto 1018:298 centrato al 60% dell'alte
 
 ### 6.3 Ciò che NON è stato generato con Higgsfield
 Testi, loghi, importi, simbolo €, CTA, disclaimer: composti dal template. Nessuna clip video generativa: il movimento dell'ambiente è programmato (parallasse deterministica a 4 layer + particelle), per garantire assenza di flicker e piena compressibilità; la decisione è motivata in `05_concept/concept.md` e `11_qc/strategia_compressione.md`.
+
+
+---
+
+## 7. CONCEPT M — ambiente "campo di calcio visto dall'alto" (2026-09-10, storyboard v2)
+
+Batch `generate_image_batch` di 4 still 21:9, `nano_banana_pro` (servito `nano_banana_2`, 3168×1344), prompt di campo generico notturno visto dall'alto con esclusioni esplicite (persone, giocatori, pallone, bandierine, porte, spalti, folla, cartelloni, loghi, testi, numeri, architettura di stadio). Costo: 8 crediti.
+
+| # | Job | Soggetto | Esito | Decisione |
+|---|---|---|---|---|
+| 21 | `e190625a-b390-47f4-ba30-cc464acb0373` | zenitale, cerchio al centro, linea di metà campo verticale | pulito, linee sottili, luci ai bordi alto/basso (ritagliate), **nessun elemento IP** | **SELEZIONATO** |
+| 22 | `79514b54-65b7-4eb6-9eb8-7f15647a3da5` | zenitale con cerchio decentrato | in realtà inclinata (prospettiva), non "dall'alto" | scartato |
+| 23 | `7aaef159-1e57-4a77-b778-4992bfa31766` | alta angolazione, campo intero | campo intero con bordi neri, suggestivo ma il campo è piccolo nel 970×250 | riserva |
+| 24 | `2523bb8a-5f99-4b86-add0-9e7270a05403` | zenitale bagnato con foschia | inclinata e molto nebbiosa | scartato |
+
+Trasferimento (preview per lo storyboard): ritaglio fascia centrale 3168×927 (y=208), Lanczos a 1018×298, JPEG q86 4:4:4 (29 807 byte), md5 `40a0dc0c3c5b7c15bce12887d35e2b40`, 3 blocchi base64 ricomposti e verificati. File: `08_progetto/assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg`. In produzione: stesso ritaglio a 2036×596 q90 (≈ 10 blocchi).
+
+Audio: verificato che gli strumenti audio di Higgsfield MCP sono solo text-to-speech (vedi `06_storyboard/storyboard_M.md` §7.1): non usati.

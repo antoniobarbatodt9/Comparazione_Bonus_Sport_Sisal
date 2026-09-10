@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Bonus Sport — concept M "Montaggio a scene" — 970×250 — 12,0 s</title>
 <!--
-  CONCEPT M — banner a scene montate (storyboard). Parametri URL: t, safe, bg, bgmode (drift|still), guide, colon (1 default | 0). Layout S1 (px): BONUS 132 · SPORT 362 · ":" 561 · CTA grande 607,79 230×52
+  CONCEPT M — banner a scene montate (storyboard). Parametri URL: t, safe, bg, bgmode (drift|still), guide, colon (1 default | 0). Layout S1 (px): BONUS 142 · SPORT 372 · CTA grande 599,79 230×52 (due punti disattivati, colon=0). S2–S4: hero 195,30 300×158 + CTA media 565,80 210×54
   Scene: S1 titolo → T1 → S2 Sisal → T2 → S3 NetBet → T3 → S4 William Hill → T4 → S5 comparazione → S6 CTA in risalto.
   Durata 12,0 s = 300 fotogrammi a 25 fps. CTA presente in ogni fotogramma (grande in S1, si trasforma nella pill piccola in T1).
 -->
@@ -19,13 +19,15 @@
   #stage{position:relative;width:970px;height:250px;overflow:hidden;background:var(--ground-0);font-family:var(--font-ui);color:var(--text)}
   /* ambiente */
   #env{position:absolute;inset:0;overflow:hidden} #env>div{position:absolute}
-  #env .img{left:-40px;top:-40px;width:1050px;height:330px;background-size:cover;background-position:center 60%;will-change:transform}
+  #env .img{left:-40px;top:-40px;width:1050px;height:330px;background-size:cover;background-position:center 50%;will-change:transform;filter:brightness(1.06) contrast(1.04)}
+  #env .tint{inset:0;background:linear-gradient(180deg,rgba(0,100,58,.70),rgba(0,84,48,.70));mix-blend-mode:color}
+  #env .tint2{inset:0;background:rgba(0,100,58,.12);mix-blend-mode:screen}
   #env .proc{inset:0;background:radial-gradient(420px 220px at 12% 110%,rgba(185,213,49,.26),rgba(185,213,49,0) 70%),linear-gradient(180deg,#06231a 0%,#0b3324 55%,#0f4a30 100%)}
   #env .flare{left:760px;top:-140px;width:560px;height:420px;border-radius:50%;opacity:0;background:radial-gradient(closest-side,rgba(255,250,225,.55),rgba(255,250,225,.18) 35%,rgba(255,250,225,0) 70%)}
   #env .rays{left:520px;top:-260px;width:900px;height:700px;opacity:0;transform-origin:100% 0;background:linear-gradient(112deg,rgba(255,255,255,0) 30%,rgba(255,255,240,.10) 42%,rgba(255,255,255,0) 50%),linear-gradient(112deg,rgba(255,255,255,0) 55%,rgba(255,255,240,.07) 63%,rgba(255,255,255,0) 71%)}
   #env .tone{inset:0;background:linear-gradient(180deg,rgba(6,26,18,.42) 0%,rgba(6,26,18,.10) 50%,rgba(6,26,18,.55) 100%)}
   #env .vignette{inset:0;background:radial-gradient(75% 130% at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)}
-  #env .shade{left:120px;top:10px;width:730px;height:190px;border-radius:60px;background:rgba(4,18,12,.55);filter:blur(24px)}
+  #env .shade{left:160px;top:20px;width:650px;height:170px;border-radius:60px;background:rgba(4,18,12,.28);filter:blur(26px)}
   #particles{position:absolute;inset:0;pointer-events:none} #particles i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:0}
   /* scene */
   .scene{position:absolute;inset:0;will-change:clip-path}
@@ -46,7 +48,7 @@
   .lbl{position:absolute;left:26px;top:96px;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:.06em;text-transform:uppercase;opacity:0}
   .lbl b{color:var(--sisal-lime);font-weight:800}
   /* hero card (clip operatore) */
-  .hero{position:absolute;left:335px;top:30px;width:300px;height:158px;border-radius:14px;box-sizing:border-box;overflow:hidden;background:linear-gradient(180deg,var(--card-bg-2),rgba(255,255,255,.02)),var(--card-bg);border:1px solid var(--card-border);box-shadow:0 12px 34px rgba(0,0,0,.3);transform-origin:50% 100%;opacity:0}
+  .hero{position:absolute;left:195px;top:30px;width:300px;height:158px;border-radius:14px;box-sizing:border-box;overflow:hidden;background:linear-gradient(180deg,var(--card-bg-2),rgba(255,255,255,.02)),var(--card-bg);border:1px solid var(--card-border);box-shadow:0 12px 34px rgba(0,0,0,.3);transform-origin:50% 100%;opacity:0}
   .hero .logo{position:absolute;left:0;right:0;top:22px;height:56px;display:flex;align-items:center;justify-content:center;opacity:0} .hero .logo img{display:block}
   .hero .fino{position:absolute;left:0;right:0;top:86px;text-align:center;font-family:var(--font-ui);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);opacity:0}
   .hero .valwrap{position:absolute;left:0;right:0;top:104px;height:46px;overflow:hidden;text-align:center}
@@ -73,24 +75,24 @@
 </head>
 <body>
 <div id="stage">
-  <div id="env"><div class="proc"></div><div class="img" id="envimg"></div><div class="rays" id="rays"></div><div class="flare" id="flare"></div><div class="tone"></div><div class="shade"></div><div class="vignette"></div></div>
+  <div id="env"><div class="proc"></div><div class="img" id="envimg"></div><div class="tint"></div><div class="tint2"></div><div class="rays" id="rays"></div><div class="flare" id="flare"></div><div class="tone"></div><div class="shade"></div><div class="vignette"></div></div>
   <div id="particles"></div>
 
   <!-- S1: titolo a tutto banner -->
   <div class="scene" id="s1"><div class="grp">
-    <div class="clip" style="left:132px"><div class="w w1" data-el="w1">Bonus</div></div>
-    <div class="clip" style="left:362px"><div class="w w2" data-el="w2">Sport</div></div>
+    <div class="clip" style="left:142px"><div class="w w1" data-el="w1">Bonus</div></div>
+    <div class="clip" style="left:372px"><div class="w w2" data-el="w2">Sport</div></div>
     <div class="colon" data-el="colon" style="left:561px">:</div>
     <div class="sweep" data-el="s1sweep"></div>
-    <div class="rule" data-el="s1rule" style="left:132px"></div>
+    <div class="rule" data-el="s1rule" style="left:142px"></div>
   </div></div>
 
   <!-- S2/S3/S4: clip operatore (una per volta) -->
-  <div class="scene" id="s2"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+  <div class="scene" id="s2">
     <div class="hero" data-op="sisal"><div class="idx">1 / 3</div><div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:172px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">5.200€</div></div><div class="spec"></div></div></div>
-  <div class="scene" id="s3"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+  <div class="scene" id="s3">
     <div class="hero" data-op="netbet"><div class="idx">2 / 3</div><div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:164px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">1.000€</div></div><div class="spec"></div></div></div>
-  <div class="scene" id="s4"><div class="lbl"><span>Bonus</span> <b>Sport</b></div>
+  <div class="scene" id="s4">
     <div class="hero" data-op="williamhill"><div class="idx">3 / 3</div><div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:202px;height:auto"></div><div class="fino">Fino a</div><div class="valwrap"><div class="val">255€</div></div><div class="spec"></div></div></div>
 
   <!-- S5/S6: comparazione + CTA in risalto -->
@@ -128,7 +130,7 @@
   // ---- Ambiente: "camera" diversa per ogni clip (salto al taglio) + deriva continua dentro la clip
   const cams={s1:[0,1.06],s2:[-28,1.02],s3:[22,1.03],s4:[-12,1.04],s5:[0,1.0]};
   let cam=cams.s1; for(const k of ['s2','s3','s4','s5']) if(t>=S[k][0]-0.17) cam=cams[k];
-  const envimg=document.getElementById('envimg'); const bg=q.get('bg');
+  const envimg=document.getElementById('envimg'); const bg=q.get('bg')||'assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg';
   if(bg){envimg.style.backgroundImage=`url("${bg}")`; document.querySelector('#env .proc').style.opacity=0;}
   document.getElementById('env').style.opacity=eoC(prog(t,[0,0.6]));
   envimg.style.transform=`translateX(${cam[0]-14*d}px) scale(${cam[1]+0.03-0.03*d})`;
@@ -152,22 +154,23 @@
 
   // ---- S1: titolo
   const rise=(el,p,dy=104)=>{el.style.transform=`translateY(${(1-p)*dy}%)`;el.style.letterSpacing=`${lerp(0.14,-0.01,p)}em`;el.style.opacity=clamp(p*3);};
-  rise(document.querySelector('[data-el=w1]'),eoE(prog(t,[0.25,0.95]))); rise(document.querySelector('[data-el=w2]'),eoE(prog(t,[0.38,1.08])));
-  const colon=document.querySelector('[data-el=colon]'); const pc=eoE(prog(t,[0.95,1.25])); colon.style.opacity=(q.get('colon')||'1')==='1'?pc:0; colon.style.transform=`scale(${lerp(0.4,1,pc)})`;
+  rise(document.querySelector('[data-el=w1]'),eoE(prog(t,[0.25,0.95]))); rise(document.querySelector('[data-el=w2]'),eoE(prog(t,[0.45,1.15])));
+  const colon=document.querySelector('[data-el=colon]'); const pc=eoE(prog(t,[0.95,1.25])); colon.style.opacity=(q.get('colon')||'0')==='1'?pc:0; colon.style.transform=`scale(${lerp(0.4,1,pc)})`;
   const sw=document.querySelector('[data-el=s1sweep]'); const psw=prog(t,[1.25,1.85]); sw.style.opacity=psw>0&&psw<1?Math.sin(psw*Math.PI):0; sw.style.left=`${lerp(90,600,eio(psw))}px`;
   document.querySelector('[data-el=s1rule]').style.width=`${427*eoC(prog(t,[1.1,1.6]))}px`;
 
   // ---- CTA unica: grande in S1 (a destra del titolo), morfa nella pill piccola durante T1; enfasi in S6
-  const big={x:607,y:79,w:230,h:52,fs:20}, small={x:800,y:83,w:150,h:44,fs:13.5};
-  const pin=eoE(prog(t,[0.0,0.45]));                // CTA presente dal fotogramma 0 (scala 0,6→1 nei primi 0,45 s)
-  const pm=eioC(prog(t,[2.50,3.05]));               // morph grande → piccola
+  const big={x:599,y:79,w:230,h:52,fs:20}, mid={x:565,y:80,w:210,h:54,fs:18}, small={x:800,y:83,w:150,h:44,fs:13.5};
+  const pin=eoE(prog(t,[1.10,1.55]));               // S1: la CTA entra dopo BONUS e SPORT (ordine richiesto: BONUS → SPORT → CTA); poi resta in ogni fotogramma
+  const pm1=eioC(prog(t,[2.50,3.05]));              // morph grande (S1) → media (S2–S4)
+  const pm2=eioC(prog(t,[9.05,9.50]));              // morph media → piccola (S5)
   const pe=eoE(prog(t,[S.s6[0],S.s6[0]+0.6]));       // enfasi S6: scala 1→1,12 e leggero spostamento verso il centro-destra
   const pset=eio(prog(t,[S.s6[0]+0.6,S.s6[0]+1.1]));
   const sc=lerp(1,1.12,pe)*lerp(1,0.97,pset);
-  let cx=lerp(big.x,small.x,pm), cy=lerp(big.y,small.y,pm), cw=lerp(big.w,small.w,pm), ch=lerp(big.h,small.h,pm), cfs=lerp(big.fs,small.fs,pm);
+  const L2=(k)=>lerp(lerp(big[k],mid[k],pm1),small[k],pm2); let cx=L2('x'), cy=L2('y'), cw=L2('w'), ch=L2('h'), cfs=L2('fs');
   const cta=document.getElementById('cta');
   cta.style.left=`${cx}px`; cta.style.top=`${cy}px`; cta.style.width=`${cw}px`; cta.style.height=`${ch}px`; cta.style.fontSize=`${cfs}px`;
-  const s0=lerp(0.6,1,pin); cta.style.transform=`scale(${s0*sc})`; cta.style.opacity=Math.max(0.999,clamp(pin*3));
+  const s0=lerp(0.7,1,pin); cta.style.transform=`translateX(${(1-pin)*36}px) scale(${s0*sc})`; cta.style.opacity=clamp(pin*2.5);
   const sheen=document.querySelector('#cta .sheen'); const sh1=prog(t,[1.7,2.2]), sh2=prog(t,[S.s6[0]+0.4,S.s6[0]+1.0]); const psh=sh1>0&&sh1<1?sh1:(sh2>0&&sh2<1?sh2:0);
   sheen.style.opacity=psh>0?1:0; sheen.style.transform=`translateX(${-120+ (cw+240)*eio(psh)}px) skewX(-18deg)`;
   const ring=document.getElementById('ctaring'); const pr=prog(t,[S.s6[0],S.s6[0]+0.8]);
@@ -178,8 +181,7 @@
 
   // ---- clip operatore (stessa coreografia per i tre, stessa durata)
   [['s2',S.s2],['s3',S.s3],['s4',S.s4]].forEach(([id,win])=>{
-    const sc=scenes[id]; const u=t-win[0]; const hero=sc.querySelector('.hero'); const lbl=sc.querySelector('.lbl');
-    lbl.style.opacity=eoC(prog(u,[0.05,0.45]))*0.9; lbl.style.transform=`translateY(${(1-eoC(prog(u,[0.05,0.45])))*8}px)`;
+    const sc=scenes[id]; const u=t-win[0]; const hero=sc.querySelector('.hero');
     const ph=eoE(prog(u,[0.0,0.5])); hero.style.opacity=clamp(ph*1.6); hero.style.transform=`translateY(${(1-ph)*30}px) rotateX(${(1-ph)*14}deg)`; hero.style.filter=`blur(${(1-ph)*5}px)`;
     const pl=eoC(prog(u,[0.3,0.7])); const lg=hero.querySelector('.logo'); lg.style.opacity=pl; lg.style.transform=`scale(${lerp(0.94,1,pl)})`;
     hero.querySelector('.fino').style.opacity=eoC(prog(u,[0.6,0.85])); hero.querySelector('.idx').style.opacity=0.9*eoC(prog(u,[0.5,0.8]));

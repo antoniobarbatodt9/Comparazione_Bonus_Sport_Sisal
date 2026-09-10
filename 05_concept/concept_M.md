@@ -1,17 +1,17 @@
 # Concept M — "Montaggio a scene" (richiesta del cliente, 2026-09-10)
 
-Stato: **storyboard in attesa di approvazione**. Nessun master prodotto per questo concept. Il concept A (pannello unico, 9 s) resta consegnato in `10_export/` e non viene toccato.
+Stato: **storyboard v2 in attesa di approvazione** (revisione del 2026-09-10 sulle note del cliente: niente due punti, ingresso BONUS → SPORT → CTA, etichetta piccola eliminata, CTA più grande nelle scene operatore, sfondo campo di calcio visto dall'alto). Nessun master prodotto per questo concept. Il concept A (pannello unico, 9 s) resta consegnato in `10_export/` e non viene toccato.
 
 ## 1. Che cosa ho capito della richiesta (riassunto per conferma)
 
 | # | Richiesta | Come la traduco |
 |---|---|---|
 | 1 | Il banner non è più un pannello unico: è una **sequenza di scene diverse, montate come clip separate**, con **transizioni** tra una scena e l'altra | 5 inquadrature (S1…S5) + 4 transizioni (T1…T4) + un'enfasi finale (S6) dentro l'ultima inquadratura; ogni scena ha una sua "camera" (leggero cambio di scala/posizione dell'ambiente) così che il taglio si senta come un vero cambio di scena |
-| 2 | **Prima scena**: solo "BONUS SPORT: SCOPRI DI PIÙ", che occupa/si allinea a tutto il 970×250, con entrata, transizione e motion graphics adeguati | S1: titolo a 56 px su una sola riga con la CTA grande (230×52) subito a destra, centrati sull'intero formato; entrata delle parole da maschera, tracking che si assesta, regolo lime, passaggio di luce; poi wipe di luce verso S2 |
-| 3 | **Inserimento sequenziale degli operatori**: prima Sisal, poi NetBet, poi William Hill | S2, S3, S4: una "hero card" per volta (300×158, logo 1,45× più grande che nel concept A, valore a 38 px), stessa coreografia e stessa durata per i tre (1,85 s ciascuno), indice "1/3 · 2/3 · 3/3" per rendere esplicita la sequenza |
-| 4 | **Mettere in risalto la CTA "SCOPRI DI PIÙ"** | La CTA è protagonista in S1 (grande), resta presente in ogni scena (pill 150×44 a destra) e in S6 riceve un'enfasi dedicata (scala, anello che si espande, alone, riflesso) sul fermo finale |
+| 2 | **Prima scena**: solo "BONUS SPORT  SCOPRI DI PIÙ", che occupa/si allinea a tutto il 970×250, con entrata, transizione e motion graphics adeguati | S1: titolo a 56 px su una sola riga con la CTA grande (230×52) subito a destra, centrati sull'intero formato, **senza due punti**; ingresso nell'ordine **BONUS → SPORT → CTA**; tracking che si assesta, regolo lime, passaggio di luce; poi wipe di luce verso S2 |
+| 3 | **Inserimento sequenziale degli operatori**: prima Sisal, poi NetBet, poi William Hill | S2, S3, S4: una "hero card" per volta (300×158, logo 1,45× più grande che nel concept A, valore a 38 px) con accanto la **CTA media** (210×54): card e CTA formano un gruppo centrato; nessuna etichetta piccola; stessa coreografia e stessa durata per i tre (1,85 s ciascuno), indice "1/3 · 2/3 · 3/3" |
+| 4 | **Mettere in risalto la CTA "SCOPRI DI PIÙ"** | La CTA è protagonista in S1 (grande, 230×52), resta grande anche nelle scene operatore (media, 210×54, accanto alla card), torna piccola (150×44) solo nella comparazione dove lo spazio è condiviso con le tre card, e in S6 riceve un'enfasi dedicata (scala, anello, alone, riflesso) sul fermo finale |
 | 5 | Le scene sono **tutte coerenti e consequenziali** | Un'unica narrazione: annuncio (S1) → i tre operatori uno alla volta (S2–S4) → tutti insieme a confronto (S5) → azione (S6). Stesso ambiente, stessa palette, stessa tipografia, stessi materiali delle card; ciascun operatore rientra in S5 con lo stesso logo e lo stesso valore appena visto |
-| 6 | **La CTA deve sempre essere presente in ogni scena** | Un'unica CTA che non sparisce mai: presente dal fotogramma 0, in S1 è grande, durante T1 migra a destra e si riduce (morph continuo, senza mai uscire dal quadro), poi resta fissa a (800,83) fino alla fine. Verificato fotogramma per fotogramma dal QC |
+| 6 | **La CTA deve sempre essere presente in ogni scena** | Un'unica CTA che, una volta entrata (1,10 s, terza dopo BONUS e SPORT come richiesto), non sparisce mai: morfa grande → media → piccola durante le transizioni senza mai uscire dal quadro. Verificato fotogramma per fotogramma dal QC |
 | 7 | **Sound effect** sulle transizioni e **effetto stadio** (se mantengo il concept) o altro | Traccia audio con: bed ambientale "stadio lontano" a basso volume, whoosh su ogni transizione, tick/impatto morbido sui valori che si completano, "ping" sulla CTA finale. Dettagli e alternative in `06_storyboard/storyboard_M.md` §6 |
 | 8 | **MAI voiceover** | Nessuna voce, né parlata né cantata, né sintetica. Nessun modello TTS viene invocato. Regola inserita nel piano QC (controllo spettrale della traccia: nessuna componente vocale) |
 | 9 | Durata **entro 13 s**; se troppo complicato/veloce, **fino a un massimo di 12 s** | Ho letto le due indicazioni come: obiettivo ≤ 12 s, tolleranza fino a 13 s. Propongo **12,0 s = 300 fotogrammi a 25 fps**; se preferisce più respiro sui fermi (S1 e S5) posso allungare a 13,0 s senza cambiare la struttura. **Da confermare.** |
@@ -33,14 +33,14 @@ Le quattro transizioni sono **wipe di luce** (una banda luminosa inclinata attra
 
 ## 4. Ambiente e motion graphics
 
-- Ambiente: lo **stesso still Higgsfield definitivo** (`08_progetto/assets/env/env_A_pitch_FINAL_2036x596.jpg`, campo notturno generico, nessun elemento IP), con parallasse programmata e una "camera" diversa per scena (S1 1,06 centrata · S2 1,02 spostata −28 px · S3 1,03 +22 px · S4 1,04 −12 px · S5 1,00). Nella GIF l'ambiente è fermo per il peso.
+- Ambiente: **nuovo still Higgsfield, campo di calcio visto dall'alto** (job `e190625a…`, preview `08_progetto/assets/env/env_M_pitch_topdown_PREVIEW_1018x298.jpg`; cerchio di centrocampo al centro, linee sottili, notturno, tinto nel verde Sisal e attenuato; nessun elemento IP), con parallasse programmata e una "camera" diversa per scena (S1 1,06 centrata · S2 1,02 spostata −28 px · S3 1,03 +22 px · S4 1,04 −12 px · S5 1,00). Nella GIF l'ambiente è fermo per il peso.
 - Nessuna clip video generativa: il montaggio è composto in modo deterministico (Playwright + ffmpeg), quindi senza flicker e pienamente comprimibile. Rimane valida l'opzione, già documentata, di sostituire l'ambiente con una clip Higgsfield se il cliente lo chiedesse (con il passaggio manuale descritto in `07_asset_generati/README_higgsfield.md` §4).
 - Higgsfield **non** genera testi, loghi, importi, simboli €, CTA o disclaimer (vincolo del brief); vedi §6 del storyboard per il ruolo nell'audio.
 
 ## 5. Scelte aperte (da decidere in approvazione)
 
 1. **Durata**: 12,0 s (proposta) oppure 13,0 s (fermi più lunghi in S1 e S5).
-2. **Due punti** dopo "SPORT" in S1 ("BONUS SPORT: SCOPRI DI PIÙ" letterale, come richiesto): attivi nello storyboard; disattivabili (`colon=0`) se si preferisce solo lo spazio.
+2. **Variante di campo**: #21 (zenitale, selezionata) oppure #23 (campo intero con bordi neri, riserva); intensità del campo regolabile (ora attenuata, "non invasiva").
 3. **Accento sul bordo della card Sisal in S5** (come nel concept A): non previsto; attivabile.
 4. **Audio**: bed stadio + SFX (proposta) oppure solo SFX senza bed. Sorgente dei suoni: sintesi procedurale nel progetto (proposta, nessun diritto di terzi) oppure libreria licenziata fornita dal cliente.
 5. **Versione muta**: consegno comunque un MP4 senza traccia audio per i circuiti display che non ammettono audio (la GIF è muta per natura).

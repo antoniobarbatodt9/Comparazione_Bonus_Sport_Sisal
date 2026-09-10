@@ -2,108 +2,121 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Bonus Sport — comparazione 970×250 — progetto modificabile</title>
+<title>Bonus Sport — comparazione 970×250 — progetto modificabile v2</title>
 <!--
-  PROGETTO MODIFICABILE — banner dinamico 970×250, 25 fps.
+  PROGETTO MODIFICABILE v2 (produzione) — banner dinamico 970×250, 25 fps, 9,0 s = 225 fotogrammi.
   Il tempo è deterministico: ogni fotogramma viene calcolato dal parametro ?t=<secondi>.
   Parametri URL:
     t      tempo in secondi (default 0)
     safe   1 = evidenzia la safe area disclaimer (solo storyboard/QC)
     bg     percorso immagine ambiente (default: placeholder procedurale)
-    bgmode still | drift   (drift = lento movimento programmato dell'ambiente)
+    bgmode drift | still   (still = ambiente, raggi e particelle fermi: usato per la GIF)
     guide  1 = griglia/quote layout (solo QC)
-    theme  board | light  (varianti di direzione, solo styleframe di confronto; default = direzione A)
-  Tutti gli elementi informativi (loghi, valori, titolo, CTA) sono DOM separati e modificabili:
-  vedi config.json e la sezione DATI qui sotto. Nessun testo è incorporato nell'ambiente.
+    theme  board | light  (varianti di confronto, non in produzione)
+  Tutti gli elementi informativi (loghi, valori, titolo, CTA) sono DOM separati e modificabili (vedi config.json).
+  Nessun testo, logo, importo o CTA è incorporato nell'ambiente generato.
 -->
 <style>
   @font-face { font-family: "Montserrat"; font-weight: 800; src: url("assets/font/Montserrat-800.woff2") format("woff2"); }
   @font-face { font-family: "Montserrat"; font-weight: 700; src: url("assets/font/Montserrat-700.woff2") format("woff2"); }
-  @font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/font/Montserrat-600.woff2") format("woff2"); }
   @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/font/Inter-600.woff2") format("woff2"); }
   @font-face { font-family: "Inter"; font-weight: 700; src: url("assets/font/Inter-700.woff2") format("woff2"); }
 
   :root {
-    /* ===== TOKEN PROVVISORI (da validare con brand audit sisal.it) =====
-       Derivati esclusivamente dal file ufficiale 01_loghi/sisal.svg */
-    --sisal-green: #00643a;      /* osservato: fill wordmark/stella grande */
-    --sisal-lime:  #b9d531;      /* osservato: fill stella media */
-    --sisal-red:   #e22118;      /* osservato: fill stella piccola (non usato come UI) */
-    --ground-0:    #061a12;      /* proposto: fondo scuro derivato da sisal-green */
-    --ground-1:    #0b3324;      /* proposto */
+    /* TOKEN PROVVISORI — derivati dal logo ufficiale sisal.svg (brand audit del sito bloccato) */
+    --sisal-green: #00643a;
+    --sisal-lime:  #b9d531;
+    --lime-hi:     #e6ff8a;
+    --ground-0:    #061a12;
+    --ground-1:    #0b3324;
     --text:        #ffffff;
-    --text-dim:    rgba(255,255,255,0.72);
-    --card-bg:     rgba(255,255,255,0.075);
-    --card-border: rgba(255,255,255,0.16);
+    --text-dim:    rgba(255,255,255,0.74);
+    --card-bg:     rgba(6,26,18,0.42);
+    --card-bg-2:   rgba(255,255,255,0.06);
+    --card-border: rgba(255,255,255,0.17);
     --cta-bg:      var(--sisal-lime);
     --cta-text:    #06301d;
-    --radius:      12px;          /* proposto: da confrontare con i raggi dei componenti sisal.it */
-    --font-display: "Montserrat", "Inter", Arial, sans-serif;   /* PROVVISORIO, non ufficiale */
-    --font-ui:      "Inter", "Montserrat", Arial, sans-serif;   /* PROVVISORIO, non ufficiale */
+    --radius:      12px;
+    --font-display: "Montserrat", "Inter", Arial, sans-serif;   /* sostitutivo OFL, non ufficiale */
+    --font-ui:      "Inter", "Montserrat", Arial, sans-serif;   /* sostitutivo OFL, non ufficiale */
   }
   html, body { margin:0; padding:0; background:#000; }
   #stage { position:relative; width:970px; height:250px; overflow:hidden; background:var(--ground-0); font-family:var(--font-ui); color:var(--text); }
 
-  /* ---------- AMBIENTE ---------- */
+  /* ---------- AMBIENTE (layer con parallasse) ---------- */
   #env { position:absolute; inset:0; overflow:hidden; }
-  #env .img { position:absolute; left:-20px; top:-20px; width:1010px; height:290px; background-size:cover; background-position:center 62%; will-change:transform; }
-  #env .proc { position:absolute; inset:0;
+  #env > div { position:absolute; }
+  #env .img { left:-24px; top:-24px; width:1018px; height:298px; background-size:cover; background-position:center 60%; will-change:transform; }
+  #env .proc { inset:0;
     background:
-      radial-gradient(420px 220px at 12% 110%, rgba(185,213,49,0.28), rgba(185,213,49,0) 70%),
+      radial-gradient(420px 220px at 12% 110%, rgba(185,213,49,0.26), rgba(185,213,49,0) 70%),
       radial-gradient(520px 180px at 78% -10%, rgba(255,255,255,0.10), rgba(255,255,255,0) 70%),
       linear-gradient(180deg, #06231a 0%, #0b3324 55%, #0f4a30 100%); }
-  #env .lines { position:absolute; inset:0; }
-  #env .haze { position:absolute; inset:0; background:linear-gradient(180deg, rgba(6,26,18,0.55) 0%, rgba(6,26,18,0.15) 45%, rgba(6,26,18,0.55) 100%); }
-  #env .vignette { position:absolute; inset:0; background:radial-gradient(70% 120% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.45) 100%); }
+  #env .lines { inset:0; }
+  #env .flare { left:760px; top:-140px; width:560px; height:420px; border-radius:50%; opacity:0; will-change:opacity,transform;
+    background:radial-gradient(closest-side, rgba(255,250,225,0.55), rgba(255,250,225,0.18) 35%, rgba(255,250,225,0) 70%); }
+  #env .rays { left:520px; top:-260px; width:900px; height:700px; opacity:0; transform-origin:100% 0; will-change:transform,opacity;
+    background:
+      linear-gradient(112deg, rgba(255,255,255,0) 30%, rgba(255,255,240,0.10) 42%, rgba(255,255,255,0) 50%),
+      linear-gradient(112deg, rgba(255,255,255,0) 55%, rgba(255,255,240,0.07) 63%, rgba(255,255,255,0) 71%),
+      linear-gradient(112deg, rgba(255,255,255,0) 74%, rgba(255,255,240,0.05) 80%, rgba(255,255,255,0) 86%); }
+  #env .haze { left:-60px; top:60px; width:1140px; height:150px; opacity:0.55; will-change:transform;
+    background:radial-gradient(60% 100% at 50% 60%, rgba(180,220,190,0.14), rgba(180,220,190,0) 70%); }
+  #env .shade { left:200px; top:14px; width:610px; height:184px; border-radius:40px; background:rgba(4,18,12,0.55); filter:blur(22px); }
+  #env .vignette { inset:0; background:radial-gradient(75% 130% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%); }
+  #env .tone { inset:0; background:linear-gradient(180deg, rgba(6,26,18,0.42) 0%, rgba(6,26,18,0.10) 50%, rgba(6,26,18,0.55) 100%); }
+  #particles { position:absolute; inset:0; pointer-events:none; }
+  #particles i { position:absolute; display:block; width:3px; height:3px; border-radius:50%; background:#fff; opacity:0; will-change:transform,opacity; }
 
   /* ---------- TITOLO ---------- */
-  #title { position:absolute; left:26px; top:48px; width:190px; }
-  #title .l { font-family:var(--font-display); font-weight:800; font-size:37px; line-height:38px; letter-spacing:-0.01em; text-transform:uppercase; }
+  #title { position:absolute; left:26px; top:60px; width:196px; }
+  #title .clip { overflow:hidden; height:40px; }
+  #title .l { font-family:var(--font-display); font-weight:800; font-size:37px; line-height:40px; text-transform:uppercase; white-space:nowrap; will-change:transform,letter-spacing; }
   #title .l2 { color:var(--sisal-lime); }
-  #title .crit { margin-top:10px; font-family:var(--font-ui); font-weight:600; font-size:10.5px; line-height:13px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-dim); }
+  #title .rule { margin-top:8px; height:2px; width:0; background:var(--sisal-lime); opacity:0.9; }
 
   /* ---------- CARD ---------- */
-  #cards { position:absolute; left:232px; top:32px; width:544px; height:146px; }
-  .card { position:absolute; top:0; width:168px; height:146px; border-radius:var(--radius); background:var(--card-bg); border:1px solid var(--card-border); box-sizing:border-box; overflow:hidden; }
+  #cards { position:absolute; left:232px; top:32px; width:544px; height:146px; perspective:900px; }
+  .card { position:absolute; top:0; width:168px; height:146px; border-radius:var(--radius); box-sizing:border-box; overflow:hidden;
+    background:linear-gradient(180deg, var(--card-bg-2), rgba(255,255,255,0.02)), var(--card-bg); border:1px solid var(--card-border);
+    box-shadow:0 10px 30px rgba(0,0,0,0.28); transform-origin:50% 100%; will-change:transform,opacity,filter; }
   .card .glow { position:absolute; inset:-40px; background:radial-gradient(60% 60% at 50% 60%, rgba(185,213,49,0.35), rgba(185,213,49,0) 70%); opacity:0; }
-  .card .logo { position:absolute; left:0; right:0; top:22px; height:40px; display:flex; align-items:center; justify-content:center; }
+  .card .spec { position:absolute; top:-40px; bottom:-40px; width:70px; opacity:0; transform:translateX(-120px) skewX(-22deg);
+    background:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.20) 50%, rgba(255,255,255,0) 100%); }
+  .card .logo { position:absolute; left:0; right:0; top:22px; height:40px; display:flex; align-items:center; justify-content:center; will-change:transform,opacity; }
   .card .logo img { display:block; }
   .card .fino { position:absolute; left:0; right:0; top:76px; text-align:center; font-family:var(--font-ui); font-weight:600; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-dim); }
-  .card .valwrap { position:absolute; left:0; right:0; top:94px; height:38px; overflow:hidden; }
-  .card .val { text-align:center; font-family:var(--font-display); font-weight:800; font-size:29px; line-height:38px; letter-spacing:-0.01em; font-variant-numeric:tabular-nums; }
+  .card .valwrap { position:absolute; left:0; right:0; top:94px; height:38px; overflow:hidden; text-align:center; }
+  .card .val { display:inline-block; font-family:var(--font-display); font-weight:800; font-size:29px; line-height:38px; letter-spacing:-0.01em; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .card .val span { display:inline-block; will-change:transform,opacity; }
   .card .accent { position:absolute; inset:0; border-radius:var(--radius); pointer-events:none; }
   .card .accent .ring { position:absolute; inset:0; border-radius:var(--radius); border:1.5px solid var(--sisal-lime); box-sizing:border-box; opacity:0; }
-  .card .accent .sweep { position:absolute; inset:-2px; border-radius:calc(var(--radius) + 2px); opacity:0;
-    background:conic-gradient(from 0deg, rgba(185,213,49,0) 0deg, rgba(185,213,49,0) 300deg, rgba(232,255,140,1) 350deg, rgba(185,213,49,0) 360deg);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor; mask-composite: exclude; padding:2.5px; }
+  .card .accent .sweep, .card .accent .sweep2 { position:absolute; inset:-3px; border-radius:calc(var(--radius) + 3px); opacity:0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; padding:3.5px; }
+  .card .accent .sweep  { background:conic-gradient(from 0deg, rgba(185,213,49,0) 0deg, rgba(185,213,49,0) 250deg, rgba(185,213,49,0.55) 330deg, rgba(230,255,138,1) 352deg, rgba(185,213,49,0) 360deg); }
+  .card .accent .sweep2 { background:conic-gradient(from 0deg, rgba(230,255,138,0) 0deg, rgba(230,255,138,0) 340deg, rgba(255,255,255,0.9) 352deg, rgba(230,255,138,0) 360deg); filter:blur(2px); }
 
   /* ---------- CTA ---------- */
   #cta { position:absolute; left:800px; top:83px; width:150px; height:44px; border-radius:22px; background:var(--cta-bg); color:var(--cta-text);
-    display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:13.5px; letter-spacing:0.05em; text-transform:uppercase; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
-  #cta .sheen { position:absolute; top:-10px; bottom:-10px; width:46px; background:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%); transform:translateX(-80px) skewX(-18deg); opacity:0; }
+    display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:13.5px; letter-spacing:0.05em; text-transform:uppercase; overflow:hidden; box-shadow:0 8px 22px rgba(0,0,0,0.30), 0 0 0 1px rgba(255,255,255,0.08) inset; }
+  #cta .sheen { position:absolute; top:-10px; bottom:-10px; width:46px; background:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%); transform:translateX(-80px) skewX(-18deg); opacity:0; }
 
-  /* ---------- SAFE AREA DISCLAIMER (sempre libera) ---------- */
+  /* ---------- SAFE AREA DISCLAIMER (sempre libera, piatta) ---------- */
   #safe { position:absolute; left:0; top:210px; width:970px; height:40px; background:var(--ground-0); }
   #safe.show::after { content:"SAFE AREA DISCLAIMER · 970×40 px · y 210–250 · libera per ADM / 18+ / diciture (inserimento manuale)"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
     font:600 10px/1 var(--font-ui); letter-spacing:0.08em; color:#ff4fd8; background:repeating-linear-gradient(45deg, rgba(255,79,216,0.12) 0 6px, rgba(255,79,216,0.04) 6px 12px); border-top:1px dashed #ff4fd8; box-sizing:border-box; }
 
-  /* ---------- VARIANTI DI DIREZIONE (solo per styleframe di confronto) ---------- */
-  /* B · "Tabellone di luce": fondo piatto, card senza vetro, divisori, accento = sottolineatura */
-  #stage.theme-board .card { background:transparent; border:none; border-radius:0; }
+  /* ---------- VARIANTI DI CONFRONTO (non in produzione) ---------- */
+  #stage.theme-board .card { background:transparent; border:none; border-radius:0; box-shadow:none; }
   #stage.theme-board .card::before { content:""; position:absolute; left:0; top:12px; bottom:12px; width:1px; background:rgba(255,255,255,0.18); }
   #stage.theme-board .card[data-op=sisal]::before { display:none; }
   #stage.theme-board .card .accent .ring { border:none; border-bottom:2px solid var(--sisal-lime); border-radius:0; top:auto; height:0; bottom:8px; left:24px; right:24px; }
-  #stage.theme-board .card .accent .sweep { display:none; }
-  #stage.theme-board .card .glow { display:none; }
+  #stage.theme-board .card .accent .sweep, #stage.theme-board .card .accent .sweep2, #stage.theme-board .card .glow, #stage.theme-board #env .lines, #stage.theme-board #env .shade { display:none; }
   #stage.theme-board #cta { border-radius:6px; }
-  #stage.theme-board #env .lines { display:none; }
-  /* C · "Editoriale chiaro": fondo chiaro — dimostra l'incompatibilità dei loghi white forniti */
   #stage.theme-light { background:#f2f4f1; color:#0b3324; }
-  #stage.theme-light #env { display:none; }
+  #stage.theme-light #env, #stage.theme-light #particles { display:none; }
   #stage.theme-light .card { background:#ffffff; border:1px solid #d9ded8; box-shadow:0 4px 14px rgba(0,0,0,0.06); }
   #stage.theme-light .card .fino { color:#5a6a60; }
-  #stage.theme-light #title .crit { color:#5a6a60; }
   #stage.theme-light #title .l2 { color:var(--sisal-green); }
   #stage.theme-light #cta { background:var(--sisal-green); color:#fff; }
   #stage.theme-light #safe { background:#0b3324; }
@@ -118,46 +131,50 @@
 <div id="stage">
   <div id="env">
     <div class="proc"></div>
-    <svg class="lines" viewBox="0 0 970 250" width="970" height="250" aria-hidden="true">
-      <!-- linee di campo generiche, nessun riferimento a stadi reali -->
-      <g fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1.5">
-        <ellipse cx="485" cy="292" rx="330" ry="64"/>
-        <path d="M-40 236 L1010 236"/>
-      </g>
+    <svg class="lines" viewBox="0 0 970 250" width="970" height="250" aria-hidden="true" style="position:absolute;inset:0">
+      <g fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"><ellipse cx="485" cy="292" rx="330" ry="64"/></g>
     </svg>
     <div class="img" id="envimg"></div>
-    <div class="haze"></div>
+    <div class="haze" id="haze"></div>
+    <div class="rays" id="rays"></div>
+    <div class="flare" id="flare"></div>
+    <div class="tone"></div>
+    <div class="shade"></div>
     <div class="vignette"></div>
   </div>
+  <div id="particles"></div>
 
   <div id="title">
-    <div class="l l1" data-el="title1">Bonus</div>
-    <div class="l l2" data-el="title2">Sport</div>
-    <div class="crit" data-el="crit">Importo massimo dichiarato</div>
+    <div class="clip"><div class="l l1" data-el="title1">Bonus</div></div>
+    <div class="clip"><div class="l l2" data-el="title2">Sport</div></div>
+    <div class="rule" data-el="rule"></div>
   </div>
 
-  <!-- DATI: valori riportati esattamente come da brief, senza arrotondamenti -->
+  <!-- DATI: valori riportati esattamente come da brief -->
   <div id="cards">
     <div class="card" data-op="sisal" style="left:0">
       <div class="glow"></div>
       <div class="logo"><img src="assets/loghi/Sisal_white_neg_LRES.png" alt="Sisal" style="width:118px;height:auto"></div>
       <div class="fino">Fino a</div>
       <div class="valwrap"><div class="val">5.200€</div></div>
-      <div class="accent"><div class="sweep"></div><div class="ring"></div></div>
+      <div class="spec"></div>
+      <div class="accent"><div class="sweep"></div><div class="sweep2"></div><div class="ring"></div></div>
     </div>
     <div class="card" data-op="netbet" style="left:188px">
       <div class="glow"></div>
       <div class="logo"><img src="assets/loghi/NetBet_PrimaryLogo_White.png" alt="NetBet" style="width:112px;height:auto"></div>
       <div class="fino">Fino a</div>
       <div class="valwrap"><div class="val">1.000€</div></div>
-      <div class="accent"><div class="sweep"></div><div class="ring"></div></div>
+      <div class="spec"></div>
+      <div class="accent"><div class="sweep"></div><div class="sweep2"></div><div class="ring"></div></div>
     </div>
     <div class="card" data-op="williamhill" style="left:376px">
       <div class="glow"></div>
       <div class="logo"><img src="assets/loghi/WilliamHill_white.png" alt="William Hill" style="width:138px;height:auto"></div>
       <div class="fino">Fino a</div>
       <div class="valwrap"><div class="val">255€</div></div>
-      <div class="accent"><div class="sweep"></div><div class="ring"></div></div>
+      <div class="spec"></div>
+      <div class="accent"><div class="sweep"></div><div class="sweep2"></div><div class="ring"></div></div>
     </div>
   </div>
 
@@ -166,7 +183,7 @@
   <div id="safe"></div>
 
   <div id="guide">
-    <div class="box" style="left:26px;top:48px;width:190px;height:100px">TITOLO 26,48 190×100</div>
+    <div class="box" style="left:26px;top:60px;width:196px;height:92px">TITOLO 26,60 196×92</div>
     <div class="box" style="left:232px;top:32px;width:544px;height:146px">CARDS 232,32 544×146 (3×168, gap 20)</div>
     <div class="box" style="left:800px;top:83px;width:150px;height:44px">CTA 800,83 150×44</div>
     <div class="box" style="left:0;top:210px;width:970px;height:40px">SAFE 0,210 970×40</div>
@@ -174,68 +191,97 @@
 </div>
 
 <script>
-  // ===================== TIMELINE (secondi) =====================
-  // Durata prevista: 9,0 s = 225 fotogrammi a 25 fps (vedi 06_storyboard/storyboard.md)
+  // ===================== TIMELINE (secondi) — 9,0 s = 225 fotogrammi a 25 fps =====================
   const TL = {
     duration: 9.0,
-    env:     { fade:[0.00, 0.60] },
-    title1:  { in:[0.20, 0.70] },
-    title2:  { in:[0.30, 0.80] },
-    crit:    { in:[0.70, 1.10] },
-    cards:   { in:[0.90, 1.60] },     // identico per le tre card (simultaneo)
-    logos:   { in:[1.25, 1.75] },     // identico per i tre loghi
+    env:     { fade:[0.00, 0.70] },
+    flare:   { on:[0.10, 0.55], settle:[0.55, 1.60] },   // i riflettori "si accendono" e si assestano
+    rays:    { in:[0.30, 1.40] },
+    title1:  { in:[0.25, 0.95] },
+    title2:  { in:[0.38, 1.08] },
+    rule:    { in:[0.95, 1.35] },
+    cards:   { in:[0.90, 1.70] },     // identico per le tre card (simultaneo)
+    logos:   { in:[1.30, 1.85] },     // identico per i tre loghi
     fino:    { in:[2.00, 2.35] },
-    values:  { in:[2.15, 2.75] },     // identico per i tre valori (rivelazione sincronizzata)
-    sweep:   { run:[4.00, 4.85] },    // unico accento: passaggio di luce sul bordo card Sisal
-    ring:    { in:[4.60, 5.10] },     // bordo lime persistente 1,5 px
-    glow:    { in:[4.50, 5.30] },
-    sheen:   { run:[6.60, 7.20] },    // singolo riflesso CTA (non ripetuto)
+    values:  { end:2.75, dur:0.46, stagger:0.035 },   // rivelazione a cifre, allineata alla fine: tutti i valori completi a 2,75 s
+    spec:    { run:[3.05, 3.75] },    // riflesso "vetro" simultaneo sulle tre card
+    sweep:   { run:[4.00, 4.85] },    // unico accento: luce sul bordo card Sisal
+    ring:    { in:[4.60, 5.10] },
+    glow:    { in:[4.55, 5.30], settle:[5.30, 6.10] },
+    sheen:   { run:[6.60, 7.20] },    // singolo riflesso CTA
   };
 
   const q = new URLSearchParams(location.search);
   const t = parseFloat(q.get('t') || '0');
+  const still = (q.get('bgmode') || 'drift') === 'still';
   const clamp = (x,a=0,b=1)=>Math.max(a,Math.min(b,x));
   const prog = (t,[a,b])=>clamp((t-a)/(b-a));
   const easeOutCubic = x=>1-Math.pow(1-x,3);
   const easeOutQuint = x=>1-Math.pow(1-x,5);
-  const easeInOutSine = x=>-(Math.cos(Math.PI*x)-1)/2;
+  const easeOutExpo  = x=>x>=1?1:1-Math.pow(2,-10*x);
+  const easeInOutSine= x=>-(Math.cos(Math.PI*x)-1)/2;
+  const lerp=(a,b,p)=>a+(b-a)*p;
+  const d = still ? 0 : t / TL.duration;   // avanzamento lento e continuo dell'ambiente (0 nella GIF)
 
-  // Ambiente
+  // ---- Ambiente
   const envimg = document.getElementById('envimg');
   const bg = q.get('bg');
   if (bg) { envimg.style.backgroundImage = `url("${bg}")`; document.querySelector('#env .proc').style.opacity = 0; document.querySelector('#env .lines').style.opacity = 0; }
-  const envFade = easeOutCubic(prog(t, TL.env.fade));
-  document.getElementById('env').style.opacity = envFade;
-  if ((q.get('bgmode')||'drift') === 'drift') {
-    const d = t / TL.duration;                       // deriva lenta e continua, mai oscillante
-    envimg.style.transform = `translateX(${-10*d}px) scale(${1.035 - 0.035*d})`;
+  document.getElementById('env').style.opacity = easeOutCubic(prog(t, TL.env.fade));
+  envimg.style.transform = `translateX(${-12*d}px) scale(${1.04 - 0.04*d})`;
+  document.getElementById('haze').style.transform = `translateX(${-22*d}px)`;
+  const rays = document.getElementById('rays');
+  rays.style.opacity = 0.9*easeOutCubic(prog(t, TL.rays.in));
+  rays.style.transform = `rotate(${-2 + 3*d}deg)`;
+  const flare = document.getElementById('flare');
+  const pon = easeOutExpo(prog(t, TL.flare.on)), pset = easeInOutSine(prog(t, TL.flare.settle));
+  flare.style.opacity = lerp(0, 1.0, pon) * lerp(1, 0.38, pset);
+  flare.style.transform = `scale(${lerp(0.7, 1.0, pon)}) translateX(${-10*d}px)`;
+
+  // ---- Particelle (posizioni pseudo-casuali deterministiche; sopra la safe area)
+  const P = document.getElementById('particles');
+  let seed = 7; const rnd = ()=>{ seed = (seed*9301+49297)%233280; return seed/233280; };
+  for (let i=0;i<22;i++){
+    const x0 = 20 + rnd()*930, y0 = 20 + rnd()*170, sp = 6 + rnd()*10, ph = rnd()*Math.PI*2, s = 2 + rnd()*1.6, op = 0.18 + rnd()*0.32;
+    const el = document.createElement('i'); const tt = still ? 0 : t;
+    const y = y0 - sp*tt*0.6, x = x0 + Math.sin(ph + tt*0.6)*6;
+    if (y > 8 && y < 198) { el.style.transform = `translate(${x}px,${y}px) scale(${s/3})`; el.style.opacity = op * easeOutCubic(prog(t,[0.4,1.6])); P.appendChild(el); }
   }
 
-  // Titolo
-  const rise = (el, p, dy=14) => { el.style.opacity = p; el.style.transform = `translateY(${(1-p)*dy}px)`; };
-  rise(document.querySelector('[data-el=title1]'), easeOutQuint(prog(t, TL.title1.in)));
-  rise(document.querySelector('[data-el=title2]'), easeOutQuint(prog(t, TL.title2.in)));
-  rise(document.querySelector('[data-el=crit]'),   easeOutCubic(prog(t, TL.crit.in)), 6);
+  // ---- Titolo: rivelazione da maschera + tracking che si assesta
+  const titleReveal = (el, p) => { el.style.transform = `translateY(${(1-p)*104}%)`; el.style.letterSpacing = `${lerp(0.14, -0.01, p)}em`; el.style.opacity = clamp(p*3); };
+  titleReveal(document.querySelector('[data-el=title1]'), easeOutExpo(prog(t, TL.title1.in)));
+  titleReveal(document.querySelector('[data-el=title2]'), easeOutExpo(prog(t, TL.title2.in)));
+  document.querySelector('[data-el=rule]').style.width = `${44*easeOutCubic(prog(t, TL.rule.in))}px`;
 
-  // Card: stesso ingresso per tutte e tre (pari dignità)
+  // ---- Card: stesso ingresso per tutte e tre (pari dignità)
   document.querySelectorAll('.card').forEach(card => {
-    rise(card, easeOutQuint(prog(t, TL.cards.in)), 22);
-    card.querySelector('.logo').style.opacity = easeOutCubic(prog(t, TL.logos.in));
+    const pc = easeOutExpo(prog(t, TL.cards.in));
+    card.style.opacity = clamp(pc*1.6);
+    card.style.transform = `translateY(${(1-pc)*28}px) rotateX(${(1-pc)*16}deg)`;
+    card.style.filter = `blur(${(1-pc)*5}px)`;
+    const pl = easeOutCubic(prog(t, TL.logos.in));
+    const lg = card.querySelector('.logo'); lg.style.opacity = pl; lg.style.transform = `scale(${lerp(0.94,1,pl)})`;
     card.querySelector('.fino').style.opacity = easeOutCubic(prog(t, TL.fino.in));
-    const pv = easeOutQuint(prog(t, TL.values.in));
-    const v = card.querySelector('.val'); v.style.opacity = pv; v.style.transform = `translateY(${(1-pv)*30}px)`;
+    // valori: una cifra alla volta, tutte complete nello stesso istante
+    const v = card.querySelector('.val');
+    if (!v.dataset.split) { v.innerHTML = [...v.textContent].map(ch=>`<span>${ch}</span>`).join(''); v.dataset.split = 1; }
+    const spans = v.querySelectorAll('span'); const n = spans.length;
+    spans.forEach((sp,i) => { const start = TL.values.end - TL.values.dur - (n-1-i)*TL.values.stagger; const p = easeOutQuint(prog(t,[start, start+TL.values.dur]));
+      sp.style.transform = `translateY(${(1-p)*34}px)`; sp.style.opacity = clamp(p*2); });
+    // riflesso vetro simultaneo
+    const ps = prog(t, TL.spec.run); const spec = card.querySelector('.spec');
+    spec.style.opacity = ps>0&&ps<1 ? Math.sin(ps*Math.PI) : 0; spec.style.transform = `translateX(${lerp(-120, 220, easeInOutSine(ps))}px) skewX(-22deg)`;
   });
 
-  // Accento unico su Sisal (bordo, non dimensione)
+  // ---- Accento unico su Sisal (bordo e luce, non dimensione)
   const sisal = document.querySelector('[data-op=sisal]');
-  const ps = prog(t, TL.sweep.run);
-  const sweep = sisal.querySelector('.sweep');
-  sweep.style.opacity = ps>0 && ps<1 ? Math.sin(ps*Math.PI) : 0;
-  sweep.style.transform = `rotate(${easeInOutSine(ps)*360}deg)`;
+  const psw = prog(t, TL.sweep.run);
+  ['.sweep','.sweep2'].forEach(sel => { const el = sisal.querySelector(sel); el.style.opacity = psw>0&&psw<1 ? Math.sin(psw*Math.PI) : 0; el.style.transform = `rotate(${easeInOutSine(psw)*360}deg)`; });
   sisal.querySelector('.ring').style.opacity = easeOutCubic(prog(t, TL.ring.in));
-  sisal.querySelector('.glow').style.opacity = 0.9*easeOutCubic(prog(t, TL.glow.in));
+  sisal.querySelector('.glow').style.opacity = 0.95*easeOutCubic(prog(t, TL.glow.in)) * lerp(1, 0.85, easeInOutSine(prog(t, TL.glow.settle)));
 
-  // CTA: sempre visibile dal fotogramma 0; un solo riflesso
+  // ---- CTA: sempre visibile dal fotogramma 0; un solo riflesso
   const psh = prog(t, TL.sheen.run);
   const sheen = document.querySelector('#cta .sheen');
   sheen.style.opacity = psh>0 && psh<1 ? 1 : 0;

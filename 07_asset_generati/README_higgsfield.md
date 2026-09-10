@@ -62,3 +62,26 @@ Il CDN dei risultati Higgsfield (`*.cloudfront.net`) è **bloccato dal proxy di 
 | P4 QC | eventualmente `video_deflicker` sulla sola clip d'ambiente se adottata | — | — |
 
 **Decisione di default** (motivata in `05_concept/concept.md`): ambiente **still** generato da Higgsfield + **movimento programmato deterministico** nel compositor (deriva 10 px / 9 s, scala 1,035→1,0, passaggio di luce, riflesso CTA). Una clip generativa verrebbe adottata solo se il test P2 mostra assenza di flicker e un guadagno percepibile, e solo dietro accettazione del passaggio manuale descritto al §4. Budget stimato totale: **≤ 150 crediti** (≈ 5% del saldo).
+
+
+---
+
+## 6. PRODUZIONE (dopo approvazione del 2026-09-10)
+
+### 6.1 Generazione ambiente definitivo
+Batch `generate_image_batch` di 4 still 21:9 con prompt affinati (orizzonte al 65%, banda alta scura e pulita, luci solo ai bordi, centro quieto, esclusioni esplicite di persone/pali/tabelloni/loghi/testi/bandiere/palloni):
+
+| # | Job | Modello richiesto → servito | Esito | Decisione |
+|---|---|---|---|---|
+| 11 | `b8ed1902-6fd2-4492-8741-78614a84faa4` | nano_banana_pro → nano_banana_2 (3168×1344) | banda alta pulita, cerchio di centrocampo, bokeh piccolo ai bordi, centro scuro | **SELEZIONATO** |
+| 12 | `fec46426-d89b-489a-87ea-16d5d5d01769` | idem | come 11 con foschia bassa, più sfocato | riserva |
+| 13 | `a57deef0-cef5-4ba0-b3ab-954205e83c80` | idem | molto scuro, linea in primo piano dominante | scartato |
+| 14 | `cc81dc34-df81-4187-a49b-6b4f770ff581` | seedream_v4_5 (6048×2592) | pali dei riflettori, **pallone e bandierina d'angolo** presenti | **scartato (elementi vietati)** |
+
+Preview a 776 px in `higgsfield_produzione/`. Crediti spesi in produzione: 7 (3×2 + 1).
+
+### 6.2 Trasferimento
+Nella sandbox Higgsfield: ritaglio a rapporto 1018:298 centrato al 60% dell'altezza (crop 3168×927 da y=343), Lanczos a **2036×596** (2× dell'area ambiente del template, per il render a 2×), JPEG q90 4:4:4 (113 068 byte), md5 `0929c68958b445d34f6a3798c875094e`; 10 blocchi base64 da 16 KB ricomposti localmente e verificati (md5 identico). File: `08_progetto/assets/env/env_A_pitch_FINAL_2036x596.jpg`.
+
+### 6.3 Ciò che NON è stato generato con Higgsfield
+Testi, loghi, importi, simbolo €, CTA, disclaimer: composti dal template. Nessuna clip video generativa: il movimento dell'ambiente è programmato (parallasse deterministica a 4 layer + particelle), per garantire assenza di flicker e piena compressibilità; la decisione è motivata in `05_concept/concept.md` e `11_qc/strategia_compressione.md`.

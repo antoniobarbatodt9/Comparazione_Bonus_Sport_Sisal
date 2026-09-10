@@ -1,6 +1,15 @@
 # Bonus Sport — banner dinamico di comparazione 970×250 (Sisal · NetBet · William Hill)
 
-**Stato: PRIMA CONSEGNA — analisi, brand audit (parziale, sito bloccato), concept, styleframe, storyboard, piani. In attesa di approvazione esplicita. Nessun asset definitivo, master, GIF o size aggiuntiva è stato prodotto.**
+**Stato: PRODUZIONE (approvazione con modifiche ricevuta il 2026-09-10: 9 s, senza etichetta criterio, alone attivo, ordine confermato, motion graphics di livello superiore). Master, versione web, GIF di controllo e report QC in `10_export/` e `11_qc/`.**
+
+## Consegna di produzione
+- `10_export/BonusSport_970x250_25fps_9s_MASTER.mp4` — master H.264 CRF 12 (+ copia archivio yuv444p)
+- `10_export/BonusSport_970x250_25fps_9s_WEB.mp4` — versione di distribuzione (≤ 3,5 MB)
+- `10_export/BonusSport_970x250_CONTROL.gif` — GIF di controllo (≤ 3,5 MB, ambiente fermo)
+- `10_export/BonusSport_970x250_25fps_9s_ENDFRAME_fallback_statico.png` — end frame
+- `11_qc/report_qc.md` — controlli automatici e visivi
+- `06_storyboard/storyboard_v2_contact_sheet.png` — storyboard definitivo dai fotogrammi del master
+- Pipeline riproducibile: `08_progetto/make_master.sh` (render 2× → Lanczos → ffmpeg)
 
 ## Dove guardare (in ordine)
 1. `06_storyboard/storyboard_contact_sheet.png` — lo storyboard scena per scena (11 fotogrammi reali 970×250, safe area evidenziata).

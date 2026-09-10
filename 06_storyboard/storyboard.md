@@ -1,5 +1,27 @@
 # Storyboard — Direzione A "Campo di luce" · 970×250 · 25 fps · 9,0 s · 225 fotogrammi · senza audio
 
+> **Aggiornamento v2 (produzione, 2026-09-10)** — approvato con modifiche: etichetta di criterio rimossa, alone lime confermato, ordine confermato, durata 9,0 s confermata, richiesta di motion graphics di livello superiore. La timeline v2 e i fotogrammi definitivi sono in `frames_v2/` (safe area evidenziata) e `frames_v2_clean/`; il contact sheet aggiornato è `storyboard_v2_contact_sheet.png`. La sezione originale sotto resta come riferimento della prima consegna.
+
+## Timeline v2 (motion design di produzione)
+
+| t (s) | Evento | Dettaglio |
+|---|---|---|
+| 0,00 | CTA presente | Pill lime, visibile e integra per tutti i 225 fotogrammi |
+| 0,00–0,70 | Ambiente | Dissolvenza dell'ambiente (still Higgsfield, 4 layer con parallasse: immagine, foschia, raggi, flare) |
+| 0,10–1,60 | Riflettori | Il flare a destra "si accende" (0,10–0,55) e si assesta (0,55–1,60); i raggi entrano 0,30–1,40 |
+| 0,25–1,08 | Titolo | "BONUS" e "SPORT" si rivelano da maschera, tracking da 0,14 em a −0,01 em; regolo lime 0,95–1,35 |
+| 0,40–1,60 | Particelle | 22 punti luce deterministici compaiono e derivano lentamente (fermi nella GIF) |
+| 0,90–1,70 | Card | Le tre card entrano **insieme**: salita 28 px, rotateX 16°→0, blur 5→0 px |
+| 1,30–1,85 | Loghi | Dissolvenza + scala 0,94→1, simultanea |
+| 2,00–2,35 | "FINO A" | Dissolvenza simultanea |
+| 2,15–2,75 | Valori | Cifre una alla volta con maschera; **tutti i valori completi nello stesso istante (2,75 s)** |
+| 3,05–3,75 | Riflesso vetro | Un riflesso diagonale attraversa le tre card **contemporaneamente** |
+| 4,00–4,85 | Accento unico | Doppia luce (testa bianca + coda lime) percorre il bordo della card Sisal (un solo giro) |
+| 4,55–6,10 | Accento si posa | Bordo lime 1,5 px (4,60–5,10) e alone (4,55–5,30), poi un unico assestamento (5,30–6,10) |
+| 6,60–7,20 | CTA | Un solo riflesso diagonale |
+| 6,10–9,00 | Fermo | Solo l'ambiente deriva (12 px, scala 1,04→1,00 sull'intera durata); end frame stabile |
+
+
 **Immagini:** `frames/` (con safe area evidenziata in magenta, per lettura dello storyboard) e `frames_clean/` (senza overlay, come apparirà). Contact sheet: `storyboard_contact_sheet.png`. Ogni immagine è un fotogramma reale a 970×250 renderizzato dal progetto modificabile `08_progetto/banner.html` (ambiente: preview esplorativa Higgsfield #1, a bassa risoluzione; in produzione sarà rigenerato a risoluzione piena).
 
 **Convenzione fotogrammi:** f = t × 25; f0 = primo fotogramma, f224 = ultimo (t = 8,96 s). Il file dura esattamente 9,00 s.

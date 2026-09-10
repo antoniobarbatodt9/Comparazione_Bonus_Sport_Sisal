@@ -8,3 +8,6 @@ Test di pipeline (NON definitivi). Servono a verificare toolchain e pesi di comp
 - test_pipeline_out/TEST_gif_12fps_128c_bayer.gif — 1,9 MB (ambiente in deriva, 128 colori)
 Le GIF con ambiente in deriva a 256 colori (5,1 MB e 9,1 MB) non sono versionate: vedi 11_qc/strategia_compressione.md.
 - test_template/ — primi 5 fotogrammi di verifica del template con guide di layout.
+
+## Produzione (2026-09-10)
+Le sequenze di fotogrammi del master (`master_frames_2x/`, `master_frames/`, `gif_frames_2x/`, `gif_frames/`) non sono versionate perché rigenerabili in modo deterministico con `08_progetto/make_master.sh`. Log della pipeline: `make_master.log`.

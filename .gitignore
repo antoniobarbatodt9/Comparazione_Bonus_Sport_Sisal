@@ -7,3 +7,9 @@
 09_preview/test_pipeline_out/TEST_gif_25fps_256c.gif
 09_preview/test_pipeline_out/TEST_gif_12fps_256c.gif
 node_modules/
+09_preview/master_frames_2x/
+09_preview/gif_frames_2x/
+09_preview/master_frames/
+09_preview/gif_frames/
+09_preview/test_v2/
+09_preview/test_final_env/

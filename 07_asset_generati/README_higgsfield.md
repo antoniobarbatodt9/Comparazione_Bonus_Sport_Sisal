@@ -119,3 +119,7 @@ Richiesta del cliente: il bed sintetico continuo non suonava come uno stadio rea
 Prompt (entrambi): campo zenitale notturno, camera fissa; audio "realistic stadium ambience only: distant crowd murmur, soft continuous hum with occasional swells, a few far isolated shouts, wind; no music, no announcer, no commentary, no speech, no singing, no chants with words, no whistles". Preset "IN THE DARK" proposto dalla piattaforma e rifiutato (`declined_preset_id`).
 
 Crediti spesi in questa revisione: 76. Totale progetto: ≈ 97.
+
+## 9. FAMIGLIA VERTICALE 300×600 / 320×480 / 160×600 (2026-09-11, fase storyboard)
+
+Nessun job avviato, **0 crediti**. Lo sfondo verticale è una ri-inquadratura dello stesso still approvato del master (job `e190625a-b390-47f4-ba30-cc464acb0373`): fascia centrale verticale 896×1344 (cerchio di centrocampo + linea di metà campo), ridimensionata a 800×1200 q76 nel sandbox e trasferita in 9 chunk base64 (md5 `d73f25578e8675d9c66088b4e88d4f3b`) → `08_progetto/assets/env/env_M_pitch_topdown_VERT_800x1200.jpg`. Valutazione asset per asset e opzioni per il render 2× in `adaptations/vertical_family/family_system/higgsfield_strategy.md`.

@@ -1,6 +1,6 @@
 # Famiglia verticale 300×600 · 320×480 · 160×600
 
-Master di riferimento: **970×250 concept M rev 2** (commit `429e807`), unico usato; il progetto 970×250 non è stato toccato. Storyboard approvati il 2026-09-11; **produzione completata**: file in `10_export/vertical/`, QC in `11_qc/report_qc_vertical.md`, pipeline `src/make_vertical.sh`. Durata 10,0 s · 25 fps · senza audio.
+Master di riferimento: **970×250 concept M rev 2** (commit `429e807`), unico usato; il progetto 970×250 non è stato toccato. Storyboard approvati il 2026-09-11; **produzione completata**: file in `10_export/vertical/`, QC in `11_qc/report_qc_vertical.md`, pipeline `src/make_vertical.sh`. Durata 10,0 s · 25 fps · con audio (stessa traccia del master ri-temporizzata, vedi `family_system/motion_system.md` §Audio); variante WEB_MUTO per i placement senza audio.
 
 | # | Consegna | Dove |
 |---|---|---|

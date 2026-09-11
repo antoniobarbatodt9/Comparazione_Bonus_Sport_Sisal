@@ -5,7 +5,7 @@ Stessa catena del master (ffmpeg da `imageio_ffmpeg`), parametri adattati alle a
 | Uscita | Codec / parametri | Peso atteso | Note |
 |---|---|---|---|
 | MASTER (archivio) | H.264 High 4:4:4 (`-pix_fmt yuv444p -crf 12`) + copia MOV | 4–8 MB | non per distribuzione |
-| WEB.mp4 (distribuzione ≤ 3,5 MB) | H.264 High 4:2:0, `-crf 20 -preset slow -profile:v high -movflags +faststart`, GOP 50, `-an` | 0,8–1,6 MB | senza audio (brief); se un ad server richiede traccia audio silente, aggiungere `anullsrc` in un secondo file |
+| WEB.mp4 (distribuzione ≤ 3,5 MB) | H.264 High 4:2:0, `-crf 17 -preset veryslow -profile:v high -movflags +faststart`, AAC 128 kbps | 0,4–0,6 MB | con audio (richiesta del cliente); `WEB_MUTO.mp4` senza traccia per i placement che non ammettono audio |
 | CONTROL.gif (≤ 3,5 MB) | palettegen/paletteuse (256 colori, dither bayer 3), 12,5 fps (125 f) per 300×600 e 320×480; 160×600 a 25 fps se ≤ 3,5 MB altrimenti 12,5 | 1,5–3,3 MB | i gradienti dello sfondo sono la voce di costo: eventuale `stats_mode=diff` |
 | ENDFRAME PNG | ultimo fotogramma 1× | < 200 KB | fallback statico |
 

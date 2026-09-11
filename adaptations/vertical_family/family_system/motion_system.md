@@ -1,4 +1,4 @@
-# Sistema di movimento della famiglia verticale (10,0 s · 25 fps · 250 fotogrammi · senza audio)
+# Sistema di movimento della famiglia verticale (10,0 s · 25 fps · 250 fotogrammi · con audio)
 
 ## Struttura temporale (derivata dal master 12 s, compressa a 10 s senza cambiare la funzione narrativa)
 
@@ -32,3 +32,18 @@ Hold minimi rispettati: ogni scena operatore resta ferma con dati completi per �
 ## Zone di movimento / zone libere
 - Zona di movimento: l'intera area utile meno i margini; la CTA si muove solo lungo l'asse centrale.
 - Zona libera assoluta: fascia disclaimer (y ≥ usable) — nessun elemento, luce, particella o ombra vi entra. L'ombra della CTA (22 px di blur) resta ≥ 24 px sopra la fascia (≥ 26 su 320×480 con box a 404: l'ombra sfuma a 0 entro 418).
+
+## Audio (aggiunto in produzione su richiesta del cliente: "l'audio deve restare sempre")
+Stessa traccia del master (bed stadio reale dalla clip Higgsfield `9d228081…` + SFX procedurali), ri-temporizzata sulla timeline da 10 s con il profilo `vertical` di `08_progetto/audio/make_audio.py`:
+
+| Cue | Master (s) | Verticali (s) | Nota |
+|---|---|---|---|
+| Swell riflettori | 0,10–1,60 | 0,10–1,60 | invariato |
+| Soffi BONUS / SPORT / CTA | 0,25 · 0,45 · 1,10 | 0,20 · 0,38 · 0,90 | allineati agli ingressi |
+| Whoosh wipe | 2,58 · 4,80 · 6,95 · 9,10 | 2,00 · 3,80 · 5,60 · 7,40 | senza panoramica L→R (il wipe scende) |
+| Tick "lock" valori | 4,10 · 6,25 · 8,40 | 3,25 · 5,05 · 6,85 | a cifre complete (+0,95 s) |
+| Soffio card S5 | 9,50 | 7,75 | |
+| Ping pulse CTA | 10,70 · 11,30 | 8,90 · 9,45 | |
+| Fade out bed | 11,90 | 9,90 (+ dissolvenza finale 80 ms) | |
+
+Loudness −20 LUFS, true peak ≤ −1 dBTP. Consegna: MASTER.mp4 e WEB.mp4 con audio AAC, archivio 4:4:4 con PCM 24 bit, più WEB_MUTO.mp4 per i placement che non ammettono audio; GIF senza audio per natura.

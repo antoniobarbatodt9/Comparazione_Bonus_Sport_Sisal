@@ -9,7 +9,13 @@ Revisione 2 (2026-09-10): il bed non è più rumore sintetico ma la traccia AMBI
 import sys, os, subprocess, json, re
 import numpy as np
 import imageio_ffmpeg
-SR = 48000; DUR = 12.0; N = int(SR*DUR)
+PROFILE = sys.argv[sys.argv.index('--profile')+1] if '--profile' in sys.argv else 'master'
+# cue in secondi per profilo: master 970x250 (12 s) e famiglia verticale (10 s, stessa sequenza narrativa compressa)
+CUE = {
+ 'master':   dict(DUR=12.0, fade_out=11.90, title=(0.25,0.45,1.10), wipes=(2.58,4.80,6.95,9.10), locks=(4.10,6.25,8.40), s5=9.50, pings=(10.70,11.30), pan_sweep=True),
+ 'vertical': dict(DUR=10.0, fade_out=9.90, title=(0.20,0.38,0.90), wipes=(2.00,3.80,5.60,7.40), locks=(3.25,5.05,6.85), s5=7.75, pings=(8.90,9.45), pan_sweep=False, end_fade=0.08),
+}[PROFILE]
+SR = 48000; DUR = CUE['DUR']; N = int(SR*DUR)
 rng = np.random.default_rng(20260910)
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 t = np.arange(N)/SR
@@ -71,33 +77,37 @@ if os.path.exists(amb):
             nxt=a.copy(); w=np.linspace(0,1,xf)[:,None]; parts[-1][-xf:]=parts[-1][-xf:]*(1-w)+nxt[:xf]*w; parts.append(nxt[xf:]); total+=len(nxt)-xf
         a=np.concatenate(parts)
     a=a[:N]; a=a/(np.sqrt(np.mean(a**2))+1e-12)
-    fade_in=np.clip(t/0.9,0,1)**1.2; fade_out=np.clip((11.90-t)/0.7,0,1)
+    fade_in=np.clip(t/0.9,0,1)**1.2; fade_out=np.clip((CUE['fade_out']-t)/0.7,0,1)
     bed_env=fade_in*fade_out
     mix += a*bed_env[:,None]*10**(-31/20)*1.0
     BED_SRC='ambiente Higgsfield: '+os.path.basename(amb)
 else:
     bedL = fft_bandnoise(N, 180, 3200, -0.9, seed=1); bedR = fft_bandnoise(N, 180, 3200, -0.9, seed=2); common = fft_bandnoise(N, 180, 3200, -0.9, seed=3)
     slow = 0.78 + 0.12*np.sin(2*np.pi*0.23*t+0.4) + 0.07*np.sin(2*np.pi*0.61*t+2.1) + 0.05*np.sin(2*np.pi*1.7*t)
-    fade_in = np.clip(t/0.7,0,1)**1.5; fade_out = np.clip((11.90-t)/0.6,0,1); bed_env = slow*fade_in*fade_out; bedg = 10**(-30/20)*3.0
+    fade_in = np.clip(t/0.7,0,1)**1.5; fade_out = np.clip((CUE['fade_out']-t)/0.6,0,1); bed_env = slow*fade_in*fade_out; bedg = 10**(-30/20)*3.0
     mix[:,0] += (0.6*bedL+0.7*common)*bed_env*bedg; mix[:,1] += (0.6*bedR+0.7*common)*bed_env*bedg; BED_SRC='sintetico (fallback)'
 # ---------- 2. accensione riflettori 0,10–1,60: swell passa-basso
 n=int(1.5*SR); sw = fft_bandnoise(n, 60, 900, -1.2, seed=4); e = (np.linspace(0,1,n)**2)*np.concatenate([np.ones(n-int(0.5*SR)), np.linspace(1,0,int(0.5*SR))])
 add(sw*e/ (np.max(np.abs(sw*e))+1e-12), 0.10, -32)
 # ---------- 3. ingressi titolo e CTA (S1)
-add(soffio(0.35), 0.25, -26, -0.3); add(soffio(0.35), 0.45, -26, 0.0); add(soffio(0.30), 1.10, -25, 0.5)
+add(soffio(0.35), CUE['title'][0], -26, -0.3); add(soffio(0.35), CUE['title'][1], -26, 0.0); add(soffio(0.30), CUE['title'][2], -25, 0.5)
 # ---------- 4. whoosh transizioni (stesso campione, pan L→R per blocchi)
 wh = whoosh()
 def add_pan_sweep(sig, t0, gain_db):
     n=len(sig); blk=int(0.02*SR)
     for i in range(0,n,blk):
         u=min(i/n,1.0); pan=-0.8+1.6*u; add(sig[i:i+blk], t0+i/SR, gain_db, pan)
-for t0 in (2.58, 4.80, 6.95, 9.10): add_pan_sweep(wh, t0, -19)
+for t0 in CUE['wipes']:
+    if CUE['pan_sweep']: add_pan_sweep(wh, t0, -19)
+    else: add(wh, t0, -19, 0.0)  # verticali: il wipe scende, nessuna panoramica L→R
 # ---------- 5. 'lock' valori: stesso suono, stesso livello per i tre operatori
-for t0 in (4.10, 6.25, 8.40): add(tick(), t0, -22, 0.0)
+for t0 in CUE['locks']: add(tick(), t0, -22, 0.0)
 # ---------- 6. card S5 (soffio unico) e CTA S6 (ping + soffio anello)
-add(soffio(0.60, 1.0), 9.50, -24, 0.0)
-add(ping(), 10.70, -19, 0.6); add(ping(), 11.30, -23, 0.6)
+add(soffio(0.60, 1.0), CUE['s5'], -24, 0.0)
+add(ping(), CUE['pings'][0], -19, 0.6); add(ping(), CUE['pings'][1], -23, 0.6)
 
+# ---------- verticali: dissolvenza finale di sicurezza (la coda del ping non deve arrivare al taglio)
+if CUE.get('end_fade'): mix *= np.clip((DUR-0.06-t)/CUE['end_fade'],0,1)[:,None]
 # ---------- normalizzazione loudness (-20 LUFS) e true-peak (<= -1 dBTP) via ffmpeg ebur128
 def measure(x):
     raw = (x.astype(np.float32)).tobytes()

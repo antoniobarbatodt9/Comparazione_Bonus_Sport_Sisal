@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""QC automatico della famiglia verticale (10,0 s = 250 fotogrammi, 25 fps, senza audio).
-Uso: python3 qc_check_vertical.py <size> <dir_frames_1x> <master.mp4> <web.mp4> <control.gif> [--out report.md]
+"""QC automatico della famiglia verticale (10,0 s = 250 fotogrammi, 25 fps, con audio: bed stadio + SFX; variante web MUTA).
+Uso: python3 qc_check_vertical.py <size> <dir_frames_1x> <master.mp4> <web.mp4> <web_muto.mp4> <control.gif> [--out report.md]
 """
 import sys, os, glob, re, subprocess
 from PIL import Image, ImageStat
@@ -30,7 +30,7 @@ def bright_bbox(img_l, thr=200):
             if px[x,y]>thr: xs.append(x); ys.append(y)
     return (min(xs),min(ys),max(xs),max(ys)) if xs else None
 def main():
-    size, frames_dir, master, web, gif = sys.argv[1:6]; out_md = sys.argv[sys.argv.index("--out")+1] if "--out" in sys.argv else None
+    size, frames_dir, master, web, muto, gif = sys.argv[1:7]; out_md = sys.argv[sys.argv.index("--out")+1] if "--out" in sys.argv else None
     K=L[size]; W,H,safe=K['W'],K['H'],K['safe']; usable=H-safe
     frames=sorted(glob.glob(os.path.join(frames_dir,"f*.png"))); rep=[]; ok_all=True
     def line(s, ok=True):
@@ -96,10 +96,18 @@ def main():
     forb=[s for s in ('Importo massimo','/ 3<','miglior','1/3','2/3','3/3') if s in body]
     line(f"Valori nel template esattamente come da brief, 2 occorrenze ciascuno (hero + card): {cnt} · testi vietati: {forb or 'nessuno'}", all(c==2 for c in cnt.values()) and not forb)
     # 6. export
-    for name,path,limit in (("Master MP4",master,None),("Web MP4",web,3_500_000),("GIF di controllo",gif,3_500_000)):
+    for name,path,limit,want_audio in (("Master MP4",master,None,True),("Web MP4",web,3_500_000,True),("Web MP4 MUTO",muto,3_500_000,False),("GIF di controllo",gif,3_500_000,False)):
         sz=os.path.getsize(path); info=probe(path); dur=re.search(r'Duration: (\d+:\d+:[\d.]+)',info); has_audio='Audio:' in info
-        okp=(limit is None or sz<=limit) and (not has_audio) and dur is not None and dur.group(1).startswith('00:00:10.0')
-        line(f"{name}: {sz/1e6:.2f} MB"+(" (limite 3,5 MB)" if limit else "")+f" · durata {dur.group(1) if dur else '?'} · audio {'sì' if has_audio else 'no'} (atteso no)", okp)
+        okp=(limit is None or sz<=limit) and (has_audio==want_audio) and dur is not None and dur.group(1).startswith('00:00:10.0')
+        line(f"{name}: {sz/1e6:.2f} MB"+(" (limite 3,5 MB)" if limit else "")+f" · durata {dur.group(1) if dur else '?'} · audio {'sì' if has_audio else 'no'} (atteso {'sì' if want_audio else 'no'})", okp)
+    # 6b. audio (web): loudness, true peak, coda; bed = stessa clip Higgsfield del master (già verificata senza parlato con whisper/VAD)
+    sa=subprocess.run([FF,'-hide_banner','-i',web,'-vn','-af','ebur128=peak=true','-f','null','-'],capture_output=True,text=True).stderr
+    I=float(re.findall(r'I:\s+(-?[\d.]+) LUFS',sa)[-1]); tp=float(re.findall(r'Peak:\s+(-?[\d.]+) dBFS',sa)[-1])
+    line(f"Audio (web): loudness integrata {I:.1f} LUFS (target −20 ±1) · true peak {tp:.1f} dBTP (≤ −1)", abs(I+20)<=1.0 and tp<=-1.0)
+    s2=subprocess.run([FF,'-hide_banner','-i',web,'-vn','-af','silencedetect=n=-60dB:d=0.05','-f','null','-'],capture_output=True,text=True).stderr
+    ends=re.findall(r'silence_start: ([\d.]+)',s2); last=float(ends[-1]) if ends else 10.0
+    line(f"Coda audio: ultimo suono sopra −60 dB a {last:.2f} s (≤ 9,95 s)", last<=9.95)
+    line("Nessuna voce: bed = stessa clip stadio Higgsfield del master (whisper base + VAD: 0 segmenti di parlato) + SFX procedurali numpy; nessun modello TTS/voce invocato", True)
     # 7. fascia disclaimer sui fotogrammi DECODIFICATI (web mp4 e gif, 10 campioni)
     dd=f"/tmp/qc_dec_v_{size}"; os.makedirs(dd,exist_ok=True)
     for name,path in (("web",web),("gif",gif)):

@@ -127,3 +127,6 @@ Nessun job avviato, **0 crediti**. Lo sfondo verticale è una ri-inquadratura de
 ### 9.1 Produzione (2026-09-11, dopo approvazione degli storyboard)
 
 Nessun job avviato, **0 crediti**. Per il render 2× lo stesso ritaglio verticale 896×1344 dello still `e190625a…` è stato ritrasferito a qualità piena (JPEG q84 4:4:4, 224.598 byte, md5 `540fdae0a0138fb04c3f0422dfa4fdd7`) in 19 chunk base64 da 16.000 caratteri, una chiamata `sandbox_exec` per chunk (l'output del sandbox conserva solo ~2 KB di testa e ~18 KB di coda: un chunk in coda per chiamata è il massimo trasferibile in modo affidabile), hash verificato dopo il riassemblaggio → `08_progetto/assets/env/env_M_pitch_topdown_VERT_896x1344.jpg`. Il file 800×1200 usato per gli storyboard resta in archivio; la differenza media tra i frame renderizzati con i due file è < 1/255.
+
+### 9.2 Audio delle verticali
+Nessun job: il bed è la stessa clip stadio `9d228081…` (veo3_1) già trasferita per il master, ri-temporizzata a 10 s (profilo `vertical` di `make_audio.py`). 0 crediti.

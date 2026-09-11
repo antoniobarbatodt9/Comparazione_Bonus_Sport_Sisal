@@ -130,3 +130,6 @@ Nessun job avviato, **0 crediti**. Per il render 2× lo stesso ritaglio vertical
 
 ### 9.2 Audio delle verticali
 Nessun job: il bed è la stessa clip stadio `9d228081…` (veo3_1) già trasferita per il master, ri-temporizzata a 10 s (profilo `vertical` di `make_audio.py`). 0 crediti.
+
+### 9.3 Famiglia orizzontale 1920×1080 / 300×250 / 336×280 (2026-09-11, fase storyboard)
+Nessun job avviato, **0 crediti**. Sfondo 16:9 = ri-inquadratura dello stesso still `e190625a…`: ritaglio centrale 2389×1344 (x 389–2778, altezza piena) ridimensionato a 1920×1080 nel sandbox (JPEG q80 4:2:0, 220.538 byte, md5 `77490f8c1684faae58ca8dd9bf11fbae`), trasferito in 19 chunk base64 da 16.000 caratteri (una chiamata `sandbox_exec` per chunk), hash verificato → `08_progetto/assets/env/env_M_pitch_topdown_169_1920x1080.jpg`. Usato da tutte e tre le size (i rettangoli ne prendono il centro). Audio: stessa clip stadio `9d228081…`, nessun nuovo job. Opzioni per il render 2× del 1920 in `adaptations/horizontal_family/family_system/background_strategy.md`.

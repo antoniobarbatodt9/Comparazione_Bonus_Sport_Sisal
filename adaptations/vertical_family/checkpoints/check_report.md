@@ -48,7 +48,7 @@ Metodo: misure automatiche dei bounding box (`src/render_vertical.mjs --measure`
 | Hold S1 con tutto a fuoco ≥ 0,6 s (1,30–2,00) | PASS | K2 | — | — | — |
 | Wipe verticale confinato all'area utile; opacità 0 quando raggiunge y = usable | PASS | K3 + scansione fascia | — | — | — |
 | Hero: card → logo → FINO A → cifre; dati completi a +0,95 s; hold ≥ 0,55 s | PASS | K4–K6 | — | — | — |
-| Nessuna sovrapposizione CTA/card durante i morph (CTA sempre sotto la card) | PASS | misure t 1,9–2,4 e 7,3–7,8: CTA top ≥ card bottom + 24 | — | — | — |
+| Nessuna sovrapposizione CTA/card durante i morph e gli ingressi (solo elementi visibili, opacità > 5 %) | FAIL → PASS | misure a passo 20 ms in 1,80–2,50 · 7,00–8,00 · 8,80–10,00 | prima iterazione: a t 7,74 la terza card di S5 (opacità 0,33, in salita di 24 px) toccava la CTA ancora in morph (gap −1,5 px su 320×480, 4 px sulle altre) | morph 2 anticipato a 7,25–7,70 (CTA ferma prima dell'arrivo delle card) e salita delle card S5 ridotta a 12 px | gap minimo visibile: 14,4 (300×600) · 8,5 (320×480) · 10,8 (160×600) px, PASS |
 | S5: titolo + tre card entrano insieme, hold ≥ 1,55 s | PASS | K7 | — | — | — |
 | Finale: due pulse (8,90 / 9,55), nessun anello, ultimo fotogramma completo | PASS | K8 | — | — | — |
 | Pulse 160×600 entro i bordi (x ≥ 4) | FAIL → PASS | prima iterazione 9 % → x 5,9; ridotto a 7 % + 5 % | ampiezza per size | x 7,3–152,7, PASS |

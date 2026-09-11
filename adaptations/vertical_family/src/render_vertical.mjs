@@ -17,7 +17,7 @@ for (const t of times) { const p = new URLSearchParams({ size, t: String(t) }); 
   if (args.measure) boxes.push({ t, ...(await page.evaluate(() => { const r = e => { const b = e.getBoundingClientRect(); return [Math.round(b.left*10)/10, Math.round(b.top*10)/10, Math.round(b.width*10)/10, Math.round(b.height*10)/10]; };
     const vis = e => e && getComputedStyle(e).display !== 'none' && e.closest('.scene') ? getComputedStyle(e.closest('.scene')).display !== 'none' : true;
     const o = { cta: r(document.querySelector('#cta')), ctaOpacity: getComputedStyle(document.querySelector('#cta')).opacity };
-    document.querySelectorAll('.card').forEach((c, k) => { if (vis(c)) o['card' + k] = { box: r(c), logo: r(c.querySelector('.logo img')), fino: r(c.querySelector('.fino')), val: r(c.querySelector('.val')), op: c.dataset.op }; });
+    document.querySelectorAll('.card').forEach((c, k) => { if (vis(c)) o['card' + k] = { box: r(c), logo: r(c.querySelector('.logo img')), fino: r(c.querySelector('.fino')), val: r(c.querySelector('.val')), op: c.dataset.op, opacity: getComputedStyle(c).opacity }; });
     ['w1', 'w2', 't1', 't2', 'r1', 'r5'].forEach(id => { const e = document.getElementById(id); if (e && vis(e) && getComputedStyle(e).display !== 'none') o[id] = r(e); });
     return o; })) });
   i++; }

@@ -95,7 +95,7 @@ const LAYOUTS = {
 };
 // ---------- TIMELINE (10,0 s) — stessa sequenza narrativa del master 12 s, compressa
 const S = { s1:[0.00,2.00], t1:[2.00,2.30], s2:[2.30,3.80], t2:[3.80,4.10], s3:[4.10,5.60], t3:[5.60,5.90], s4:[5.90,7.40], t4:[7.40,7.70], s5:[7.70,10.00] };
-const CTA_IN=[0.90,1.30], MORPH1=[1.90,2.40], MORPH2=[7.30,7.80], PULSE1=8.90, PULSE2=9.55;
+const CTA_IN=[0.90,1.30], MORPH1=[1.90,2.40], MORPH2=[7.25,7.70], PULSE1=8.90, PULSE2=9.55;
 const q=new URLSearchParams(location.search); const size=q.get('size')||'300x600'; const L=LAYOUTS[size]; const t=parseFloat(q.get('t')||'0'); const still=(q.get('bgmode')||'drift')==='still';
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)); const lerp=(a,b,p)=>a+(b-a)*p; const prog=(t,[a,b])=>clamp((t-a)/(b-a));
 const eoE=p=>p>=1?1:1-Math.pow(2,-10*p), eoC=p=>1-Math.pow(1-p,3), eio=p=>p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2, eioC=p=>p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2, eoQ=p=>1-Math.pow(1-p,5);
@@ -149,7 +149,7 @@ const ops=['sisal','netbet','williamhill'];
   } else { setWord('c5a','t1',T.y1,T.fs,T.lh,eoE(prog(u,[0,0.55]))); setWord('c5b','t2',T.y2,T.fs,T.lh,eoE(prog(u,[0.08,0.63]))); }
   const r=$('#r5'); const pr=eoC(prog(u,[0.35,0.75])); r.style.left=(L.s5.rule.x+L.s5.rule.w/2*(1-pr))+'px'; r.style.top=L.s5.rule.y+'px'; r.style.width=(L.s5.rule.w*pr)+'px';
   document.querySelectorAll('#s5 .k').forEach((card,k)=>{ layoutCard(card,{x:L.s5.cards.x,y:L.s5.cards.ys[k],w:L.s5.cards.w,h:L.s5.cards.h},L.s5.cards,k);
-    const p=eoE(prog(u,[0.05+k*0.06,0.65+k*0.06])); card.style.opacity=clamp(p*1.6); card.style.transform=`translateY(${(1-p)*24}px) rotateX(${(1-p)*14}deg)`; card.style.filter=`blur(${(1-p)*4}px)`;
+    const p=eoE(prog(u,[0.05+k*0.06,0.65+k*0.06])); card.style.opacity=clamp(p*1.6); card.style.transform=`translateY(${(1-p)*12}px) rotateX(${(1-p)*14}deg)`; card.style.filter=`blur(${(1-p)*4}px)`;
     card.querySelector('.logo').style.opacity=1; card.querySelector('.fino').style.opacity=1; const v=card.querySelector('.val'); if(!v.dataset.split){v.innerHTML=[...v.textContent].map(c=>`<span>${c}</span>`).join('');v.dataset.split=1;} }); }
 // ---------- CTA unica: entra terza in S1, morph verticale S1→hero→S5, pulse finale (due battiti, ancorata in basso a destra della propria box)
 { const big=L.s1.cta, mid=L.hero.cta, small=L.s5.cta; const pin=eoE(prog(t,CTA_IN)); const pm1=eioC(prog(t,MORPH1)), pm2=eioC(prog(t,MORPH2));

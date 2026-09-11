@@ -15,7 +15,7 @@
 | S5 confronto | 9,45–12,00 | 7,70–10,00 | 193–249 | titolo + tre card insieme, hold, due pulse CTA |
 | CTA in | 1,10–1,55 | 0,90–1,30 | 23–32 | terza a entrare in S1 |
 | Morph 1 | 2,50–3,05 | 1,90–2,40 | 48–60 | grande → media |
-| Morph 2 | 9,05–9,50 | 7,30–7,80 | 183–195 | media → confronto |
+| Morph 2 | 9,05–9,50 | 7,25–7,70 | 181–192 | media → confronto: la CTA è ferma nella posizione finale quando le card di S5 arrivano |
 | Pulse 1 / 2 | 10,70 / 11,45 | 8,90 / 9,55 | 223–236 / 239–249 | ampiezza 9 % + 6 % (160×600: 7 % + 5 %) |
 
 Hold minimi rispettati: ogni scena operatore resta ferma con dati completi per ≥ 0,55 s (master 0,70 s); S5 hold con tutto a fuoco ≥ 1,55 s; ultimo fotogramma = stato finale completo (fallback statico).
@@ -25,7 +25,7 @@ Hold minimi rispettati: ogni scena operatore resta ferma con dati completi per �
 - **CTA**: unica, mai mascherata dai wipe; entra in scala 0,7 → 1 con traslazione 18 px; morph di posizione/dimensione/corpo in easing cubico in-out. Il percorso di morph è **verticale** (scende lungo l'asse) invece che orizzontale: stessa funzione (la CTA "segue" il blocco contenuti).
 - **Card operatore** (clip relativa alla scena): card 0–0,42 s (rise 26 px, rotateX 14° → 0, blur 5 → 0), logo 0,25–0,58 s (scala 0,94 → 1), FINO A 0,50–0,70 s, cifre 0,59–0,95 s (roll-up 40 px per cifra, sfalsamento 30 ms). Stessa sequenza del master, tempi ridotti del 17 %.
 - **Wipe**: nel master la banda di luce attraversa da sinistra a destra (skew −14°); nelle verticali la banda **scende** dall'alto (skew −6°, altezza 120 px) e le scene sono mascherate con `clip-path` alto/basso. La banda esiste solo dentro l'area utile (da −120 a usable + 120 con opacità sinusoidale: a fine corsa è già a opacità 0 quando tocca y = usable — verificato: fascia piatta su tutti i campioni).
-- **S5**: titolo slide-up (0,15 s di anticipo come master), regolo, card che entrano insieme con sfalsamento 60 ms, dati già visibili (nessun rollo delle cifre: come master).
+- **S5**: titolo slide-up (0,15 s di anticipo come master), regolo, card che entrano insieme con sfalsamento 60 ms, salita 12 px (ridotta dai 24 px del master perché nelle verticali la CTA sta sotto le card), dati già visibili (nessun rollo delle cifre: come master).
 - **Camera sull'ambiente**: deriva −8 px / scala 1,03 → 1,00 lungo i 10 s + offset per scena (S1 1,06 · Sisal −6 px 1,02 · NetBet +5 px 1,03 · WH −3 px 1,04 · S5 1,00), stessa logica di "respiro" del master; particelle 14 / 12 / 8 con deriva verticale lenta, confinate a y < usable − 12.
 - **Pulse finale**: solo scala della CTA (origine al centro), nessun anello/alone (decisione rev 2 del master).
 

@@ -123,3 +123,7 @@ Crediti spesi in questa revisione: 76. Totale progetto: ≈ 97.
 ## 9. FAMIGLIA VERTICALE 300×600 / 320×480 / 160×600 (2026-09-11, fase storyboard)
 
 Nessun job avviato, **0 crediti**. Lo sfondo verticale è una ri-inquadratura dello stesso still approvato del master (job `e190625a-b390-47f4-ba30-cc464acb0373`): fascia centrale verticale 896×1344 (cerchio di centrocampo + linea di metà campo), ridimensionata a 800×1200 q76 nel sandbox e trasferita in 9 chunk base64 (md5 `d73f25578e8675d9c66088b4e88d4f3b`) → `08_progetto/assets/env/env_M_pitch_topdown_VERT_800x1200.jpg`. Valutazione asset per asset e opzioni per il render 2× in `adaptations/vertical_family/family_system/higgsfield_strategy.md`.
+
+### 9.1 Produzione (2026-09-11, dopo approvazione degli storyboard)
+
+Nessun job avviato, **0 crediti**. Per il render 2× lo stesso ritaglio verticale 896×1344 dello still `e190625a…` è stato ritrasferito a qualità piena (JPEG q84 4:4:4, 224.598 byte, md5 `540fdae0a0138fb04c3f0422dfa4fdd7`) in 19 chunk base64 da 16.000 caratteri, una chiamata `sandbox_exec` per chunk (l'output del sandbox conserva solo ~2 KB di testa e ~18 KB di coda: un chunk in coda per chiamata è il massimo trasferibile in modo affidabile), hash verificato dopo il riassemblaggio → `08_progetto/assets/env/env_M_pitch_topdown_VERT_896x1344.jpg`. Il file 800×1200 usato per gli storyboard resta in archivio; la differenza media tra i frame renderizzati con i due file è < 1/255.

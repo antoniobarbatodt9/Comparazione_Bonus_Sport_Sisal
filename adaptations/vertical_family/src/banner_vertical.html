@@ -104,7 +104,7 @@ if((q.get('mode')||'final')==='wire') document.body.classList.add('wire');
 const usable=L.H-L.safe;
 // ---------- ambiente: riframe verticale dello stesso asset Higgsfield (800x1200 = fascia centrale 896x1344 del job e190625a)
 const envimg=$('#envimg'); const pad=L.env.pad; envimg.style.left=(-pad)+'px'; envimg.style.top=(-pad)+'px'; envimg.style.width=(L.W+2*pad)+'px'; envimg.style.height=(L.H+2*pad)+'px';
-envimg.style.backgroundImage='url("../../../08_progetto/assets/env/env_M_pitch_topdown_VERT_800x1200.jpg")';
+envimg.style.backgroundImage='url("../../../08_progetto/assets/env/env_M_pitch_topdown_VERT_896x1344.jpg")';
 const d=still?0:t/10; const cams={s1:[0,1.06],s2:[-6,1.02],s3:[5,1.03],s4:[-3,1.04],s5:[0,1.0]};
 const cur=Object.keys(S).filter(k=>k[0]==='s').find(k=>t>=S[k][0]&&t<S[k][1])||'s5'; const cam=cams[cur];
 envimg.style.transform=`translateY(${cam[0]-8*d}px) scale(${cam[1]+0.03-0.03*d})`; envimg.style.opacity=eoC(prog(t,[0,0.6]));

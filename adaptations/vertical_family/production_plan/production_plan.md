@@ -1,4 +1,4 @@
-# Piano di produzione — famiglia verticale (da avviare SOLO dopo approvazione esplicita degli storyboard)
+# Piano di produzione — famiglia verticale (ESEGUITO il 2026-09-11 dopo approvazione degli storyboard; esiti in `11_qc/report_qc_vertical.md`)
 
 ## Ingressi bloccati
 - Template: `adaptations/vertical_family/src/banner_vertical.html` (parametri size/t), renderer `src/render_vertical.mjs`.

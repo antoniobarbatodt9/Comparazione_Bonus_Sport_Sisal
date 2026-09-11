@@ -20,7 +20,7 @@ Lo sfondo delle verticali è **lo stesso asset Higgsfield approvato** per il mas
 ## Copertura dell'area verticale
 - 300×600 e 160×600: il ritaglio 896×1344 (2:3) copre 300×600 (1:2) e 160×600 (~1:3,75) con scala ≥ 1 rispetto al ritaglio a 800×1200: la linea di metà campo passa vicino all'asse, il cerchio sta nella metà alta/centrale dietro il blocco titolo o le card.
 - 320×480 (2:3): rapporto identico al ritaglio, nessun taglio aggiuntivo.
-- Render di produzione a 2× (dopo approvazione): l'area necessaria è 680×1360 per 300×600 (600×1200 + bordo 80), 720×1040 per 320×480, 400×1360 per 160×600. La fascia verticale 896×1344 dello still originale copre tutte e tre (scala di cover ≤ 1,02): basta ritrasferire lo stesso ritaglio a 896×1344 q84 (≈ 200 KB), senza upscale né nuova generazione. Decisione formale in `production_plan/production_plan.md`.
+- Render di produzione a 2× (dopo approvazione): l'area necessaria è 680×1360 per 300×600 (600×1200 + bordo 80), 720×1040 per 320×480, 400×1360 per 160×600. La fascia verticale 896×1344 dello still originale copre tutte e tre (scala di cover ≤ 1,02): basta ritrasferire lo stesso ritaglio a 896×1344 q84 (≈ 200 KB), senza upscale né nuova generazione. Eseguito in produzione: `env_M_pitch_topdown_VERT_896x1344.jpg` (md5 `540fdae0a0138fb04c3f0422dfa4fdd7`), usato dal template per tutti i render definitivi.
 
 ## Ciò che NON si fa
 Nessuna nuova generazione, nessuna variazione di soggetto (niente porte, spalti, tribune, palloni, giocatori), nessun elemento IP, nessuno stretch, nessuna duplicazione visibile del cerchio.

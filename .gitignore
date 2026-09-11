@@ -17,3 +17,7 @@ node_modules/
 09_preview/M_gif_frames_2x/
 09_preview/M_master_frames/
 09_preview/M_gif_frames/
+09_preview/vertical/*_2x/
+09_preview/vertical/*_frames/
+09_preview/vertical/*_gif_2x/
+09_preview/vertical/*_gif_frames/

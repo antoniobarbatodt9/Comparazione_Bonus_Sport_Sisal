@@ -1,6 +1,6 @@
-# Famiglia verticale 300×600 · 320×480 · 160×600 — fase storyboard (gate di approvazione)
+# Famiglia verticale 300×600 · 320×480 · 160×600
 
-Master di riferimento: **970×250 concept M rev 2** (commit `429e807`), unico usato; il progetto 970×250 non è stato toccato. Nessun video, MP4 o GIF prodotto in questa fase. Durata 10,0 s · 25 fps · senza audio.
+Master di riferimento: **970×250 concept M rev 2** (commit `429e807`), unico usato; il progetto 970×250 non è stato toccato. Storyboard approvati il 2026-09-11; **produzione completata**: file in `10_export/vertical/`, QC in `11_qc/report_qc_vertical.md`, pipeline `src/make_vertical.sh`. Durata 10,0 s · 25 fps · senza audio.
 
 | # | Consegna | Dove |
 |---|---|---|

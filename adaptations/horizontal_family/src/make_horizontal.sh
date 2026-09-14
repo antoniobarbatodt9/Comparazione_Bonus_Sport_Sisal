@@ -2,7 +2,7 @@
 # Produzione famiglia orizzontale (10,0 s, 250 f, 25 fps, CON audio): render 2x → Lanczos → MP4 master/web (AAC) + web MUTO → GIF → end-frame.
 # Uso: bash make_horizontal.sh <size> [duration=10] [fps=25]     (SKIP_RENDER=1 per riusare i frame 2x)
 # 1920x1080: WEB.mp4 con CRF crescente fino a ≤ 3,5 MB (se CRF 17 supera la soglia resta come WEB_HQ.mp4, dichiarato fuori soglia);
-#            GIF di controllo a 960x540 / 10 fps da una sequenza "fermo" resa a 1x (una GIF 1920x1080 di 10 s non sta in 3,5 MB).
+#            GIF di controllo a 720x405 / 10 fps da una sequenza "fermo" resa a 1x (una GIF 1920x1080, e anche 960x540, di 10 s non sta in 3,5 MB: 960x540 a 8 fps = 5,2 MB).
 set -euo pipefail
 cd "$(dirname "$0")"
 SIZE="$1"; DUR="${2:-10}"; FPS="${3:-25}"; W="${SIZE%x*}"; H="${SIZE#*x}"
@@ -16,13 +16,13 @@ BIG=0; [ "$W" -gt 1000 ] && BIG=1
 if [ "${SKIP_RENDER:-0}" != "1" ]; then
   rm -rf "$PREV/${SIZE}_2x" "$PREV/${SIZE}_gif_2x" "$PREV/${SIZE}_gif_1x"
   echo "[1/6] $SIZE render 2x (deriva)";  node render_horizontal.mjs --size "$SIZE" --fps "$FPS" --duration "$DUR" --out "$PREV/${SIZE}_2x" --scale 2 --bgmode drift
-  if [ "$BIG" = 1 ]; then echo "[2/6] $SIZE render 1x 10 fps (fermo, GIF 960x540)"; node render_horizontal.mjs --size "$SIZE" --fps 10 --duration "$DUR" --out "$PREV/${SIZE}_gif_1x" --scale 1 --bgmode still
+  if [ "$BIG" = 1 ]; then echo "[2/6] $SIZE render 1x 10 fps (fermo, GIF 720x405)"; node render_horizontal.mjs --size "$SIZE" --fps 10 --duration "$DUR" --out "$PREV/${SIZE}_gif_1x" --scale 1 --bgmode still
   else echo "[2/6] $SIZE render 2x (fermo, GIF)"; node render_horizontal.mjs --size "$SIZE" --fps "$FPS" --duration "$DUR" --out "$PREV/${SIZE}_gif_2x" --scale 2 --bgmode still; fi
 fi
 echo "[3/6] downsample Lanczos ${W}x${H}"
 rm -rf "$PREV/${SIZE}_frames" "$PREV/${SIZE}_gif_frames"; mkdir -p "$PREV/${SIZE}_frames" "$PREV/${SIZE}_gif_frames"
 "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_2x/f%04d.png" -vf "scale=${W}:${H}:flags=lanczos" "$PREV/${SIZE}_frames/f%04d.png"
-if [ "$BIG" = 1 ]; then "$FF" -y -loglevel error -framerate 10 -i "$PREV/${SIZE}_gif_1x/f%04d.png" -vf "scale=$((W/2)):$((H/2)):flags=lanczos" "$PREV/${SIZE}_gif_frames/f%04d.png"
+if [ "$BIG" = 1 ]; then "$FF" -y -loglevel error -framerate 10 -i "$PREV/${SIZE}_gif_1x/f%04d.png" -vf "scale=$((W*3/8)):$((H*3/8)):flags=lanczos" "$PREV/${SIZE}_gif_frames/f%04d.png"
 else "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_gif_2x/f%04d.png" -vf "scale=${W}:${H}:flags=lanczos" "$PREV/${SIZE}_gif_frames/f%04d.png"; fi
 echo "[4/6] MP4 master (CRF 12, AAC 192k) + archivio 444 (PCM 24 bit)"
 "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_frames/f%04d.png" -i "$AUDIO" -c:v libx264 -preset veryslow -crf 12 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart "$EXP/${NAME}_MASTER.mp4"

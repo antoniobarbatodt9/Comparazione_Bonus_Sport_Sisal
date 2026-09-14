@@ -115,7 +115,7 @@ def main():
         for fn in sorted(glob.glob(f"{dd}/{name}_*.png")):
             st=ImageStat.Stat(Image.open(fn).convert("RGB").crop((0,int((usable+2)*kk),int(W*kk),int(H*kk))))
             worst=max(worst,max(st.stddev),abs(st.mean[0]-6),abs(st.mean[1]-26),abs(st.mean[2]-18))
-        line(f"Fascia disclaimer nei fotogrammi decodificati ({name}{' 960x540' if kk!=1 else ''}, 10 campioni): deviazione max {worst:.1f} (≤ 6)", worst<=6)
+        line(f"Fascia disclaimer nei fotogrammi decodificati ({name}{' '+str(gw)+'x'+str(Image.open(gif).size[1]) if kk!=1 else ''}, 10 campioni): deviazione max {worst:.1f} (≤ 6)", worst<=6)
     # 8. end frame decodificato: leggibilità del valore della terza card/riga (255€) rispetto al fondo card
     ev=K['endval']; eb=K['endbg']
     for name,path in (("web",web),("gif",gif)):

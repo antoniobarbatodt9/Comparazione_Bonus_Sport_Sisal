@@ -22,12 +22,8 @@ Stesso still Higgsfield del master (job `e190625a-b390-47f4-ba30-cc464acb0373`, 
 | Particelle | 22 (3 px) | 40 (5 px) · 8 · 8 |
 | Fascia disclaimer | 970×40 piatta | 1920×108 · 300×30 · 336×34 piatte, dissolvenza di raccordo dentro l'area utile |
 
-## Render 2× del 1920×1080 (produzione)
-Il render a deviceScaleFactor 2 richiede 3840×2160 di copertura: il file 1920×1080 verrebbe ingrandito 2× (morbido). Opzioni, in ordine di preferenza:
-1. **trasferire il ritaglio 2389×1344 alla risoluzione nativa** (stesso still, q84, ≈ 600 KB, ≈ 50 chunk) e lasciare che il template lo copra a scala 1,61 a 2×: nessun costo in crediti, nitidezza pari al master (che a 2× usa lo still a scala ≈ 1,0);
-2. render 1920×1080 a **1× diretto** (nessun downsample): il 16:9 è già alla risoluzione di consegna; testi e loghi sono vettoriali/PNG ad alta risoluzione e restano nitidi; l'anti-aliasing 2× del master si perde solo sui bordi curvi;
-3. `upscale_image` dello still (crediti) — solo se il check a 100 % dei frame lo richiedesse; non previsto.
-Per 300×250 e 336×280 il file attuale basta anche a 2× (scala < 1).
+## Render 2× del 1920×1080 (produzione, decisione applicata)
+Il render a deviceScaleFactor 2 (3840×2160) ingrandisce 2× il file 1920×1080; il downsample Lanczos a 1920×1080 riporta lo sfondo alla risoluzione di partenza (round-trip 2× → 1×: differenza trascurabile rispetto all'originale), mentre testi, loghi e bordi delle card beneficiano dell'anti-aliasing a 2× come nel master. Con la camera a scala 1,00–1,06 lo sfondo è mostrato a ingrandimento ≤ 1,06 rispetto al file, come già negli storyboard a 1× approvati. Per questo **non è stato ritrasferito il ritaglio nativo 2389×1344** (opzione A) né fatto alcun upscale (opzione C): 0 crediti, nessun trasferimento aggiuntivo. Per 300×250 e 336×280 il file copre a scala < 1 anche a 2×.
 
 ## Ciò che NON si fa
 Nessuna nuova generazione, nessuna variazione di soggetto (porte, spalti, palloni, giocatori), nessuno stretch, nessun elemento IP.

@@ -21,3 +21,8 @@ node_modules/
 09_preview/vertical/*_frames/
 09_preview/vertical/*_gif_2x/
 09_preview/vertical/*_gif_frames/
+09_preview/horizontal/*_2x/
+09_preview/horizontal/*_frames/
+09_preview/horizontal/*_gif_2x/
+09_preview/horizontal/*_gif_1x/
+09_preview/horizontal/*_gif_frames/

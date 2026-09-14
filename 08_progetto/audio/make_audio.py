@@ -10,10 +10,11 @@ import sys, os, subprocess, json, re
 import numpy as np
 import imageio_ffmpeg
 PROFILE = sys.argv[sys.argv.index('--profile')+1] if '--profile' in sys.argv else 'master'
-# cue in secondi per profilo: master 970x250 (12 s) e famiglia verticale (10 s, stessa sequenza narrativa compressa)
+# cue in secondi per profilo: master 970x250 (12 s), famiglia verticale e orizzontale (10 s, stessa sequenza narrativa compressa)
 CUE = {
  'master':   dict(DUR=12.0, fade_out=11.90, title=(0.25,0.45,1.10), wipes=(2.58,4.80,6.95,9.10), locks=(4.10,6.25,8.40), s5=9.50, pings=(10.70,11.30), pan_sweep=True),
  'vertical': dict(DUR=10.0, fade_out=9.90, title=(0.20,0.38,0.90), wipes=(2.00,3.80,5.60,7.40), locks=(3.25,5.05,6.85), s5=7.75, pings=(8.90,9.45), pan_sweep=False, end_fade=0.08),
+ 'horizontal': dict(DUR=10.0, fade_out=9.90, title=(0.20,0.38,0.90), wipes=(2.00,3.80,5.60,7.40), locks=(3.25,5.05,6.85), s5=7.75, pings=(8.90,9.45), pan_sweep=True, end_fade=0.08),  # orizzontali: stessa timeline, wipe L→R come il master → panoramica
 }[PROFILE]
 SR = 48000; DUR = CUE['DUR']; N = int(SR*DUR)
 rng = np.random.default_rng(20260910)

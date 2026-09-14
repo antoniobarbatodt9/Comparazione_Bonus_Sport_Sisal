@@ -37,3 +37,30 @@ NOTE_COMPRESSIONE
 - ✅ End frame decodificato (gif): luminanza cifre 255€ (p90) 255 vs fondo card 29 (≥ 40 di differenza)
 
 - **ESITO COMPLESSIVO 300x250: TUTTI I CONTROLLI AUTOMATICI SUPERATI**
+
+
+## Controlli automatici 336x280 (qc_check_vertical.py)
+
+- ✅ Fotogrammi: 250 (atteso 250) · dimensione (336, 280) (atteso (336, 280))
+- ✅ CTA presente e integra (pill lime + testo scuro, x ≥ 3, fondo ≤ 230) dal f33 al f249: tutti
+- ✅ Posizione CTA grande (S1) f35–f46: scarto max dal layout (78, 134, 180, 42) = 0 px (soglia 3)
+- ✅ Posizione CTA media (S2–S4) f62–f180: scarto max dal layout (78, 178, 180, 40) = 0 px (soglia 3)
+- ✅ Posizione CTA finale (S5, prima del pulse) f195–f221: scarto max dal layout (78, 188, 180, 36) = 0 px (soglia 3)
+- ✅ Fascia disclaimer 0,246 336×34 piatta #061a12 su tutti i 250 fotogrammi (wipe e pulse inclusi): tutti
+- ✅ Pari trattamento sequenziale (stessi tempi relativi, stessa altezza dei valori ±1 px): Sisal: card a u=0,20 (lum 33), valore completo a u=1,05 e stabile a u=1,45 → sì, altezza cifre 19 px · NetBet: card a u=0,20 (lum 33), valore completo a u=1,05 e stabile a u=1,45 → sì, altezza cifre 19 px · William Hill: card a u=0,20 (lum 33), valore completo a u=1,05 e stabile a u=1,45 → sì, altezza cifre 19 px
+- ✅ Proporzioni dell'inchiostro dei loghi nelle hero card vs PNG ufficiali ridotti alla stessa larghezza (render 2x, soglia luminanza 100, tolleranza 5 %: sensibile al ricampionamento dei tratti sottili): Sisal 3.04 vs riferimento 3.08 (1.3 %) · NetBet 5.51 vs riferimento 5.51 (0.0 %) · William Hill 4.79 vs riferimento 4.85 (1.3 %)
+- ✅ Box <img> dei loghi nel DOM non deformati (rapporto elemento = rapporto file PNG, tolleranza 0,5 %): Sisal elemento 136.0×43.4 = 3.134 vs file 3.136 (0.07 %) · NetBet elemento 130.0×33.8 = 3.846 vs file 3.839 (0.17 %) · William Hill elemento 160.0×53.3 = 3.002 vs file 3.000 (0.06 %)
+- ✅ Valori nel template esattamente come da brief, 2 occorrenze ciascuno (hero + card): {'5.200€': 2, '1.000€': 2, '255€': 2} · testi vietati: nessuno
+- ✅ Master MP4: 0.67 MB · durata 00:00:10.00 · audio sì (atteso sì)
+- ✅ Web MP4: 0.37 MB (limite 3,5 MB) · durata 00:00:10.00 · audio sì (atteso sì)
+- ✅ Web MP4 MUTO: 0.20 MB (limite 3,5 MB) · durata 00:00:10.00 · audio no (atteso no)
+- ✅ GIF di controllo: 2.30 MB (limite 3,5 MB) · durata 00:00:10.00 · audio no (atteso no)
+- ✅ Audio (web): loudness integrata -20.1 LUFS (target −20 ±1) · true peak -5.8 dBTP (≤ −1)
+- ✅ Coda audio: ultimo suono sopra −60 dB a 9.93 s (≤ 9,95 s)
+- ✅ Nessuna voce: bed = stessa clip stadio Higgsfield del master (whisper base + VAD: 0 segmenti di parlato) + SFX procedurali numpy; nessun modello TTS/voce invocato
+- ✅ Fascia disclaimer nei fotogrammi decodificati (web, 10 campioni): deviazione max 3.0 (≤ 6)
+- ✅ Fascia disclaimer nei fotogrammi decodificati (gif, 10 campioni): deviazione max 2.0 (≤ 6)
+- ✅ End frame decodificato (web): luminanza cifre 255€ (p90) 253 vs fondo card 28 (≥ 40 di differenza)
+- ✅ End frame decodificato (gif): luminanza cifre 255€ (p90) 255 vs fondo card 29 (≥ 40 di differenza)
+
+- **ESITO COMPLESSIVO 336x280: TUTTI I CONTROLLI AUTOMATICI SUPERATI**

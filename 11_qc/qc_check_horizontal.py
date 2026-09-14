@@ -126,6 +126,28 @@ def main():
             lv=np.asarray(im.crop(tuple(int(v*kk) for v in ev)).convert("L")); lv=float(np.percentile(lv,90))
             lb=ImageStat.Stat(im.crop(tuple(int(v*kk) for v in eb)).convert("L")).mean[0]
             line(f"End frame decodificato ({name}): luminanza cifre 255€ (p90) {lv:.0f} vs fondo card {lb:.0f} (≥ 40 di differenza)", lv>lb+40)
+    # 9. varianti 2x (HiDPI) dei rettangoli: risoluzione doppia, stessi limiti di peso, fascia piatta, audio
+    if "--x2" in sys.argv:
+        web2,gif2=sys.argv[sys.argv.index("--x2")+1:sys.argv.index("--x2")+3]
+        for name,path,want_audio in (("Web MP4 2x",web2,True),("GIF 2x",gif2,False)):
+            sz=os.path.getsize(path); info=probe(path); dur=re.search(r'Duration: (\d+:\d+:[\d.]+)',info); has_audio='Audio:' in info
+            dim=re.search(r'(\d{2,5})x(\d{2,5})',info.split('Video:')[1]) if 'Video:' in info else None; dw,dh=(int(dim.group(1)),int(dim.group(2))) if dim else (0,0)
+            kx=dw/W  # fattore reale (2 per gli MP4; la GIF può ripiegare a 1,5x per restare in 3,5 MB)
+            okp=sz<=3_500_000 and has_audio==want_audio and dur is not None and dur.group(1).startswith('00:00:10.0') and ((dw,dh)==(2*W,2*H) or (name.startswith('GIF') and (dw,dh)==(int(1.5*W),int(1.5*H))))
+            line(f"{name}: {sz/1e6:.2f} MB (limite 3,5 MB) · {dw}×{dh} (atteso {2*W}×{2*H}{', ammesso 1,5x' if name.startswith('GIF') else ''}) · durata {dur.group(1) if dur else '?'} · audio {'sì' if has_audio else 'no'} (atteso {'sì' if want_audio else 'no'})", okp)
+            for fn in glob.glob(f"{dd}/x2{name[:3]}_*.png"): os.remove(fn)
+            subprocess.run([FF,"-y","-loglevel","error","-i",path,"-vf","fps=1","-frames:v","10",f"{dd}/x2{name[:3]}_%02d.png"])
+            worst=0
+            for fn in sorted(glob.glob(f"{dd}/x2{name[:3]}_*.png")):
+                st=ImageStat.Stat(Image.open(fn).convert("RGB").crop((0,int((usable+2)*kx),dw,dh)))
+                worst=max(worst,max(st.stddev),abs(st.mean[0]-6),abs(st.mean[1]-26),abs(st.mean[2]-18))
+            line(f"Fascia disclaimer nei fotogrammi decodificati ({name}, 10 campioni): deviazione max {worst:.1f} (≤ 6)", worst<=6)
+        # nitidezza: PSNR del web 2x rispetto ai frame 2x sorgente a t 9,0 s
+        f2=os.path.join(frames_dir.rstrip('/').replace('_frames','_2x'),'f0225.png')
+        if os.path.exists(f2):
+            subprocess.run([FF,"-y","-loglevel","error","-ss","9.0","-i",web2,"-frames:v","1",f"{dd}/x2_t9.png"])
+            a=np.asarray(Image.open(f"{dd}/x2_t9.png").convert("RGB")).astype(float); b=np.asarray(Image.open(f2).convert("RGB")).astype(float)
+            ps=10*np.log10(255**2/((a-b)**2).mean()); line(f"Web MP4 2x: PSNR vs frame sorgente 2x a t 9,0 s = {ps:.1f} dB (≥ 36)", ps>=36)
     rep.append(""); rep.append("**ESITO COMPLESSIVO "+size+": "+("TUTTI I CONTROLLI AUTOMATICI SUPERATI**" if ok_all else "CONTROLLI FALLITI, vedi sopra**"))
     txt="\n".join("- "+r if r else "" for r in rep); print(txt)
     if out_md:

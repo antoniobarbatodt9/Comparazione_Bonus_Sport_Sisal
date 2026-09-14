@@ -29,11 +29,12 @@ echo "[4/6] MP4 master (CRF 12, AAC 192k) + archivio 444 (PCM 24 bit)"
 "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_frames/f%04d.png" -i "$AUDIO" -c:v libx264 -preset veryslow -crf 10 -pix_fmt yuv444p -c:a pcm_s24le -shortest "$EXP/${NAME}_MASTER_444_archivio.mov"
 echo "[5/6] MP4 web (≤ 3,5 MB, AAC 128k) + MP4 web MUTO"
 rm -f "$EXP/${NAME}_WEB_HQ.mp4"
-for CRF in 17 19 21 23 25 27; do
+CRFS="17 19 21 23 25 27"; [ "$BIG" = 0 ] && CRFS="12 14 17 19 21 23"
+for CRF in $CRFS; do
   "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_frames/f%04d.png" -i "$AUDIO" -c:v libx264 -preset veryslow -crf $CRF -profile:v high -level 4.1 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest -movflags +faststart "$EXP/${NAME}_WEB.mp4"
   SZ=$(stat -c %s "$EXP/${NAME}_WEB.mp4"); echo "  WEB CRF $CRF = $SZ byte"
   if [ "$SZ" -le 3500000 ]; then WEBCRF=$CRF; break; fi
-  if [ "$CRF" = 17 ]; then cp "$EXP/${NAME}_WEB.mp4" "$EXP/${NAME}_WEB_HQ.mp4"; echo "  CRF 17 > 3,5 MB: conservato come WEB_HQ.mp4 (fuori soglia)"; fi
+  if [ "$CRF" = 17 ] && [ "$BIG" = 1 ]; then cp "$EXP/${NAME}_WEB.mp4" "$EXP/${NAME}_WEB_HQ.mp4"; echo "  CRF 17 > 3,5 MB: conservato come WEB_HQ.mp4 (fuori soglia)"; fi
 done
 "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_frames/f%04d.png" -c:v libx264 -preset veryslow -crf $WEBCRF -profile:v high -level 4.1 -pix_fmt yuv420p -an -movflags +faststart "$EXP/${NAME}_WEB_MUTO.mp4"
 echo "$WEBCRF" > "$EXP/${NAME}_WEB_crf.txt"
@@ -49,5 +50,30 @@ if [ "$GIFSZ" -gt 3500000 ]; then echo "GIF = $GIFSZ > 3,5 MB → 8/10 fps"
   "$FF" -y -loglevel error -framerate "$GFPS" -i "$PREV/${SIZE}_gif_frames/f%04d.png" -vf "fps=$R,split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle" -loop 0 "$EXP/${NAME}_CONTROL.gif"; fi
 LAST=$(printf "f%04d.png" $((FPS*DUR-1)))
 cp "$PREV/${SIZE}_frames/$LAST" "$EXP/${NAME}_ENDFRAME_fallback_statico.png"
+
+if [ "$BIG" = 0 ]; then
+  W2=$((W*2)); H2=$((H*2)); N2="${NAME}_2x_${W2}x${H2}"
+  echo "[7/7] varianti 2x (${W2}x${H2}, per schermi HiDPI / anteprima su PC): MP4 web + muto + GIF, ≤ 3,5 MB"
+  "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_2x/f%04d.png" -i "$AUDIO" -c:v libx264 -preset veryslow -crf 12 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart "$EXP/${N2}_MASTER.mp4"
+  for CRF in 12 14 15 17 19 21 23; do
+    "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_2x/f%04d.png" -i "$AUDIO" -c:v libx264 -preset veryslow -crf $CRF -profile:v high -level 4.1 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest -movflags +faststart "$EXP/${N2}_WEB.mp4"
+    SZ=$(stat -c %s "$EXP/${N2}_WEB.mp4"); echo "  WEB 2x CRF $CRF = $SZ byte"; if [ "$SZ" -le 3500000 ]; then WEBCRF2=$CRF; break; fi
+  done
+  "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_2x/f%04d.png" -c:v libx264 -preset veryslow -crf $WEBCRF2 -profile:v high -level 4.1 -pix_fmt yuv420p -an -movflags +faststart "$EXP/${N2}_WEB_MUTO.mp4"
+  echo "$WEBCRF2" > "$EXP/${N2}_WEB_crf.txt"
+  # GIF 2x: prima a risoluzione doppia riducendo il frame-rate (25 → 12,5 → 10 → 8); se non basta, a 1,5x (12,5 → 10 → 8 fps)
+  rm -f "$EXP/${N2}_CONTROL_gif_fps.txt"; GIFOK=0
+  for SC in 2 1.5; do
+    GW=$(python3 -c "print(int($W*$SC))"); GH=$(python3 -c "print(int($H*$SC))"); SF="scale=${GW}:${GH}:flags=lanczos,"; [ "$SC" = 2 ] && SF=""
+    RATES="25 12.5 10 8"; [ "$SC" = 1.5 ] && RATES="12.5 10 8"
+    for R in $RATES; do
+      "$FF" -y -loglevel error -framerate "$FPS" -i "$PREV/${SIZE}_gif_2x/f%04d.png" -vf "fps=$R,${SF}split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle" -loop 0 "$EXP/${N2}_CONTROL.gif"
+      SZ=$(stat -c %s "$EXP/${N2}_CONTROL.gif"); echo "  GIF 2x ${GW}x${GH} $R fps = $SZ byte"
+      if [ "$SZ" -le 3500000 ]; then rm -f "$EXP/${NAME}_"*"x_"*"_CONTROL.gif" "$EXP/${NAME}_"*"x_"*"_CONTROL_gif_fps.txt"; mv "$EXP/${N2}_CONTROL.gif" "$EXP/${NAME}_${SC}x_${GW}x${GH}_CONTROL.gif"; echo "${GW}x${GH} @ $R fps" > "$EXP/${NAME}_${SC}x_${GW}x${GH}_CONTROL_gif_fps.txt"; GIFOK=1; break; fi
+    done
+    [ "$GIFOK" = 1 ] && break
+  done
+  cp "$PREV/${SIZE}_2x/$LAST" "$EXP/${N2}_ENDFRAME_fallback_statico.png"
+fi
 ls -la "$EXP" | grep "$SIZE"
 echo "ALL_DONE $SIZE"

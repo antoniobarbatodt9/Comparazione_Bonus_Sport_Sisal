@@ -12,10 +12,10 @@ L = {
                    endval=(1400,545,1560,620), endbg=(1250,660,1710,672)),
  '300x250':   dict(W=300,H=250,safe=30,m=16, s1cta=(70,120,160,38), midcta=(70,158,160,36), smallcta=(70,170,160,32),
                    hero=(16,22,268,118), hlogo=(14,40), hlogow=(124,118,146), hval=(76,30), cards=(16,[38,80,122],268,38),
-                   endval=(228,136,268,150), endbg=(108,126,150,156)),
+                   endval=(228,136,268,150), endbg=(108,126,150,156), ctamargin=16),
  '336x280':   dict(W=336,H=280,safe=34,m=18, s1cta=(78,134,180,42), midcta=(78,178,180,40), smallcta=(78,188,180,36),
                    hero=(18,26,300,132), hlogo=(16,44), hlogow=(136,130,160), hval=(86,32), cards=(18,[42,88,134],300,42),
-                   endval=(256,148,300,164), endbg=(120,138,175,172)),
+                   endval=(256,148,300,164), endbg=(120,138,175,172), ctamargin=16),
 }
 S = dict(s2=2.30, s3=4.10, s4=5.90)
 def probe(p): return subprocess.run([FF,"-hide_banner","-i",p],capture_output=True,text=True).stderr
@@ -28,7 +28,7 @@ def bright_bbox(img_l, thr=200):
     return (int(xs.min()),int(ys.min()),int(xs.max()),int(ys.max())) if len(xs) else None
 def main():
     size, frames_dir, master, web, muto, gif = sys.argv[1:7]; out_md = sys.argv[sys.argv.index("--out")+1] if "--out" in sys.argv else None
-    K=L[size]; W,H,safe=K['W'],K['H'],K['safe']; usable=H-safe
+    K=L[size]; W,H,safe=K['W'],K['H'],K['safe']; usable=H-safe; CM=K.get('ctamargin',20)  # margine minimo CTA→safe: 20 px (1920) · 16 px sui rettangoli (regola griglia famiglia orizzontale)
     frames=sorted(glob.glob(os.path.join(frames_dir,"f*.png"))); rep=[]; ok_all=True
     def line(s, ok=True):
         nonlocal ok_all; rep.append(("✅ " if ok else "❌ ")+s); ok_all = ok_all and ok
@@ -44,8 +44,8 @@ def main():
         xs=[p[0] for p in pts]; ys=[p[1]+y0 for p in pts]; bb=(min(xs),min(ys),max(xs),max(ys)); bb_all[idx]=bb
         inner=Image.open(f).convert("RGB").crop((bb[0]+10,bb[1]+8,bb[2]-10,bb[3]-8)); dark=sum(1 for p in inner.getdata() if p[0]+p[1]+p[2]<200)
         if dark<30: cta_fail.append((os.path.basename(f),'testo',dark))
-        if bb[0]<3 or bb[2]>W-4 or bb[3]>usable-20: cta_fail.append((os.path.basename(f),'margine',bb))
-    line(f"CTA presente e integra (pill lime + testo scuro, x ≥ 3, fondo ≤ {usable-20}) dal f33 al f249: {'tutti' if not cta_fail else 'FALLITI '+str(cta_fail[:4])}", not cta_fail)
+        if bb[0]<3 or bb[2]>W-4 or bb[3]>usable-CM: cta_fail.append((os.path.basename(f),'margine',bb))
+    line(f"CTA presente e integra (pill lime + testo scuro, x ≥ 3, fondo ≤ {usable-CM}) dal f33 al f249: {'tutti' if not cta_fail else 'FALLITI '+str(cta_fail[:4])}", not cta_fail)
     for name,lo,hi,exp in (("grande (S1)",35,46,K['s1cta']),("media (S2–S4)",62,180,K['midcta']),("finale (S5, prima del pulse)",195,221,K['smallcta'])):
         e=(exp[0],exp[1],exp[0]+exp[2]-1,exp[1]+exp[3]-1); bbs=[bb_all[i] for i in range(lo,hi+1) if i in bb_all]
         mx=max(max(abs(b[k]-e[k]) for k in range(4)) for b in bbs) if bbs else 999
@@ -87,7 +87,7 @@ def main():
         det.append(f"{nm} elemento {lw:.1f}×{lhh:.1f} = {r:.3f} vs file {fr:.3f} ({d*100:.2f} %)"); ok=ok and d<0.005
     line("Box <img> dei loghi nel DOM non deformati (rapporto elemento = rapporto file PNG, tolleranza 0,5 %): "+" · ".join(det), ok)
     # 5. testi nel template
-    html=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','adaptations','vertical_family','src','banner_horizontal.html'),encoding='utf-8').read()
+    html=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','adaptations','horizontal_family','src','banner_horizontal.html'),encoding='utf-8').read()
     body=html.split('<body')[1].split('</body')[0]
     cnt={v:body.count('>'+v+'<') for v in ('5.200€','1.000€','255€')}
     forb=[s for s in ('Importo massimo','/ 3<','miglior','1/3','2/3','3/3') if s in body]
